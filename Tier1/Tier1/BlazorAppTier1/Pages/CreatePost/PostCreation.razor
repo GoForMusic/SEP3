@@ -1,6 +1,7 @@
 ﻿@page "/PostCreation"
-
-
+@using Contracts
+@using Entities.Models
+@inject IPostService _postService
 @inject NavigationManager navMgr
 
 <br/>
@@ -36,7 +37,7 @@
                             </svg>
                         </div>
                         <h6 class="font-weight-bold mb-3">Automobiles</h6>
-                        <button type="button">Add in category</button>
+                        <button class="btn mt-4" @onclick="GoToAdd">Add in category</button>
                     </div>
                 </div>
             </div>
@@ -53,7 +54,7 @@
                             </svg>
                         </div>
                         <h6 class="font-weight-bold mb-3">Electronics</h6>
-                       <button type="button">Add in category</button>
+                        <button class="btn mt-4" @onclick="GoToAdd">Add in category</button>
                     </div>
                 </div>
             </div>
@@ -71,7 +72,7 @@
                             </svg>
                         </div>
                         <h6 class="font-weight-bold mb-3">Clothes</h6>
-                        <button type="button">Add in category</button>
+                        <button class="btn mt-4" @onclick="GoToAdd">Add in category</button>
                     </div>
                 </div>
             </div>
@@ -88,7 +89,7 @@
                             </svg>
                         </div>
                         <h6 class="font-weight-bold mb-3">Real Estate</h6>
-                        <button type="button">Add in category</button>
+                        <button class="btn mt-4" @onclick="GoToAdd">Add in category</button>
                     </div>
                 </div>
             </div>
@@ -106,7 +107,7 @@
                             </svg>
                         </div>
                         <h6 class="font-weight-bold mb-3">Animals</h6>
-                        <button type="button">Add in category</button>
+                        <button class="btn mt-4" @onclick="GoToAdd">Add in category</button>
                     </div>
                 </div>
             </div>
@@ -127,7 +128,7 @@
                             </svg>
                         </div>
                         <h6 class="font-weight-bold mb-3">House and Garden</h6>
-                        <button type="button">Add in category</button>
+                        <button class="btn mt-4" @onclick="GoToAdd">Add in category</button>
                     </div>
                 </div>
             </div>
@@ -144,7 +145,7 @@
                             </svg>
                         </div>
                         <h6 class="font-weight-bold mb-3">Machinery and tool boxes</h6>
-                        <button type="button">Add in category</button>
+                        <button class="btn mt-4" @onclick="GoToAdd">Add in category</button>
                     </div>
                 </div>
             </div>
@@ -161,7 +162,7 @@
                             </svg>
                         </div>
                         <h6 class="font-weight-bold mb-3">Sport, books, hobbies</h6>
-                       <button type="button">Add in category</button>
+                        <button class="btn mt-4" @onclick="GoToAdd">Add in category</button>
                     </div>
                 </div>
             </div>
@@ -178,13 +179,36 @@
                             </svg>
                         </div>
                         <h6 class="font-weight-bold mb-3">For the baby</h6>
-                        <button type="button">Add in category</button>
+                        <button class="btn mt-4" @onclick="GoToAdd">Add in category</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 @code {
+
+    private Post post = new Post();
+    private Subcategory _subcategory = new Subcategory();
+    private string errorLabel;
+
     
+
+    private async Task GoToAdd()
+    {
+        errorLabel = "";
+        try
+        {
+         
+            navMgr.NavigateTo("/AddInSubcategory");
+
+        }
+        catch(Exception e)
+        {
+            throw new Exception(e.Message);
+        }
+       
+    }
+
 }
