@@ -15,122 +15,105 @@
 /Users/prabina/Desktop/Coding/sep3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/refint/HttpServices.dll
 /Users/prabina/Desktop/Coding/sep3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.pdb
 /Users/prabina/Desktop/Coding/sep3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/ref/HttpServices.dll
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.AssemblyReference.cache
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.GeneratedMSBuildEditorConfig.editorconfig
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.AssemblyInfoInputs.cache
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.AssemblyInfo.cs
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.CoreCompileInputs.cache
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.dll
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/ref/HttpServices.dll
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.pdb
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.deps.json
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.dll
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/ref/HttpServices.dll
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.pdb
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.dll
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.dll
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.pdb
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.pdb
-C:/Users/nepal/OneDrive/Desktop/SEP3-Final/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.CopyComplete
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.deps.json
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.dll
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/ref/HttpServices.dll
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.pdb
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.dll
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.dll
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.pdb
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.pdb
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.AssemblyReference.cache
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.GeneratedMSBuildEditorConfig.editorconfig
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.AssemblyInfoInputs.cache
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.AssemblyInfo.cs
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.CoreCompileInputs.cache
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.CopyComplete
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.dll
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/ref/HttpServices.dll
-C:/Users/vassi/Desktop/adrians assignment/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.pdb
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.deps.json
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.dll
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/ref/HttpServices.dll
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.pdb
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.dll
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.dll
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.pdb
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.pdb
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.AssemblyReference.cache
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.GeneratedMSBuildEditorConfig.editorconfig
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.AssemblyInfoInputs.cache
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.AssemblyInfo.cs
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.CoreCompileInputs.cache
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.CopyComplete
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.dll
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/ref/HttpServices.dll
-D:/VIA_Courses/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.pdb
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.deps.json
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.dll
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/ref/HttpServices.dll
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.pdb
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.dll
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.dll
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.pdb
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.pdb
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.AssemblyReference.cache
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.GeneratedMSBuildEditorConfig.editorconfig
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.AssemblyInfoInputs.cache
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.AssemblyInfo.cs
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.CoreCompileInputs.cache
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.CopyComplete
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.dll
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/ref/HttpServices.dll
-C:/Users/vassi/Desktop/SEP3/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.pdb
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.deps.json
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.dll
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/ref/HttpServices.dll
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.pdb
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.dll
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.dll
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.pdb
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.pdb
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.AssemblyReference.cache
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.GeneratedMSBuildEditorConfig.editorconfig
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.AssemblyInfoInputs.cache
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.AssemblyInfo.cs
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.CoreCompileInputs.cache
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.CopyComplete
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.dll
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/ref/HttpServices.dll
-C:/Users/Marian/Desktop/VIA UNIVERSITY/3rd semester/sep project/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.pdb
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.deps.json
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.dll
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.pdb
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.dll
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.dll
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.pdb
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.pdb
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.AssemblyReference.cache
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.GeneratedMSBuildEditorConfig.editorconfig
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.AssemblyInfoInputs.cache
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.AssemblyInfo.cs
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.CoreCompileInputs.cache
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.CopyComplete
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.dll
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/obj/Debug/net6.0/refint/HttpServices.dll
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.pdb
-H:/Third Semester/Sep3Test/Tier1/Tier1/HttpServices/obj/Debug/net6.0/ref/HttpServices.dll
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.deps.json
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.dll
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.pdb
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.dll
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.dll
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.pdb
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.pdb
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.AssemblyReference.cache
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.GeneratedMSBuildEditorConfig.editorconfig
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.AssemblyInfoInputs.cache
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.AssemblyInfo.cs
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.CoreCompileInputs.cache
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.CopyComplete
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.dll
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/refint/HttpServices.dll
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.pdb
-/Users/prabina/Desktop/Development/SEP3/Tier1/Tier1/HttpServices/obj/Debug/net6.0/ref/HttpServices.dll
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.AssemblyReference.cache
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.AssemblyInfoInputs.cache
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.AssemblyInfo.cs
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.CoreCompileInputs.cache
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.dll
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\ref\HttpServices.dll
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.pdb
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.deps.json
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.dll
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\ref\HttpServices.dll
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.pdb
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Contracts.dll
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Entities.dll
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Contracts.pdb
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Entities.pdb
+C:\Users\nepal\OneDrive\Desktop\SEP3-Final\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.CopyComplete
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.deps.json
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.dll
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\ref\HttpServices.dll
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.pdb
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Contracts.dll
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Entities.dll
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Contracts.pdb
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Entities.pdb
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.AssemblyReference.cache
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.AssemblyInfoInputs.cache
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.AssemblyInfo.cs
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.CoreCompileInputs.cache
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.CopyComplete
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.dll
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\ref\HttpServices.dll
+C:\Users\vassi\Desktop\adrians assignment\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.pdb
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.deps.json
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.dll
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\ref\HttpServices.dll
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.pdb
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Contracts.dll
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Entities.dll
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Contracts.pdb
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Entities.pdb
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.AssemblyReference.cache
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.AssemblyInfoInputs.cache
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.AssemblyInfo.cs
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.CoreCompileInputs.cache
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.CopyComplete
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.dll
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\ref\HttpServices.dll
+D:\VIA_Courses\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.pdb
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.deps.json
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.dll
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\ref\HttpServices.dll
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.pdb
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Contracts.dll
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Entities.dll
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Contracts.pdb
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Entities.pdb
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.AssemblyReference.cache
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.AssemblyInfoInputs.cache
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.AssemblyInfo.cs
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.CoreCompileInputs.cache
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.CopyComplete
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.dll
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\ref\HttpServices.dll
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.pdb
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.deps.json
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.dll
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\ref\HttpServices.dll
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.pdb
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Contracts.dll
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Entities.dll
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Contracts.pdb
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Entities.pdb
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.AssemblyReference.cache
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.AssemblyInfoInputs.cache
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.AssemblyInfo.cs
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.CoreCompileInputs.cache
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.CopyComplete
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.dll
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\ref\HttpServices.dll
+C:\Users\Marian\Desktop\VIA UNIVERSITY\3rd semester\sep project\SEP3\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.pdb
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.deps.json
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.dll
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\bin\Debug\net6.0\HttpServices.pdb
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Contracts.dll
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Entities.dll
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Contracts.pdb
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\bin\Debug\net6.0\Entities.pdb
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.AssemblyReference.cache
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.GeneratedMSBuildEditorConfig.editorconfig
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.AssemblyInfoInputs.cache
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.AssemblyInfo.cs
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.CoreCompileInputs.cache
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.csproj.CopyComplete
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.dll
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\obj\Debug\net6.0\refint\HttpServices.dll
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\obj\Debug\net6.0\HttpServices.pdb
+H:\Third Semester\Sep3Test\Tier1\Tier1\HttpServices\obj\Debug\net6.0\ref\HttpServices.dll
