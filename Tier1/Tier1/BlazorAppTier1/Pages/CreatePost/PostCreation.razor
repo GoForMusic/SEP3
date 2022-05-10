@@ -170,6 +170,9 @@ else
                 </div>
                 <br/>
                 
+                <div> Add a image 
+                <InputFile OnChange="@OnInputFileChange"/>
+                  </div>
                     
                 <div class="form-group">
                   <div class="col-sm-10 col-sm-offset-2">
@@ -201,7 +204,10 @@ else
       private Post post = new Post();
         private List<Category>? allCategories = new List<Category>();
         private List<Subcategory> _subcategories = new List<Subcategory>();
+      private Stream stream = null;
       
+      
+     
 
     protected async override Task OnInitializedAsync()
     {
@@ -220,8 +226,16 @@ else
       {
         Console.WriteLine(e.Message);
       }
+      
     }
 
+      //While loading image 
+      private void OnInputFileChange(InputFileChangeEventArgs e)
+      {
+        IBrowserFile file = e.File;
+         stream = file.OpenReadStream();
+        
+      }
 
         private async Task Foo()
         {
@@ -247,7 +261,7 @@ else
         post.DateCreated = DateTime.Now;
         post.Images = new List<Image>();
         post.Writer = _user;
-        Post localTest = await  _postService.AddPostAsync(localId, post);
+        Post localTest = await  _postService.AddPostAsync(localId, post,stream);
 
         Console.WriteLine(localTest.Description);
       }

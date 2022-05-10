@@ -1,0 +1,22 @@
+@using System.Net.Http.Headers
+<h3>AddingPost</h3>
+<InputFile OnChange="@OnInputFileChange"/>
+
+
+@code {
+    
+    
+    private void OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        IBrowserFile file = e.File;
+        Stream stream = file.OpenReadStream();
+        
+    }
+    
+    
+    
+   
+
+  
+
+}
