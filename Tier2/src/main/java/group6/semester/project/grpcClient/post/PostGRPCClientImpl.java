@@ -43,6 +43,15 @@ public class PostGRPCClientImpl implements PostClient {
         return categoryBlockingStub;
     }
 
+    /**
+     * The function takes a Post object and a subCategoryId as parameters, converts the Post object to a grpc Post object,
+     * creates a grpc IdWithInteger object with the subCategoryId, creates a grpc TransferPostWithSubcategoryId object with
+     * the grpc Post object and the grpc IdWithInteger object, and then calls the addPost function on the grpc stub
+     *
+     * @param post The post object that we want to add to the database.
+     * @param subCategoryId The id of the subcategory to which the post is to be added.
+     * @return A Post object.
+     */
     @Override
     public Post addPost(Post post, int subCategoryId) {
         PostOuterClass.PostObj postObj = ConvertGrpc.getGrpcPostFromOurPost(post);
@@ -61,6 +70,11 @@ public class PostGRPCClientImpl implements PostClient {
         return getPostFromGrpcPost(postObj1);
     }
 
+    /**
+     * The function gets all the categories from the server and returns them to the client
+     *
+     * @return A list of Category objects.
+     */
     @Override
     public List<Category> getAllCategories() {
         CategoryOuterClass.ListOfCategoryObj listOfCategoryObj = null;
@@ -76,6 +90,9 @@ public class PostGRPCClientImpl implements PostClient {
         return categories;
     }
 
+    /**
+     * > It sets the stubs to null
+     */
     private void disposeStub() {
         postBlockingStub = null;
         categoryBlockingStub = null;

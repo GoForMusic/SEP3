@@ -39,6 +39,12 @@ public class UserController {
    }
 
 
+  /**
+   * The function takes a username as a path variable, and returns a user object
+   *
+   * @param username The username of the user you want to get.
+   * @return A ResponseEntity object is being returned.
+   */
   @GetMapping(value = "/user/{username}")
   @ResponseBody
   public ResponseEntity getUser(@PathVariable String username){
@@ -52,6 +58,13 @@ public class UserController {
     }
   }
 
+    /**
+     * The function takes in a username and password, and returns a user object if the username and password are correct
+     *
+     * @param username The username of the user you want to get.
+     * @param password The password of the user
+     * @return A user object
+     */
     @GetMapping(value = "/user/{username}/{password}")
     @ResponseBody
     public ResponseEntity getUser(@PathVariable String username, @PathVariable String password){

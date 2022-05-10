@@ -36,6 +36,11 @@ public class PostServiceImpl implements PostService {
         return postClient.addPost(post, subCategoryId);
     }
 
+    /**
+     * > The function returns a list of categories from the post service
+     *
+     * @return A list of categories
+     */
     @Override
     public List<Category> getAllCategories() {
         return postClient.getAllCategories();

@@ -263,6 +263,12 @@ public class ConvertGrpc {
      * @param subcategoryObj This is the object that is received from the server.
      * @return A list of posts
      */
+    /**
+     * It takes a GRPCService.Subcategory.SubcategoryObj object and returns a Subcategory object
+     *
+     * @param subcategoryObj This is the object that is received from the server.
+     * @return A list of subcategories
+     */
     public static Subcategory getSubCategoriesFromGrpcSubCategories(GRPCService.Subcategory.SubcategoryObj subcategoryObj) {
         Subcategory subcategory = new Subcategory();
         subcategory.setId(subcategoryObj.getId());

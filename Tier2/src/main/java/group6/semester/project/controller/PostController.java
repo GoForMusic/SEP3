@@ -19,6 +19,13 @@ public class PostController {
         this.postService = postService;
     }
 
+    /**
+     * It takes a Post object and a subCategoryId as parameters, and returns a ResponseEntity object
+     *
+     * @param post The object that will be added to the database.
+     * @param subCategoryId The id of the subcategory to which the post belongs.
+     * @return ResponseEntity is being returned.
+     */
     @PostMapping(value = "/post/{subCategoryId}")
     public ResponseEntity addPost(@RequestBody Post post, @PathVariable int subCategoryId){
 
@@ -32,6 +39,11 @@ public class PostController {
         }
     }
 
+    /**
+     * It returns a list of all categories in the database
+     *
+     * @return A list of categories
+     */
     @GetMapping(value = "/allCategories")
     @ResponseBody
     public ResponseEntity getAllCategories(){
