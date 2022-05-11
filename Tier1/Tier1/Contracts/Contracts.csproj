@@ -10,4 +10,8 @@
       <ProjectReference Include="..\Entities\Entities.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Components.Forms" Version="6.0.5" />
+    </ItemGroup>
+
 </Project>

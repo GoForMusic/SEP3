@@ -112,7 +112,8 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "Contracts/1.0.0": {
         "dependencies": {
-          "Entities": "1.0.0"
+          "Entities": "1.0.0",
+          "Microsoft.AspNetCore.Components.Forms": "6.0.5"
         },
         "runtime": {
           "Contracts.dll": {}

@@ -1079,11 +1079,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Third Semester\\Sep3Test\\Tier3\\GrpcService\\GrpcService.csproj",
+      "projectUniqueName": "H:\\Third Semester\\Sep\\Tier3\\GrpcService\\GrpcService.csproj",
       "projectName": "GrpcService",
-      "projectPath": "H:\\Third Semester\\Sep3Test\\Tier3\\GrpcService\\GrpcService.csproj",
+      "projectPath": "H:\\Third Semester\\Sep\\Tier3\\GrpcService\\GrpcService.csproj",
       "packagesPath": "C:\\Users\\himal\\.nuget\\packages\\",
-      "outputPath": "H:\\Third Semester\\Sep3Test\\Tier3\\GrpcService\\obj\\",
+      "outputPath": "H:\\Third Semester\\Sep\\Tier3\\GrpcService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\himal\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1098,11 +1098,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "H:\\Third Semester\\Sep3Test\\Tier3\\EFC\\EFC.csproj": {
-              "projectPath": "H:\\Third Semester\\Sep3Test\\Tier3\\EFC\\EFC.csproj"
+            "H:\\Third Semester\\Sep\\Tier3\\EFC\\EFC.csproj": {
+              "projectPath": "H:\\Third Semester\\Sep\\Tier3\\EFC\\EFC.csproj"
             },
-            "H:\\Third Semester\\Sep3Test\\Tier3\\Entities\\Entities.csproj": {
-              "projectPath": "H:\\Third Semester\\Sep3Test\\Tier3\\Entities\\Entities.csproj"
+            "H:\\Third Semester\\Sep\\Tier3\\Entities\\Entities.csproj": {
+              "projectPath": "H:\\Third Semester\\Sep\\Tier3\\Entities\\Entities.csproj"
             }
           }
         }

@@ -55,21 +55,22 @@ public class PostController {
 
     // Upload image
     @PostMapping("/uploadImage")
-    public String uploadImage(@RequestBody() MultipartFile file) throws IOException {
-
+    public ResponseEntity uploadImage(@RequestBody()MultipartFile file) throws IOException {
+        System.out.println("Adding image");
         System.out.println(file.getOriginalFilename());
         System.out.println(file.getName());
         System.out.println(file.getContentType());
         System.out.println(file.getSize());
 
 
-        String pathdirectory = new ClassPathResource("static/image").getFile().getAbsolutePath();
+        String pathdirectory = new ClassPathResource("").getFile().getAbsolutePath();
         Files.copy(file.getInputStream(), Paths.get(pathdirectory+file.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
 
         // return file;
-        return "Image is successfully uploaded";
+       return ResponseEntity.ok("Done");
 
     }
+
 
 
 }
