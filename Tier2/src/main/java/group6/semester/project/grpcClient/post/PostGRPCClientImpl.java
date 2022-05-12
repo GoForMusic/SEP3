@@ -9,11 +9,8 @@ import group6.semester.project.grpcClient.ManagedChannelGetter;
 import group6.semester.project.model.Category;
 import group6.semester.project.model.Post;
 import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static group6.semester.project.grpcClient.ConvertGrpc.getPostFromGrpcPost;
@@ -21,7 +18,7 @@ import static group6.semester.project.grpcClient.ConvertGrpc.getPostFromGrpcPost
 @Service
 public class PostGRPCClientImpl implements PostClient {
 
-    private PostGrpc.PostBlockingStub postBlockingStub;
+    private PostGrpc.PostBlockingStub postStub;
     private CategoryGrpc.CategoryBlockingStub categoryBlockingStub;
 
     /**
@@ -29,12 +26,12 @@ public class PostGRPCClientImpl implements PostClient {
      *
      * @return A blocking stub for the Post service.
      */
-    private PostGrpc.PostBlockingStub getPostBlockingStub() {
-        if (postBlockingStub == null) {
+    private PostGrpc.PostBlockingStub getPostStub() {
+        if (postStub == null) {
             ManagedChannel managedChannel = ManagedChannelGetter.getManagedChannel();
-            postBlockingStub = PostGrpc.newBlockingStub(managedChannel);
+            postStub = PostGrpc.newBlockingStub(managedChannel);
         }
-        return postBlockingStub;
+        return postStub;
     }
 
     private CategoryGrpc.CategoryBlockingStub getCategoryBlockingStub() {
@@ -54,7 +51,7 @@ public class PostGRPCClientImpl implements PostClient {
         PostOuterClass.PostObj postObj1 = null;
         try {
             System.out.println("At the add post");
-            postObj1 = getPostBlockingStub().addPost(transferPostWithSubcategoryId);
+            postObj1 = getPostStub().addPost(transferPostWithSubcategoryId);
         } catch (Exception e) {
             throw new RuntimeException(e);
         } finally {
@@ -86,7 +83,7 @@ public class PostGRPCClientImpl implements PostClient {
     @Override
     public List<Post> searchPosts(String title) {
         PostOuterClass.OnlyString titleToSend = PostOuterClass.OnlyString.newBuilder().setString(title).build();
-        PostOuterClass.ListOfPostObj list = getPostBlockingStub().searchPosts(titleToSend);
+        PostOuterClass.ListOfPostObj list = getPostStub().searchPosts(titleToSend);
         List<Post> postList = null;
         try {
             postList = ConvertGrpc.getListOfPostFromListOfGrpcPostObjects(list.getListList());
@@ -101,7 +98,7 @@ public class PostGRPCClientImpl implements PostClient {
     @Override
     public List<Post> getAllPosts() {
         PostOuterClass.RequestModel requestModal = PostOuterClass.RequestModel.newBuilder().build();
-        PostOuterClass.ListOfPostObj list = getPostBlockingStub().getAllPosts(requestModal);
+        PostOuterClass.ListOfPostObj list = getPostStub().getAllPosts(requestModal);
         List<Post> postList = null;
         try {
             postList = ConvertGrpc.getListOfPostFromListOfGrpcPostObjects(list.getListList());
@@ -114,7 +111,7 @@ public class PostGRPCClientImpl implements PostClient {
     }
 
     private void disposeStub() {
-        postBlockingStub = null;
+        postStub = null;
         categoryBlockingStub = null;
     }
 
