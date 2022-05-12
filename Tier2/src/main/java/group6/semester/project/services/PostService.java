@@ -6,6 +6,7 @@ import group6.semester.project.model.Subcategory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 @Service
@@ -14,5 +15,5 @@ public interface PostService {
 
     List<Category> getAllCategories();
 
-     void addImage(MultipartFile file);
+     void addImage(MultipartFile file) throws IOException;
 }

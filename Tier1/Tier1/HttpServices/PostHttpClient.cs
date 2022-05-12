@@ -1,6 +1,8 @@
 ﻿using System.Net;
 using System.Net.Http.Headers;
 using System.Net.Mime;
+using System.Runtime.InteropServices;
+using System.Text;
 using System.Text.Json;
 using Contracts;
 using Entities.Models;
@@ -12,11 +14,12 @@ namespace HttpServices;
 
 public class PostHttpClient : IPostService
 {
-    public async Task<Post> AddPostAsync(int subCategoryId, Post postToAdd)
+   /** public async Task<Post> AddPostAsync(int subCategoryId, Post postToAdd)
     {
         try
         {
             string client = await ClientAPI.getContent(Methods.Post, "/post/" + subCategoryId, postToAdd);
+
             Post postFromServer = GetDeserialized<Post>(client);
             return postFromServer;
         }
@@ -27,20 +30,24 @@ public class PostHttpClient : IPostService
 
     }
 
-    
+    **/
     
     public async Task<string> AddImage(MultipartFormDataContent form)
     {
         try
         {
             Console.WriteLine("Inside add image http client");
+            
             using (var httpClient = new HttpClient())
             {
+              
                 httpClient.DefaultRequestHeaders.Add("Authentification","abc123");
                 HttpResponseMessage responseMessage =
                     await httpClient.PostAsync("http://localhost:8080/uploadImage", form);
                 string responseMessageDes = GetDeserialized<string>(responseMessage.ToString());
-                return responseMessageDes;
+                httpClient.Dispose();
+                
+                return responseMessageDes.ToString();
             }
         }
         catch (Exception e)
@@ -102,6 +109,60 @@ public class PostHttpClient : IPostService
         return obj;
     }
 
+    public async Task<Post> AddPostAsync(int subCategoryId, Post postToAdd,[Optional]MultipartFormDataContent form )
+    {
+        string content = string.Empty;
+        Post post = new Post();
+        MultipartFormDataContent? formDataContent = form;
+      
+        try
+        {
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.DefaultRequestHeaders.Add("Authentification", "abc123");
+                Uri uri = new Uri("http://localhost:8080/post/" + subCategoryId);
+
+                StringContent stringContent = new(JsonSerializer.Serialize(postToAdd, new JsonSerializerOptions()
+                {
+                    PropertyNameCaseInsensitive = true,
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+                }), Encoding.UTF8, "application/json");
+                HttpResponseMessage responseMessage =
+                    await httpClient.PostAsync(uri, stringContent);
+
+                 content = await responseMessage.Content.ReadAsStringAsync();
+                 post =  GetDeserialized<Post>(content);
+            }
+            //For adding image
+
+                
+            if (formDataContent != null)
+            {
+                Console.WriteLine("Ading image post ");
+                Console.WriteLine(form.Headers.ToString());
+                
+                using var httpClient1 = new HttpClient();
+                httpClient1.DefaultRequestHeaders.Add("Authentification","abc123");
+                HttpResponseMessage responseForImage =
+                    await httpClient1.PostAsync("http://localhost:8080/uploadImage", formDataContent);
+            }
+
+
+
+
+              
+       
+            return post;
+                
+            
+        }
+        catch (Exception e)
+        {
+            throw new Exception(e.Message + " " + e.StackTrace);
+        }
+    }
+    
+    
 
 }
 

@@ -80,6 +80,8 @@ public class PostGRPCClientImpl implements PostClient {
     {
         System.out.println("GrpcClient proto adding Image");
         System.out.println(file.getName());
+
+
     }
 
     private void disposeStub() {
