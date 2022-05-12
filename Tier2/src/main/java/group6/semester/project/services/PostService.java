@@ -4,6 +4,7 @@ import group6.semester.project.model.Category;
 import group6.semester.project.model.Post;
 import group6.semester.project.model.Subcategory;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -13,4 +14,5 @@ public interface PostService {
 
     List<Category> getAllCategories();
 
+     void addImage(MultipartFile file);
 }

@@ -6,7 +6,9 @@ import group6.semester.project.model.Category;
 import group6.semester.project.model.Post;
 import group6.semester.project.services.PostService;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.util.List;
 
 @Service
@@ -39,5 +41,11 @@ public class PostServiceImpl implements PostService {
     @Override
     public List<Category> getAllCategories() {
         return postClient.getAllCategories();
+    }
+
+    @Override public void addImage(MultipartFile file)
+    {
+
+        postClient.addImage(file);
     }
 }

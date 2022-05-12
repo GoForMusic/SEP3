@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="be564274-4928-4cc6-8b2b-fa80de47c17d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/BlazorAppTier1/Pages/CreatePost/PostCreation.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/BlazorAppTier1/Pages/CreatePost/PostCreation.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Contracts/IPostService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Contracts/IPostService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Contracts/bin/Debug/net6.0/Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Contracts/bin/Debug/net6.0/Contracts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Contracts/bin/Debug/net6.0/Contracts.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Contracts/bin/Debug/net6.0/Contracts.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Contracts/bin/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Contracts/bin/Debug/net6.0/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Contracts/bin/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Contracts/bin/Debug/net6.0/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Contracts/obj/Debug/net6.0/Contracts.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Contracts/obj/Debug/net6.0/Contracts.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Contracts/obj/Debug/net6.0/Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Contracts/obj/Debug/net6.0/Contracts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Contracts/obj/Debug/net6.0/Contracts.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Contracts/obj/Debug/net6.0/Contracts.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Contracts/obj/Debug/net6.0/ref/Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Contracts/obj/Debug/net6.0/ref/Contracts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Contracts/obj/Debug/net6.0/refint/Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Contracts/obj/Debug/net6.0/refint/Contracts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Contracts/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Contracts/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Entities/Models/Post.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Entities/Models/Post.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Entities/bin/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Entities/bin/Debug/net6.0/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Entities/bin/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Entities/bin/Debug/net6.0/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Entities/obj/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Entities/obj/Debug/net6.0/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Entities/obj/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Entities/obj/Debug/net6.0/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/Entities/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/Entities/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/PostHttpClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/PostHttpClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Contracts.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/bin/Debug/net6.0/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/bin/Debug/net6.0/HttpServices.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/obj/Debug/net6.0/HttpServices.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/obj/Debug/net6.0/ref/HttpServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/obj/Debug/net6.0/ref/HttpServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/obj/Debug/net6.0/refint/HttpServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/obj/Debug/net6.0/refint/HttpServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Tier1/Tier1/HttpServices/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier2/src/main/java/group6/semester/project/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tier2/src/main/java/group6/semester/project/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier2/src/main/java/group6/semester/project/grpcClient/post/PostClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tier2/src/main/java/group6/semester/project/grpcClient/post/PostClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier2/src/main/java/group6/semester/project/grpcClient/post/PostGRPCClientImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tier2/src/main/java/group6/semester/project/grpcClient/post/PostGRPCClientImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier2/src/main/java/group6/semester/project/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tier2/src/main/java/group6/semester/project/model/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier2/src/main/java/group6/semester/project/services/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tier2/src/main/java/group6/semester/project/services/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier2/src/main/java/group6/semester/project/services/SericeImpl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tier2/src/main/java/group6/semester/project/services/SericeImpl/PostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier3/EFC/obj/Debug/net6.0/EFC.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tier3/EFC/obj/Debug/net6.0/EFC.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier3/EFC/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Tier3/EFC/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier3/GrpcService/obj/Debug/net6.0/GrpcService.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tier3/GrpcService/obj/Debug/net6.0/GrpcService.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier3/GrpcService/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Tier3/GrpcService/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier3/GrpcService/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/Tier3/GrpcService/obj/staticwebassets.pack.sentinel" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="293wIYtXEi7gf8llD6qzHwvGAmg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be564274-4928-4cc6-8b2b-fa80de47c17d" name="Default Changelist" comment="" />
+      <created>1652355001999</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652355001999</updated>
+    </task>
+    <servers />
+  </component>
+</project>

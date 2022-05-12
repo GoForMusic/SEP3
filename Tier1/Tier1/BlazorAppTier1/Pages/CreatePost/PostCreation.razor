@@ -166,8 +166,7 @@ else
                             <br/>
 
 
-                            
-                            <InputFile OnChange="@OnInputFileChange" >         Upload Image                   </InputFile>
+                            <InputFile OnChange="@OnInputFileChange"> Upload Image </InputFile>
 
 
                             <div class="form-group">
@@ -197,8 +196,8 @@ else
     private Post post = new Post();
     private List<Category>? allCategories = new List<Category>();
     private List<Subcategory> _subcategories = new List<Subcategory>();
- 
-    public  IBrowserFile? file ;
+
+    public IBrowserFile? file;
 
     protected override async Task OnInitializedAsync()
     {
@@ -230,6 +229,7 @@ else
 
     private async Task CreatePost()
     {
+       
         int localId = 0;
         foreach (var item in _subcategories)
         {
@@ -256,50 +256,58 @@ else
         Post localTest = await _postService.AddPostAsync(localId, post);
 
 
-        
-        
-
-            
-
-
         Console.WriteLine(localTest.Description);
+
+
+    // adding image function
+
+
+       
     }
 
     private async Task OnInputFileChange(InputFileChangeEventArgs e)
     {
         file = e.File;
-        using (var httpClient = new HttpClient())
-        {
-            using (var form = new MultipartFormDataContent())
-            {
-                using (var fs = file.OpenReadStream())
-                {
-                    using (var streamContent = new StreamContent(fs))
-                    {
-                        using (var fileContent = new ByteArrayContent(await streamContent.ReadAsByteArrayAsync()))
-                        {
-                            fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data");
+        await AddImage(file);
+    }
 
-    // "file" parameter name should be the same as the server side input parameter name
-                            form.Add(fileContent, "file", file.Name);
-                            Uri uri = new Uri($"http://localhost:8080/uploadImage");
-                            httpClient.DefaultRequestHeaders.Add("Authentification", "abc123");
-                            HttpResponseMessage response = await httpClient.PostAsync(uri, form);
-    
-                            Console.Write("aaa");
+
+    private async Task<bool> AddImage(IBrowserFile file)
+    {
+      
+        
+            try
+            {
+    // ...
+
+                using (var form = new MultipartFormDataContent())
+                {
+                    using (var fs = file.OpenReadStream())
+                    {
+                        using (var streamContent = new StreamContent(fs))
+                        {
+                            using (var fileContent = new ByteArrayContent(await streamContent.ReadAsByteArrayAsync()))
+                            {
+                                fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data");
+                                form.Add(fileContent,"file",file.Name);
+                                await _postService.AddImage(form);
+                            }
                         }
                     }
                 }
+
+                Console.Write("Image adding part is done ");
+
             }
-        }
-        Console.Write("done");
+            catch (Exception e)
+            {
+                throw new Exception("image can not be added");
+            }
+
+        return true;
+
     }
 
-   
 
-
-}
-
-}
 
 }

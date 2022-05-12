@@ -3,6 +3,7 @@ package group6.semester.project.model;
 import com.google.type.DateTime;
 import lombok.Data;
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -21,6 +22,7 @@ public class Post {
     private String email;
     private List<Image> images;
     private User writer;
+
 
 
 

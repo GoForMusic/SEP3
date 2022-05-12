@@ -15,5 +15,4 @@ public class Post
     public ICollection<Image> Images { get; set; }
     public User Writer { get; set; }
     
-
 }

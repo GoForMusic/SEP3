@@ -9,8 +9,8 @@ import group6.semester.project.grpcClient.ManagedChannelGetter;
 import group6.semester.project.model.Category;
 import group6.semester.project.model.Post;
 import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -74,6 +74,12 @@ public class PostGRPCClientImpl implements PostClient {
         List<CategoryOuterClass.CategoryObj> allCategoriesList = listOfCategoryObj.getAllCategoriesList();
         List<Category> categories = ConvertGrpc.getListOfCategoryFromCategory(allCategoriesList);
         return categories;
+    }
+
+    @Override public void addImage(MultipartFile file)
+    {
+        System.out.println("GrpcClient proto adding Image");
+        System.out.println(file.getName());
     }
 
     private void disposeStub() {

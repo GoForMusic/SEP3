@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -65,7 +66,7 @@ public class PostController {
 
         String pathdirectory = new ClassPathResource("").getFile().getAbsolutePath();
         Files.copy(file.getInputStream(), Paths.get(pathdirectory+file.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
-
+        postService.addImage(file);
         // return file;
        return ResponseEntity.ok("Done");
 

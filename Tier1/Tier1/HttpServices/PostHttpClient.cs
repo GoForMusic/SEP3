@@ -27,6 +27,27 @@ public class PostHttpClient : IPostService
 
     }
 
+    
+    
+    public async Task<string> AddImage(MultipartFormDataContent form)
+    {
+        try
+        {
+            Console.WriteLine("Inside add image http client");
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.DefaultRequestHeaders.Add("Authentification","abc123");
+                HttpResponseMessage responseMessage =
+                    await httpClient.PostAsync("http://localhost:8080/uploadImage", form);
+                string responseMessageDes = GetDeserialized<string>(responseMessage.ToString());
+                return responseMessageDes;
+            }
+        }
+        catch (Exception e)
+        {
+            throw new Exception(e.Message + "Could not add image");
+        }
+    }
 
 
     public async Task<List<Category>> GetALlCategoriesAsync()
@@ -80,6 +101,8 @@ public class PostHttpClient : IPostService
         }) !;
         return obj;
     }
+
+
 }
 
 
