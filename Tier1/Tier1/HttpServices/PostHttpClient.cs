@@ -143,8 +143,9 @@ public class PostHttpClient : IPostService
                 
                 using var httpClient1 = new HttpClient();
                 httpClient1.DefaultRequestHeaders.Add("Authentification","abc123");
+                Console.WriteLine(post.Id);
                 HttpResponseMessage responseForImage =
-                    await httpClient1.PostAsync("http://localhost:8080/uploadImage", formDataContent);
+                    await httpClient1.PostAsync($"http://localhost:8080/uploadImage/{post.Id}", formDataContent);
             }
 
 
@@ -158,7 +159,9 @@ public class PostHttpClient : IPostService
         }
         catch (Exception e)
         {
+            
             throw new Exception(e.Message + " " + e.StackTrace);
+          
         }
     }
     

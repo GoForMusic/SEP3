@@ -55,9 +55,9 @@ public class PostController {
 
 
     // Upload image
-    @PostMapping("/uploadImage")
-    public ResponseEntity uploadImage(@RequestBody()MultipartFile file) throws IOException {
-        System.out.println("Adding image");
+    @PostMapping("/uploadImage/{postId}")
+    public ResponseEntity uploadImage(@RequestBody()MultipartFile file,@PathVariable int postId) throws IOException {
+        System.out.println("Adding image for post " + postId );
         System.out.println(file.getOriginalFilename());
         System.out.println(file.getName());
         System.out.println(file.getContentType());

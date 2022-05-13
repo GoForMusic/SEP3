@@ -6,6 +6,7 @@
 @using System.Text.Encodings.Web
 @using System.Security.Claims
 @using System.Net.Http.Headers
+@using System.Text.Json
 @using HttpServices
 @using Microsoft.AspNetCore.Components.Web.Infrastructure
 @inject IPostService _postService;
@@ -66,7 +67,7 @@ else
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" style="margin-left: 20%">
                         <div class="panel-heading">
                             <h4 class="panel-title"style="color:white">Post info</h4>
                         </div>
@@ -74,8 +75,8 @@ else
                             <div class="form-group">
 
                                 <div class="col-sm-10">
-                                    <select class="form-select form-select-lg mb-3" @bind="test" name="category" aria-label=".form-select-lg example">
-                                        <option selected>Choose category</option>
+                                    <select class="form-select form-select-lg mb-3" @bind="subCategory" name="category" aria-label=".form-select-lg example" style="max-width: 70%">
+                                        <option selected >Choose category</option>
                                         @foreach (var category in allCategories)
                                         {
                                             _subcategories.AddRange(category.Subcategories);
@@ -88,12 +89,12 @@ else
                                     </select>
                                 </div>
                             </div>
-                           
+
 
                             <div class="form-group">
                                 <label id="name" class="col-sm-2 control-label" style="color:white">Title</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" @bind="post.Title">
+                                    <input type="text" class="form-control" @bind="post.Title" required style="max-width: 70%">
                                 </div>
                             </div>
                             <br/>
@@ -102,7 +103,8 @@ else
                                 <div class="col-md-7">
                                     <div class="well">
                                         <form accept-charset="UTF-8" action="" method="POST">
-                                            <textarea class="form-control" @bind="post.Description" id="text" name="text" placeholder="Description" rows="5"></textarea>
+                                            <label> Description about you Service/Product</label>
+                                            <textarea class="form-control" @bind="post.Description" id="text" name="text" placeholder="Description" rows="5"  ></textarea>
                                             <br/>
                                             <h6 class="pull-right" id="count_message" style="color:white"></h6>
 
@@ -111,27 +113,36 @@ else
                                 </div>
                             </div>
                             <br/>
-                        
+
                             <br/>
 
                             <div class="form-group">
 
                                 <label class="col-sm-2 control-label" style="color:white">Condition</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" @bind="post.Condition">
-                                </div>
+                                @* <div class="col-sm-10"> *@
+                                @* <input type="text" class="form-control" @bind="post.Condition"> *@
+                                @* </div> *@
 
+                                <select class="form-select" @bind="post.Condition" name="category" aria-label=".form-select example" style="max-width: 58%">
+                                    <option selected>Choose Condition</option>
+                                    @foreach (var condition in conditions)
+                                    {
+                                        <option>@condition</option>
+                                                                               
+                                    }
+                                </select>
                             </div>
-                            <br/>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label" style="color:white">E-mail address</label>
-                                <div class="col-sm-10">
-                                    <input type="email" class="form-control" @bind="post.Email">
-                                </div>
+                            
+                        </div>
+                        <br/>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" style="color:white">E-mail address</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" @bind="post.Email" style="max-width: 70%">
                             </div>
                         </div>
-                    </div>
-
+                  
+                    
                     <div class="panel panel-default">
                         <br/>
 
@@ -141,24 +152,38 @@ else
                             <div class="form-group">
                                 <label class="col-sm-2 control-label" style="color:white">Mobile number</label>
                                 <div class="col-sm-10">
-                                    <input type="tel" class="form-control" @bind="post.PhoneNumber">
+                                    <input type="tel" class="form-control" @bind="post.PhoneNumber" style="max-width: 70%">
                                 </div>
                             </div>
+                              <div class="form-group" style="margin-top: 5px">
+                                                            <label class="col-sm-2 control-label" style="color:white">Address</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="tel" class="form-control" @bind="post.Address" style="max-width: 70%;margin-top: 2px">
+                                                            </div>
+                                                        </div>
                             <br/>
 
                             <div>
-                            <InputFile OnChange="@OnInputFileChange"> Upload Image </InputFile>
-</div>
+                                <InputFile OnChange="@OnInputFileChange"> Upload Image </InputFile>
+                            </div>
 
                             <div class="form-group">
                                 <div class="col-sm-10 col-sm-offset-2">
-                                    <button type="button" class="btn btn-primary" onclick="@CreatePost">Submit</button>
+                                    <button type="button" class="btn btn-primary" onclick="@CreatePost" style="margin-top: 12px" >Submit</button>
 
                                 </div>
                             </div>
                         </div>
                     </div>
+                      </div>
                 </form>
+                <div style="color: red; margin: 10px;">
+                 @if (!string.IsNullOrEmpty(errorLabel)) {
+                                            <div class="errorPrompt">
+                                                <label> @errorLabel</label>
+                                            </div>
+                                        }
+                 </div>
             </div>
         </div>
     </div>
@@ -178,8 +203,20 @@ else
     private List<Category>? allCategories = new List<Category>();
     private List<Subcategory> _subcategories = new List<Subcategory>();
 
+    private string subCategory;
     public IBrowserFile? file;
 
+    private string errorLabel = String.Empty;
+
+
+    private IList<string> conditions = new List<string>()
+    {
+        "New","Used","Rarely Used"
+    };
+    
+
+    
+    // At the start of program 
     protected override async Task OnInitializedAsync()
     {
         try
@@ -198,107 +235,88 @@ else
             Console.WriteLine(e.Message);
         }
     }
-    
 
-    private string test = String.Empty;
-    
-    
+
+
+
     private async Task OnInputFileChange(InputFileChangeEventArgs e)
     {
         file = e.File;
-        
     }
 
     private async Task CreatePost()
     {
-       
-        int localId = 0;
-        foreach (var item in _subcategories)
+        try
         {
-            if (item.Name.Equals(test))
+            int localId = 0;
+            foreach (var item in _subcategories)
             {
-                localId = item.Id;
+                if (item.Name.Equals(subCategory))
+                {
+                    localId = item.Id;
+                }
             }
-        }
 
-        DateTime today = DateTime.Today;
-        post.DateCreated = new Date()
-        {
-            Day = today.Day,
-            Month = today.Month,
-            Year = today.Year
-        };
-        post.Images = new List<Image>();
-        post.Writer = _user;
-        if (post.Address == null)
-        {
-            post.Address = "Address not provided";
-        }
-        
-        
+            DateTime today = DateTime.Today;
+            post.DateCreated = new Date()
+            {
+                Day = today.Day,
+                Month = today.Month,
+                Year = today.Year
+            };
+            post.Images = new List<Image>();
+            post.Writer = _user;
+
+            if (post.Address == null)
+            {
+                post.Address = "Address not provided";
+            }
+
+
+
+    // Without image
+            if (file == null)
+            {
+                Post localTest = await _postService.AddPostAsync(localId, post);
+
+
+                Console.WriteLine(localTest.Description);
+            }
+
     // adding image function
-        if (file != null)
-        {
-            var form = new MultipartFormDataContent();
-            using (var fs = file.OpenReadStream())
+            if (file != null)
             {
-                using (var streamContent = new StreamContent(fs))
+                var form = new MultipartFormDataContent();
+                using (var fs = file.OpenReadStream())
                 {
-                    using (var fileContent = new ByteArrayContent(await streamContent.ReadAsByteArrayAsync()))
+                    using (var streamContent = new StreamContent(fs))
                     {
-                        fileContent.Headers.ContentType =  MediaTypeHeaderValue.Parse("multipart/form-data");
-                            
-                        form.Add(fileContent,"file",file.Name);
-                            
-                        Post localTest =  await  _postService.AddPostAsync(localId, post, form);
-                        Console.WriteLine(localTest.Description);     
+                        using (var fileContent = new ByteArrayContent(await streamContent.ReadAsByteArrayAsync()))
+                        {
+                            fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data");
+
+                            form.Add(fileContent, "file", file.Name);
+
+                            Post localTest = await _postService.AddPostAsync(localId, post, form);
+                            Console.WriteLine(localTest.Description);
+                        }
                     }
                 }
             }
-            
+            navMgr.NavigateTo("/");
         }
-        
-        if (file == null)
+        catch (Exception e)
         {
-            Post localTest = await _postService.AddPostAsync(localId, post);
-
-
-            Console.WriteLine(localTest.Description);
-        }
-
-
-
-   
-
-       
-    }
-
-    private async Task<MultipartFormDataContent> AddImage()
-    {
-        var form = new MultipartFormDataContent();
-        using (var fs = file.OpenReadStream())
+            errorLabel = "One or more field are empty";
+            Console.WriteLine(e.Message);
+            if (file.Size > 512000)
             {
-                using (var streamContent = new StreamContent(fs))
-                {
-                    using (var fileContent = new ByteArrayContent(await streamContent.ReadAsByteArrayAsync()))
-                    {
-                        fileContent.Headers.ContentType =  MediaTypeHeaderValue.Parse("multipart/form-data");
-                            
-                        form.Add(fileContent,"file",file.Name);
-                            
-                        return form; 
-                            
-                    }
-                }
+                errorLabel = "File size is greater than we support ";
             }
         }
+
+
+
     }
-
- 
-
-
-    
-
-
 
 }

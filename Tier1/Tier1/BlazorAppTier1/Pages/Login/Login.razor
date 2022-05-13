@@ -94,7 +94,7 @@
         try {
             await _authService.LoginAsync(UsernameLogin, PasswordLogin);
             navMgr.NavigateTo("/");    
-            errorLabel = $"Hello {UsernameLogin}, whats up buddy??";
+            //errorLabel = $"Hello {UsernameLogin}, whats up buddy??";
         }
         catch (Exception e) {
             errorLabel = $"Error : {e.Message}";
