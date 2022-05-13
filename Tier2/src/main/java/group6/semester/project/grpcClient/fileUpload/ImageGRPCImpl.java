@@ -15,7 +15,7 @@ import java.nio.file.Paths;
 
 public class ImageGRPCImpl {
     private imageGrpc.imageStub imageStub;
-    private StreamObserver<Image.FileUploadRequest> streamObserver = imageStub.upload(new FileUploadObserver());
+    private StreamObserver<Image.FileUploadRequest> streamObserver = getImageStub().upload(new FileUploadObserver());
     Path path = Paths.get("src/main/java/group6/semester/project/grpcClient/fileUpload/testImage.png");
 
 

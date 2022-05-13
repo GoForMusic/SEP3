@@ -109,7 +109,7 @@
     private string nextElement = String.Empty;
     private string backElement = String.Empty;
 
-    protected async override Task OnInitializedAsync() {
+    protected  override async Task OnInitializedAsync() {
         allCategories = await _postService.GetALlCategoriesAsync();
         allPosts = await _postService.GetAllPosts();
         CurrentPage = 1;

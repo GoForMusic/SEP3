@@ -1,5 +1,6 @@
 package group6.semester.project;
 
+import group6.semester.project.grpcClient.fileUpload.ImageGRPCImpl;
 import group6.semester.project.grpcClient.post.PostGRPCClientImpl;
 
 import group6.semester.project.grpcClient.user.GRPCUserClientImpl;
@@ -13,6 +14,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -25,7 +27,19 @@ public class Sep3T2Application {
 
 
         SpringApplication.run(Sep3T2Application.class, args);
-        testSearch();
+     //   testSearch();
+
+        testImage();
+    }
+
+    private static void testImage() {
+        ImageGRPCImpl imageGRPC = new ImageGRPCImpl();
+        try {
+            imageGRPC.uploadImage();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private static void testSearch() {
