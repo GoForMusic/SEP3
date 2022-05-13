@@ -7,14 +7,13 @@ using System.Text.Json;
 using Contracts;
 using Entities.Models;
 using Microsoft.AspNetCore.Components.Forms;
-
 using Microsoft.Extensions.Primitives;
 
 namespace HttpServices;
 
 public class PostHttpClient : IPostService
 {
-   /** public async Task<Post> AddPostAsync(int subCategoryId, Post postToAdd)
+    /** public async Task<Post> AddPostAsync(int subCategoryId, Post postToAdd)
     {
         try
         {
@@ -31,22 +30,21 @@ public class PostHttpClient : IPostService
     }
 
     **/
-    
+    // Not using this one
     public async Task<string> AddImage(MultipartFormDataContent form)
     {
         try
         {
             Console.WriteLine("Inside add image http client");
-            
+
             using (var httpClient = new HttpClient())
             {
-              
-                httpClient.DefaultRequestHeaders.Add("Authentification","abc123");
+                httpClient.DefaultRequestHeaders.Add("Authentification", "abc123");
                 HttpResponseMessage responseMessage =
                     await httpClient.PostAsync("http://localhost:8080/uploadImage", form);
                 string responseMessageDes = GetDeserialized<string>(responseMessage.ToString());
                 httpClient.Dispose();
-                
+
                 return responseMessageDes.ToString();
             }
         }
@@ -69,7 +67,6 @@ public class PostHttpClient : IPostService
         {
             throw new Exception(e.Message);
         }
-
     }
 
     public async Task<List<Post>> GetPostsByName(string name)
@@ -109,12 +106,14 @@ public class PostHttpClient : IPostService
         return obj;
     }
 
-    public async Task<Post> AddPostAsync(int subCategoryId, Post postToAdd,[Optional]MultipartFormDataContent form )
+
+    // Use this one as it add image and post 
+    public async Task<Post> AddPostAsync(int subCategoryId, Post postToAdd, [Optional] MultipartFormDataContent form)
     {
         string content = string.Empty;
         Post post = new Post();
         MultipartFormDataContent? formDataContent = form;
-      
+
         try
         {
             using (var httpClient = new HttpClient())
@@ -130,45 +129,30 @@ public class PostHttpClient : IPostService
                 HttpResponseMessage responseMessage =
                     await httpClient.PostAsync(uri, stringContent);
 
-                 content = await responseMessage.Content.ReadAsStringAsync();
-                 post =  GetDeserialized<Post>(content);
+                content = await responseMessage.Content.ReadAsStringAsync();
+                post = GetDeserialized<Post>(content);
             }
             //For adding image
 
-                
+
             if (formDataContent != null)
             {
                 Console.WriteLine("Ading image post ");
                 Console.WriteLine(form.Headers.ToString());
-                
+
                 using var httpClient1 = new HttpClient();
-                httpClient1.DefaultRequestHeaders.Add("Authentification","abc123");
+                httpClient1.DefaultRequestHeaders.Add("Authentification", "abc123");
                 Console.WriteLine(post.Id);
                 HttpResponseMessage responseForImage =
                     await httpClient1.PostAsync($"http://localhost:8080/uploadImage/{post.Id}", formDataContent);
             }
 
 
-
-
-              
-       
             return post;
-                
-            
         }
         catch (Exception e)
         {
-            
             throw new Exception(e.Message + " " + e.StackTrace);
-          
         }
     }
-    
-    
-
 }
-
-
-    
-    
