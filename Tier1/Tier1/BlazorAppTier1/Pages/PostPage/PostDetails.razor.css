@@ -474,4 +474,7 @@ h5{
     .section-inline p{
         font-size: 14px;
     }
+    .details{
+        /*overflow: scroll*/
+    }
 }
