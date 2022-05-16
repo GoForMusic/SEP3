@@ -12,7 +12,7 @@
 <div class="row">
 
     @if (postToShow == null) {
-        <p> Loading posts...</p>
+        <LoadingComponent message="posts"></LoadingComponent>
     }else {
         
         @foreach (var post in (userBookedList)?listOfBookedPosts:postToShow) {
