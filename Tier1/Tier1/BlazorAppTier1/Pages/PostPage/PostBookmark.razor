@@ -9,7 +9,7 @@
 @inject NavigationManager Navigation
 
 
-@attribute [Authorize]
+@attribute [Authorize(Policy = "User")]
 
 <PageTitle>BookMark Page: @CurrentPage</PageTitle>
 
