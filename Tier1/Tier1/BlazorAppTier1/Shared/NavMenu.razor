@@ -1,4 +1,5 @@
 ﻿@using Contracts
+@using Entities.Models
 @inject IAuthService authManager
 @inject NavigationManager navMgr
 
@@ -21,20 +22,24 @@
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
 									<a class="nav-link" href="Login" role="button">Login</a>
 								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="PostCreation" role="button">Add </a>
-								</li>
-								<AuthorizeView>
-									<Authorized>
-										<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-											<a class="nav-link" href="PostBookmark" role="button">Bookmark list</a>
-										</li>
-										<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-											<a class="nav-link" @onclick="@(()=>Logout())" role="button">Logout</a>
-										</li>
-									</Authorized>
-									<NotAuthorized>
-									</NotAuthorized>
+								
+								<AuthorizeView Policy="User">
+									<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+										<a class="nav-link" href="PostCreation" role="button">Add </a>
+									</li>
+									<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+										<a class="nav-link" href="PostBookmark" role="button">Bookmark list</a>
+									</li>
+								</AuthorizeView>
+								<AuthorizeView Policy="Admin">
+									<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+										<a class="nav-link" href="PostBookmark" role="button">Reports</a>
+									</li>
+								</AuthorizeView>
+								<AuthorizeView Policy="All">
+									<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+										<a class="nav-link" @onclick="@(() => Logout())" role="button">Logout</a>
+									</li>
 								</AuthorizeView>
 							</ul>
 						</div>
@@ -48,6 +53,9 @@
 </div>
 
 @code {
+
+	private User? user = new User();
+	
 	private async Task Logout()
 	{
 		await authManager.LogoutAsync();
