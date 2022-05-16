@@ -23,6 +23,13 @@ builder.Services.AddScoped<IAuthService, AuthServiceImpl>();
 builder.Services.AddScoped<IPostService, PostHttpClient>();
 builder.Services.AddScoped<ICommentService, CommentHttpClient>();
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Admin", pb => pb.RequireAuthenticatedUser().RequireClaim("Role", "Admin"));
+    options.AddPolicy("User",
+        a => a.RequireAuthenticatedUser().RequireClaim("Role", "User"));
+    options.AddPolicy("All",pb => pb.RequireAuthenticatedUser().RequireClaim("Role", "User", "Admin"));
+});
 
 var app = builder.Build();
 
