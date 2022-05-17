@@ -12,5 +12,6 @@ public interface IAuthService {
     public Action<ClaimsPrincipal> OnAuthStateChanged { get; set; }
     
     
+    
 
 }
