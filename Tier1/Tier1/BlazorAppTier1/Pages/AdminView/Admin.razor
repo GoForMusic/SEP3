@@ -48,8 +48,8 @@ else
                 <td>@item.reason</td>
                 
                 <td>
-                    <label @onclick="@(() => RemoveReport(item.reportId))" style="cursor:pointer; color: red; font-weight: bold">&#x2717;</label>
-                    </td>
+                    <label @onclick="@(() => RemoveReport(item))" style="cursor:pointer; color: red; font-weight: bold">&#x2717;</label>
+                </td>
             </tr>
         }
         </tbody>
@@ -63,13 +63,13 @@ else
 
     private List<Report> _reports;
 
-    private async Task RemoveReport(int id)
+    private async Task RemoveReport(Report item)
     {
         try
         {
-            Report reportToRemove = _reports.First(report => report.reportId == id);
-            await _reportService.RemoveReport(reportToRemove);
-            _reports.Remove(reportToRemove);
+            
+            await _reportService.RemoveReport(item);
+            _reports.Remove(item);
         }
         catch (Exception e)
         {
