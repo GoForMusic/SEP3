@@ -54,7 +54,21 @@ public class ConvertGRPC {
         };
         return bookmark;
     }
-    
+
+    public static Entities.Models.Report ConvertReportObjToReport(ReportObj reportObj)
+    {
+        Entities.Models.Report report = new Entities.Models.Report()
+        {
+            User = GetUserFromUserObj(reportObj.UserID),
+            Post = ConvertPostObjToPost(reportObj.PostID),
+            Reason = reportObj.Reason
+        };
+
+        return report;
+    }
+
+
+
     public static ListOfPostObj ConvertListPostToObj(List<Entities.Models.Post> request) {
         ListOfPostObj postObj = new ListOfPostObj();
         foreach (var item in request) {
@@ -63,6 +77,8 @@ public class ConvertGRPC {
 
         return postObj;
     }
+
+ 
     
     public static ListOfPostsForBooking ConvertListPostToObjBooking(List<Entities.Models.Post> request) {
         ListOfPostsForBooking postObj = new ListOfPostsForBooking();
@@ -99,7 +115,7 @@ public class ConvertGRPC {
         };
         return bookmarkObj;
     }
-
+  
     public static UserObj ConvertUserToUserObj(Entities.Models.User reqest)
     {
         UserObj userObj = new UserObj()

@@ -6,8 +6,13 @@ namespace EFC.DAOImpl;
 
 public class ReportDAOImpl : IReportService
 {
+    private DbAccess _context;
+    public ReportDAOImpl(DbAccess context)
+    {
+        _context = context;
+    }
 
-    private readonly DbAccess _context;
+    
     public Task<Report> AddReport(Report report)
     {
         throw new NotImplementedException();
@@ -34,11 +39,14 @@ public class ReportDAOImpl : IReportService
     {
         try
         {
-            return await _context.Reports.Include(t => t.Post).Include(t => t.User).ToListAsync();
+            List<Report> x =  await _context.Reports.Include(t => t.Post).Include(t => t.User).ToListAsync();
+            Console.WriteLine(x[0].Post.Id);
+            return x;
         }
         catch (Exception e)
         {
             throw new Exception(e.Message);
         }
+         
     }
 }

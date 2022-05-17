@@ -16,7 +16,7 @@ public class ReportController  {
         this.reportService = reportService;
     }
 
-    @DeleteMapping(value = "/Reports/{PostId}/{reason}/{UserId}")
+    @DeleteMapping(value = "/Reports/{PostId}/{UserId}")
     public ResponseEntity RemoveReport(@PathVariable int postId, @PathVariable String reason, @PathVariable int UserId){
         try{
             Report report = new Report();

@@ -6,10 +6,12 @@ import group6.semester.project.grpcClient.ConvertGrpc;
 import group6.semester.project.grpcClient.ManagedChannelGetter;
 import group6.semester.project.model.Report;
 import io.grpc.ManagedChannel;
+import org.springframework.stereotype.Service;
 
 import java.security.cert.Extension;
 import java.util.List;
 
+@Service
 public class ReportGRPCClientImpl implements ReportClient {
 
     private ReportGrpc.ReportBlockingStub reportBlockingStub;
