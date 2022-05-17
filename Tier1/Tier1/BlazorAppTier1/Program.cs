@@ -22,6 +22,7 @@ builder.Services.AddScoped<IUserService, UserHttpClient>();
 builder.Services.AddScoped<IAuthService, AuthServiceImpl>();
 builder.Services.AddScoped<IPostService, PostHttpClient>();
 builder.Services.AddScoped<ICommentService, CommentHttpClient>();
+builder.Services.AddScoped<IReportService, ReportHttpsCLient>();
 
 builder.Services.AddAuthorization(options =>
 {
