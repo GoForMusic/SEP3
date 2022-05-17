@@ -2,11 +2,7 @@
 
 public class Report {
     public int  PostId { get; set; }
-    public string ReporterUsername { get; set; }
-    public string Reason { get; set; }
-
-
-    public Report()
-    {
-    }
+    public int UserId { get; set; }
+    public string reason { get; set; }
+    public int reportId { get; set; }
 }
