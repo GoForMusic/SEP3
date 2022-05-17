@@ -22,7 +22,7 @@
         <em>Loading...</em>
     </p>
 }
-else if (_reports .Any())
+else if (_reports.Any())
 {
     <p>
         <em>No reports</em>
@@ -62,7 +62,19 @@ else
 @code {
 
     private List<Report> _reports;
-
+    
+    
+    protected override async Task OnInitializedAsync() {
+        try
+        {
+            _reports = await _reportService.GetAllReports();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+    }
+    
     private async Task RemoveReport(Report item)
     {
         try
