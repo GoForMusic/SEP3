@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+import "user.proto";
+import "post.proto";
+
+option csharp_namespace = "GRPCService";
+package report;
+
+service Report{
+  rpc RemoveReport(ReportObj) returns(EmptyReportMark);
+  rpc GetReports(EmptyReportMark) returns (ListOfReports);
+}
+
+message EmptyReportMark{
+
+}
+
+message ListOfReports{
+  repeated ReportObj reportObj = 1;
+}
+
+message ReportObj{
+  post.PostObj PostID = 1;
+  user.UserObj UserID =2;
+  string Reason = 3;
+
+}
