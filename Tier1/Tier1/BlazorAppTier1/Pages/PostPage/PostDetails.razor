@@ -4,6 +4,7 @@
 @using BlazorAppTier1.Pages.UIElements
 @inject IPostService _postService
 
+
 <h3>PostDetails</h3>
 
 
@@ -31,7 +32,7 @@
                 </div>
                 @if (showComments) {
                     <Modal>
-                        <Comments CommentsToShow="_post.Comments" postId="Id"></Comments> 
+                        <Comments CommentsToShow="_post.Comments" postId="Id"></Comments>
                         <button @onclick="ToggleShowComments" > Close</button>
                     </Modal>
                 }
@@ -43,10 +44,29 @@
                 <div>
                     <a class="btn" @onclick="ToggleShowComments"><i class="uil uil-shopping-cart icon" style="margin-top: 10%"></i>View Comments</a>
                 </div>
-            </div>
-            <br/>
-            <br/>
 
+
+                <AuthorizeView>
+                    <Authorized>
+                        <!--   For reporting post                 -->
+                                        <button @onclick="ToogleReport">Report</button>
+                                        @if (ReportThisPost)
+                                        {
+                                            <Modal>
+                                                <div>
+                                                    <ReportPost postId="Id"></ReportPost>
+
+                                                </div>
+                                            </Modal>
+                                        }
+                    </Authorized>
+                </AuthorizeView>
+
+
+                <br/>
+                <br/>
+
+            </div>
         </div>
 
 
@@ -91,8 +111,12 @@
     private User? _user = new User();
     private bool showComments;
 
-    protected override async Task OnInitializedAsync() {
-        try {
+    private bool ReportThisPost;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
             _post = await _postService.GetPostDetails(Id);
             _user = _post.Writer;
         }
@@ -101,6 +125,11 @@
         }
     }
 
+    private void ToogleReport()
+    {
+        ReportThisPost = !ReportThisPost;
+
+    }
     private void ToggleShowComments() {
         showComments = !showComments;
     }
