@@ -9,6 +9,7 @@ package report;
 service Report{
   rpc RemoveReport(ReportObj) returns(EmptyReportMark);
   rpc GetReports(EmptyReportMark) returns (ListOfReports);
+  rpc AddReport(ReportObj) returns (AddingReportStatus);
 }
 
 message EmptyReportMark{
@@ -24,4 +25,8 @@ message ReportObj{
   user.UserObj UserID =2;
   string Reason = 3;
 
+}
+
+message AddingReportStatus{
+  string  AddingReportStatus = 1;
 }

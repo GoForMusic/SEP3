@@ -266,4 +266,20 @@ public class ConvertGRPC {
             Comments = { GetRepeatedFieldsOfCommentObjsFromListOfComments(request.Comments!) }
         }; 
     }
+
+    public static Entities.Models.Report ConvertReportObjReport(ReportObj reportObj)
+    {
+        Entities.Models.Report report = new Entities.Models.Report();
+        Entities.Models.Post post = ConvertPostObjToPost(reportObj.PostID);
+        report.Post = post;
+        Entities.Models.User user = GetUserFromUserObj(reportObj.UserID);
+        report.User = user;
+
+        report.Reason = reportObj.Reason;
+
+        return report;
+
+    }
+    
+
 }

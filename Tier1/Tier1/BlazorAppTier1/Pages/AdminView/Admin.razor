@@ -43,9 +43,9 @@ else
         @foreach (var item in _reports)
         {
             <tr>
-                <td>@item.PostId</td>
+                @*<td>@item.PostId</td>
                 <td>@item.UserId</td>
-                <td>@item.reason</td>
+                <td>@item.reason</td>*@
                 
                 <td>
                     <label @onclick="@(() => RemoveReport(item))" style="cursor:pointer; color: red; font-weight: bold">&#x2717;</label>

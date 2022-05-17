@@ -24,7 +24,7 @@ public class BookmarkProtoImpl : Bookmark.BookmarkBase
         }
         catch (Exception e)
         {
-            throw new RpcException(new Status(StatusCode.AlreadyExists, e.Message));
+            throw new RpcException(new Grpc.Core.Status(StatusCode.AlreadyExists, e.Message));
         }
     }
 
@@ -39,7 +39,7 @@ public class BookmarkProtoImpl : Bookmark.BookmarkBase
         }
         catch (Exception e)
         {
-            throw new RpcException(new Status(StatusCode.NotFound,e.Message));
+            throw new RpcException(new Grpc.Core.Status(StatusCode.NotFound,e.Message));
         }
         
     }
@@ -54,7 +54,7 @@ public class BookmarkProtoImpl : Bookmark.BookmarkBase
         }
         catch (Exception e)
         {
-            throw new RpcException(new Status(StatusCode.NotFound,e.Message));
+            throw new RpcException(new Grpc.Core.Status(StatusCode.NotFound,e.Message));
         }
     }
 }

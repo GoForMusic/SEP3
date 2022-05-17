@@ -7,7 +7,7 @@ import java.util.List;
 
 @Service
 public interface ReportClient {
-    void AddReport(Report report);
+    void AddReport(Report report) throws Exception;
     void RemoveReport(Report report);
 
     List<Report> getReports();

@@ -127,7 +127,8 @@ public class ConvertGrpc {
     public static ReportOuterClass.ReportObj getGrpcReportFromOurReport(Report report){
         ReportOuterClass.ReportObj reportObj= ReportOuterClass.ReportObj.newBuilder()
                 .setPostID(getGrpcPostFromOurPost(report.getPost()))
-                .setUserID(getGrpcUserFromUser(report.getReporter())).build();
+                .setUserID(getGrpcUserFromUser(report.getReporter())).setReason(
+                report.getReason()).build();
         return reportObj;
     }
 

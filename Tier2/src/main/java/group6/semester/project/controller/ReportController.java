@@ -32,4 +32,18 @@ public class ReportController  {
         var temp = reportService.getReports();
         return ResponseEntity.ok(temp);
     }
+
+    @PostMapping("/AddReport")
+    public ResponseEntity addReport(@RequestBody Report report){
+        try
+        {
+            System.out.println(report.getReporter().getUsername() + "Wants to report " +report.getReason());
+            reportService.AddReport(report);
+            return ResponseEntity.ok("Report Added");
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+            return new ResponseEntity("Report could not be added",HttpStatus.BAD_REQUEST);
+        }
+    }
 }

@@ -8,9 +8,37 @@ public class ReportDAOImpl : IReportService
 {
 
     private readonly DbAccess _context;
-    public Task<Report> AddReport(Report report)
+
+    public ReportDAOImpl(DbAccess context)
     {
-        throw new NotImplementedException();
+        _context = context;
+    }
+
+    public async Task<bool> AddReport(Report report)
+    {
+      
+        try
+        {
+            Console.WriteLine(report.Reason);
+            
+            Console.WriteLine(report.Post.Id + "    " + report.User.Username + "   " + report.Reason);
+          var  returnedReport = await _context.Reports.AddAsync(report);
+            await _context.SaveChangesAsync();
+            if (returnedReport == null )
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw new Exception("Report Cannot be added");
+        }
+
     }
 
     public async Task<Report> RemoveReport(Report report)

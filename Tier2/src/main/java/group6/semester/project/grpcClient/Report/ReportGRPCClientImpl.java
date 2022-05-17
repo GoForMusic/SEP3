@@ -6,9 +6,12 @@ import group6.semester.project.grpcClient.ConvertGrpc;
 import group6.semester.project.grpcClient.ManagedChannelGetter;
 import group6.semester.project.model.Report;
 import io.grpc.ManagedChannel;
+import org.springframework.stereotype.Service;
 
+import java.lang.constant.Constable;
 import java.security.cert.Extension;
 import java.util.List;
+@Service
 
 public class ReportGRPCClientImpl implements ReportClient {
 
@@ -23,8 +26,19 @@ public class ReportGRPCClientImpl implements ReportClient {
     }
 
     @Override
-    public void AddReport(Report report) {
-
+    public void AddReport(Report report) throws Exception
+    {
+        try
+        {
+            ReportOuterClass.ReportObj reportObjToSend = ConvertGrpc.getGrpcReportFromOurReport(report);
+            getReportBlockingStub().addReport(reportObjToSend);
+            disposeStub();
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            throw new Exception("Could not add report");
+        }
     }
 
     @Override

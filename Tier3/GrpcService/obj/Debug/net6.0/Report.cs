@@ -28,17 +28,20 @@ namespace GRPCService {
             "byIRCg9FbXB0eVJlcG9ydE1hcmsiNQoNTGlzdE9mUmVwb3J0cxIkCglyZXBv",
             "cnRPYmoYASADKAsyES5yZXBvcnQuUmVwb3J0T2JqIlkKCVJlcG9ydE9iahId",
             "CgZQb3N0SUQYASABKAsyDS5wb3N0LlBvc3RPYmoSHQoGVXNlcklEGAIgASgL",
-            "Mg0udXNlci5Vc2VyT2JqEg4KBlJlYXNvbhgDIAEoCTKCAQoGUmVwb3J0EjoK",
-            "DFJlbW92ZVJlcG9ydBIRLnJlcG9ydC5SZXBvcnRPYmoaFy5yZXBvcnQuRW1w",
-            "dHlSZXBvcnRNYXJrEjwKCkdldFJlcG9ydHMSFy5yZXBvcnQuRW1wdHlSZXBv",
-            "cnRNYXJrGhUucmVwb3J0Lkxpc3RPZlJlcG9ydHNCDqoCC0dSUENTZXJ2aWNl",
-            "YgZwcm90bzM="));
+            "Mg0udXNlci5Vc2VyT2JqEg4KBlJlYXNvbhgDIAEoCSIwChJBZGRpbmdSZXBv",
+            "cnRTdGF0dXMSGgoSQWRkaW5nUmVwb3J0U3RhdHVzGAEgASgJMr4BCgZSZXBv",
+            "cnQSOgoMUmVtb3ZlUmVwb3J0EhEucmVwb3J0LlJlcG9ydE9iahoXLnJlcG9y",
+            "dC5FbXB0eVJlcG9ydE1hcmsSPAoKR2V0UmVwb3J0cxIXLnJlcG9ydC5FbXB0",
+            "eVJlcG9ydE1hcmsaFS5yZXBvcnQuTGlzdE9mUmVwb3J0cxI6CglBZGRSZXBv",
+            "cnQSES5yZXBvcnQuUmVwb3J0T2JqGhoucmVwb3J0LkFkZGluZ1JlcG9ydFN0",
+            "YXR1c0IOqgILR1JQQ1NlcnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GRPCService.UserReflection.Descriptor, global::GRPCService.PostReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::GRPCService.EmptyReportMark), global::GRPCService.EmptyReportMark.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GRPCService.ListOfReports), global::GRPCService.ListOfReports.Parser, new[]{ "ReportObj" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GRPCService.ReportObj), global::GRPCService.ReportObj.Parser, new[]{ "PostID", "UserID", "Reason" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GRPCService.ReportObj), global::GRPCService.ReportObj.Parser, new[]{ "PostID", "UserID", "Reason" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GRPCService.AddingReportStatus), global::GRPCService.AddingReportStatus.Parser, new[]{ "AddingReportStatus_" }, null, null, null, null)
           }));
     }
     #endregion
@@ -595,6 +598,178 @@ namespace GRPCService {
           }
           case 26: {
             Reason = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class AddingReportStatus : pb::IMessage<AddingReportStatus>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AddingReportStatus> _parser = new pb::MessageParser<AddingReportStatus>(() => new AddingReportStatus());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AddingReportStatus> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GRPCService.ReportReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AddingReportStatus() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AddingReportStatus(AddingReportStatus other) : this() {
+      addingReportStatus_ = other.addingReportStatus_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AddingReportStatus Clone() {
+      return new AddingReportStatus(this);
+    }
+
+    /// <summary>Field number for the "AddingReportStatus" field.</summary>
+    public const int AddingReportStatus_FieldNumber = 1;
+    private string addingReportStatus_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AddingReportStatus_ {
+      get { return addingReportStatus_; }
+      set {
+        addingReportStatus_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AddingReportStatus);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AddingReportStatus other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AddingReportStatus_ != other.AddingReportStatus_) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AddingReportStatus_.Length != 0) hash ^= AddingReportStatus_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AddingReportStatus_.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AddingReportStatus_);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AddingReportStatus_.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AddingReportStatus_);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (AddingReportStatus_.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AddingReportStatus_);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AddingReportStatus other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AddingReportStatus_.Length != 0) {
+        AddingReportStatus_ = other.AddingReportStatus_;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AddingReportStatus_ = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AddingReportStatus_ = input.ReadString();
             break;
           }
         }

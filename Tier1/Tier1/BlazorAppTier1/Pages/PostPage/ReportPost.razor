@@ -5,6 +5,7 @@
 @inject IAuthService authService
 @inject IUserService _userService;
 @inject NavigationManager _navigationManager;
+@inject IReportService _reportService;
 
 <AuthorizeView>
     <Authorized>
@@ -19,15 +20,16 @@
 @code {
 
     private Report _report = new Report();
-    [Parameter] public int postId { get; set; }
+    [Parameter] public Post PostForReport { get; set; }
 
 
     private async Task AddReport(string userName)
     {
-        _report.ReporterUsername = userName;
-        _report.PostId = postId;
+        _report.Reporter =await _userService.GetUserAsync(userName);
+        _report.Post = PostForReport;
         
-        Console.WriteLine($"{userName} had added report on {_report.PostId} cause {_report.Reason}");
+        //Console.WriteLine($"{userName} had added report on {_report.PostId} cause {_report.Reason}");
+       await _reportService.AddReport(_report);
         _navigationManager.NavigateTo($"/");
     }
 

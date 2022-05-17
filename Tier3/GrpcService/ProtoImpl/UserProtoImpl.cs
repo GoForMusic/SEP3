@@ -36,7 +36,7 @@ public class UserProtoImpl : User.UserBase {
             return userObj;
         }
         catch (Exception e) {
-            throw new RpcException(new Status(StatusCode.PermissionDenied, e.Message));
+            throw new RpcException(new Grpc.Core.Status(StatusCode.PermissionDenied, e.Message));
         }
     }
 
@@ -45,7 +45,7 @@ public class UserProtoImpl : User.UserBase {
         try {
             Entities.Models.User? userFromDatabase = _service.GetUser(request.UserName).Result;
             if (userFromDatabase == null) {
-                throw new RpcException(new Status(StatusCode.NotFound, "Username not found"));
+                throw new RpcException(new Grpc.Core.Status(StatusCode.NotFound, "Username not found"));
             }
 
             UserObj userToSend = new UserObj() {
@@ -59,7 +59,7 @@ public class UserProtoImpl : User.UserBase {
         }             
         catch (Exception e) {
             Console.WriteLine(e.Message + "\n\n\n");
-            throw new RpcException(new Status(StatusCode.NotFound, e.Message));
+            throw new RpcException(new Grpc.Core.Status(StatusCode.NotFound, e.Message));
         }
     }
 }
