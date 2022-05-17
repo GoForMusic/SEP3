@@ -27,6 +27,7 @@ message UserForBookMark{
 message BookmarkObj{
   user.UserObj User=1;
   post.PostObj Post=2;
+  
 }
 
 message StringAndIntegerBookmark{

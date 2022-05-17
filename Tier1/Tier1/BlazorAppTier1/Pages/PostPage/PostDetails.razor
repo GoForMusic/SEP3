@@ -19,8 +19,6 @@
                 <label for="desc-1">Description</label>
                 <input class="desc-btn" type="radio" id="desc-2" name="desc-btn"/>
                 <label for="desc-2">Details</label>
-                <input class="desc-btn" type="radio" id="desc-3" name="desc-btn"/>
-                <label for="desc-3">Comments</label>
                 <div class="section-fluid desc-sec accor-1">
                     <p>@_post.Description</p>
                 </div>
@@ -31,11 +29,19 @@
                     <p> Email : @_post.Email </p>
                     <p> Phone number : @_post.PhoneNumber</p>
                 </div>
-                <div class="section-fluid desc-sec accor-3 commentSection">
-                    <Comments CommentsToShow="_post.Comments"></Comments>
+                @if (showComments) {
+                    <Modal>
+                        <Comments CommentsToShow="_post.Comments" postId="Id"></Comments> 
+                        <button @onclick="ToggleShowComments" > Close</button>
+                    </Modal>
+                }
+
+
+                <div>
+                    <a  class="btn"><i class="uil uil-shopping-cart icon" style="margin-top: 10%"></i>Bookmark</a>
                 </div>
                 <div>
-                    <a href="#" class="btn"><i class="uil uil-shopping-cart icon" style="margin-top: 10%"></i>Bookmark</a>
+                    <a class="btn" @onclick="ToggleShowComments"><i class="uil uil-shopping-cart icon" style="margin-top: 10%"></i>View Comments</a>
                 </div>
             </div>
             <br/>
@@ -83,6 +89,7 @@
 
     private Post? _post = new Post();
     private User? _user = new User();
+    private bool showComments;
 
     protected override async Task OnInitializedAsync() {
         try {
@@ -93,5 +100,10 @@
             throw new Exception(e.Message);
         }
     }
+
+    private void ToggleShowComments() {
+        showComments = !showComments;
+    }
+
 
 }
