@@ -70,7 +70,7 @@ public class ConvertGrpc {
         post.setTitle(postObj.getTitle());
         post.setImages(getListOfImageFromListOfGrpcImages(postObj.getImagesList()));
         post.setDateCreated(date);
-        if ( postObj.getCommentsList() !=null || !postObj.getCommentsList().isEmpty()){
+        if (postObj.getCommentsList() != null || !postObj.getCommentsList().isEmpty()) {
             post.setComments(getListOfCommentFromGrpcListOfComments(postObj.getCommentsList()));
         }
 
@@ -90,7 +90,7 @@ public class ConvertGrpc {
                 .setDateCreated(getDateCreatedFromYearMonthDay(post.getDateCreated()))
                 .addAllComments(getListOfGRPCCommentsFromOurListOfComments(new ArrayList<>()))
                 .setTitle(post.getTitle()).setPrice(post.getPrice())
-                . setDescription(post.getDescription())
+                .setDescription(post.getDescription())
                 .setPhoneNumber(post.getPhoneNumber())
                 .setEmail(post.getEmail())
                 .addAllImages(getListOfGRPCImageFromListOfImage(post.getImages()))
@@ -102,7 +102,7 @@ public class ConvertGrpc {
 
     }
 
-    public static BookmarkOuterClass.BookmarkObj getGrpcBookmarkFromOurBookmark(Bookmark bookmark){
+    public static BookmarkOuterClass.BookmarkObj getGrpcBookmarkFromOurBookmark(Bookmark bookmark) {
         BookmarkOuterClass.BookmarkObj bookmarkObj = BookmarkOuterClass.BookmarkObj.newBuilder()
                 .setPost(getGrpcPostFromOurPost(bookmark.getPost()))
                 .setUser(getGrpcUserFromUser(bookmark.getUser()))
@@ -111,15 +111,14 @@ public class ConvertGrpc {
     }
 
 
-
-    public static Bookmark getBookmarkFromGrpcBookmark(BookmarkOuterClass.BookmarkObj bookmark){
+    public static Bookmark getBookmarkFromGrpcBookmark(BookmarkOuterClass.BookmarkObj bookmark) {
         Bookmark local = new Bookmark();
         local.setUser(getUserFromGrpcUser(bookmark.getUser()));
         local.setPost(getPostFromGrpcPost(bookmark.getPost()));
         return local;
     }
 
-    public static PostOuterClass.DateCreated getDateCreatedFromYearMonthDay(Date date){
+    public static PostOuterClass.DateCreated getDateCreatedFromYearMonthDay(Date date) {
         PostOuterClass.DateCreated dateCreated = PostOuterClass.DateCreated.newBuilder().setDay(date.getDay()).setMonth(date.getMonth()).setYear(date.getYear()).build();
         return dateCreated;
 
@@ -201,18 +200,13 @@ public class ConvertGrpc {
     }
 
 
-
-
-
-
     /**
      * It takes a list of our Comment objects and returns a list of GRPCService.Comment.CommentObj objects
      *
      * @param list The list of comments that you want to convert to a list of GRPC comments.
      * @return A list of GRPCService.Comment.CommentObj
      */
-    public static List<GRPCService.Comment.CommentObj> getListOfGRPCCommentsFromOurListOfComments(List<Comment> list)
-    {
+    public static List<GRPCService.Comment.CommentObj> getListOfGRPCCommentsFromOurListOfComments(List<Comment> list) {
         List<GRPCService.Comment.CommentObj> commentObjs = new ArrayList<>();
         for (Comment i : list) {
             commentObjs.add(getCommentObjFromComment(i));
@@ -250,10 +244,10 @@ public class ConvertGrpc {
         return category;
     }
 
-    public static List<Category> getListOfCategoryFromCategory(List<CategoryOuterClass.CategoryObj> categoryObjList){
+    public static List<Category> getListOfCategoryFromCategory(List<CategoryOuterClass.CategoryObj> categoryObjList) {
         List<Category> categories = new ArrayList<>();
-        for (CategoryOuterClass.CategoryObj i:categoryObjList
-             ) {
+        for (CategoryOuterClass.CategoryObj i : categoryObjList
+        ) {
             categories.add(getCategoryFromGrpcCategory(i));
 
         }
@@ -299,7 +293,7 @@ public class ConvertGrpc {
      * @param comment The comment object that we want to convert to a GRPC object.
      * @return A CommentObj object is being returned.
      */
-    public static GRPCService.Comment.CommentObj getCommentObjFromComment(Comment comment){
+    public static GRPCService.Comment.CommentObj getCommentObjFromComment(Comment comment) {
         GRPCService.Comment.CommentObj commentObj = GRPCService.Comment.CommentObj.newBuilder()
                 .setBody(comment.getBody())
                 .setWriter(getGrpcUserFromUser(comment.getWriter()))
@@ -319,7 +313,7 @@ public class ConvertGrpc {
      * @param commentObj The GRPC object that you want to convert to a Comment object.
      * @return A Comment object
      */
-    public static Comment getCommentFromGRPCCommentObj(GRPCService.Comment.CommentObj commentObj){
+    public static Comment getCommentFromGRPCCommentObj(GRPCService.Comment.CommentObj commentObj) {
         Comment comment = new Comment();
         comment.setId(commentObj.getId());
         comment.setBody(commentObj.getBody());
@@ -330,8 +324,6 @@ public class ConvertGrpc {
         date.setDay(commentObj.getDateCreated().getDay());
         comment.setDateCreated(date);
         return comment;
-
-
     }
 
 

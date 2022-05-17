@@ -1,49 +1,60 @@
 ﻿@using Entities.Models
+@using Contracts
+@using HttpServices
 @namespace BlazorAppTier1.Pages.UIElements 
+@inject NavigationManager _navigationManager;  
+@inject ICommentService _commentService;   
+@inject IUserService _userService;
 
-@if (CommentsToShow == null || !CommentsToShow.Any()) {
-    <p> No comments yet...</p>
-}
-else {
-    <div id="body" class="container">
-        <div class="row">
-            @foreach (var comment in CommentsToShow) {
-                <div class="col-md-8">
-                    <div class="media g-mb-30 media-comment">
-                        <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
-                            <div class="g-mb-15">
-                                <h5 class="h5 mb-0 fullname " @onclick="@(() => PressedUser.InvokeAsync(comment.Writer.Username))">@comment.Writer.FirstName @comment.Writer.LastName</h5>
-                                <span class=" g-font-size-12">@comment.DateCreated.GetDate()</span>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous"/>
+<div id="body" class="container mt-5 mb-5 ">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-8">
+            <AuthorizeView>
+                <Authorized>
+                    <div class="d-flex flex-row align-items-center add-comment p-2 bg-white rounded">
+                        <input type="text" class="form-control border-0 no-box-shadow ml-1" placeholder="Leave a constructive comment..."@bind="_comment.Body">
+                        <span class="oi oi-eject" @onclick="@(() => PostComment(context.User.Identity.Name))"></span>
+                    </div>
+                </Authorized>
+                <NotAuthorized>
+                    <div class="p-3 bg-white mt-2 rounded text-center">
+                        <h5>Join the community to comment</h5><button class="btn btn-success btn-sm px-3" type="button" @onclick="@(() => NavigateToLogin())">Signup</button>
+                    </div>
+                </NotAuthorized>
+            </AuthorizeView>
+
+            @if (CommentsToShow == null || !CommentsToShow.Any()) {
+                <p> No comments yet...</p>
+            }
+            else {
+                @foreach (Comment comment in CommentsToShow) {
+                    <div class="p-3 bg-white mt-2 rounded">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex flex-row user">
+                                <img class="rounded-circle img-fluid img-responsive" src="https://i.imgur.com/Yxje2El.jpg" width="40">
+                                <div class="d-flex flex-column ml-2">
+                                    <span class="font-weight-bold">@comment.Writer.FirstName @comment.Writer.LastName</span><span class="day">@comment.DateCreated.GetDate()</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center px-3 heart border">
+                                <i class="fa-solid fa-user"></i><span class="ml-2">Edit</span>
                             </div>
 
-                            <p>
-                                @comment.Body
-                            </p>
-
-                            <ul class="list-inline d-sm-flex my-0">
-                                <li class="list-inline-item g-mr-20">
-                                    <a class="u-link-v5  g-color-primary--hover" href="#!">
-                                        <i class="fa fa-thumbs-up g-pos-rel g-top-1 g-mr-3"></i>
-                                        178
-                                    </a>
-                                </li>
-                                <li class="list-inline-item g-mr-20">
-                                    <a class="u-link-v5 g g-color-primary--hover" href="#!">
-                                        <i class="fa fa-thumbs-down g-pos-rel g-top-1 g-mr-3"></i>
-                                        34
-                                    </a>
-                                </li>
-                            </ul>
+                        </div>
+                        <div class="comment-text text-justify mt-2">
+                            <p>@comment.Body</p>
                         </div>
                     </div>
-                </div>
+                }
             }
+
+
+
         </div>
-
     </div>
-}
-
-
+</div>
 
 
 @code {
@@ -51,10 +62,36 @@ else {
     [Parameter]
     public List<Comment>? CommentsToShow { get; set; }
 
+    [Parameter]
+    public int postId { get; set; }
+
+    private Comment _comment = new Comment();
+
     // Just to make that when someone presses the user. it redirects to the profile of that user.
     // for later purposes
     [Parameter]
     public EventCallback<string> PressedUser { get; set; }
 
+
+    private async Task PostComment(string identityName) {
+        DateTime dateTime = DateTime.Today;
+        Date date = new Date() {
+            Day = dateTime.Day,
+            Month = dateTime.Month,
+            Year = dateTime.Year
+        };
+
+        User user = await _userService.GetUserAsync(identityName);
+
+        _comment.DateCreated = date;
+        _comment.Writer = user;
+
+        Comment addComment = await _commentService.AddComment(postId, _comment);
+        CommentsToShow!.Add(addComment);
+    }
+
+    private void NavigateToLogin() {
+        _navigationManager.NavigateTo("/Login");
+    }
 
 }

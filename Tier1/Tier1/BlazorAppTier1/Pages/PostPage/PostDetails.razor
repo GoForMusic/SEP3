@@ -4,7 +4,6 @@
 @using BlazorAppTier1.Pages.UIElements
 @inject IPostService _postService
 
-
 <h3>PostDetails</h3>
 
 
@@ -20,8 +19,6 @@
                 <label for="desc-1">Description</label>
                 <input class="desc-btn" type="radio" id="desc-2" name="desc-btn"/>
                 <label for="desc-2">Details</label>
-                <input class="desc-btn" type="radio" id="desc-3" name="desc-btn"/>
-                <label for="desc-3">Comments</label>
                 <div class="section-fluid desc-sec accor-1">
                     <p>@_post.Description</p>
                 </div>
@@ -32,36 +29,26 @@
                     <p> Email : @_post.Email </p>
                     <p> Phone number : @_post.PhoneNumber</p>
                 </div>
-                <div class="section-fluid desc-sec accor-3 commentSection">
-                    <Comments CommentsToShow="_post.Comments"></Comments>
+                @if (showComments) {
+                    <Modal>
+                        <Comments CommentsToShow="_post.Comments" postId="Id"></Comments> 
+                        <button @onclick="ToggleShowComments" > Close</button>
+                    </Modal>
+                }
+
+
+                <div>
+                    <a  class="btn"><i class="uil uil-shopping-cart icon" style="margin-top: 10%"></i>Bookmark</a>
                 </div>
                 <div>
-                    <a href="#" class="btn"><i class="uil uil-shopping-cart icon" style="margin-top: 10%"></i>Bookmark</a>
+                    <a class="btn" @onclick="ToggleShowComments"><i class="uil uil-shopping-cart icon" style="margin-top: 10%"></i>View Comments</a>
                 </div>
-                
-                
-                <AuthorizeView>
-                    <Authorized>
-                        <!--   For reporting post                 -->
-                                        <button @onclick="ToogleReport">Report</button>
-                                        @if (ReportThisPost)
-                                        {
-                                            <Modal>
-                                                <div>
-                                                    <ReportPost postId="Id"></ReportPost>
-                                                    
-                                                </div>
-                                            </Modal>
-                                        }
-                    </Authorized>
-                </AuthorizeView>
-
-
-                <br/>
-                <br/>
-
             </div>
+            <br/>
+            <br/>
+
         </div>
+
 
         <div class="clearfix"></div>
         <input class="color-btn for-color-1" type="radio" id="color-1" name="color-btn" checked/>
@@ -102,26 +89,21 @@
 
     private Post? _post = new Post();
     private User? _user = new User();
+    private bool showComments;
 
-    private bool ReportThisPost;
-
-    protected override async Task OnInitializedAsync()
-    {
-        try
-        {
+    protected override async Task OnInitializedAsync() {
+        try {
             _post = await _postService.GetPostDetails(Id);
             _user = _post.Writer;
         }
-        catch (Exception e)
-        {
+        catch (Exception e) {
             throw new Exception(e.Message);
         }
-
     }
 
-    private void ToogleReport()
-    {
-        ReportThisPost = !ReportThisPost;
-        
+    private void ToggleShowComments() {
+        showComments = !showComments;
     }
+
+
 }
