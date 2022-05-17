@@ -1,4 +1,5 @@
-﻿using Contracts;
+﻿using System.Text.Json;
+using Contracts;
 using Entities.Models;
 
 namespace HttpServices;
@@ -10,13 +11,39 @@ public class ReportHttpsCLient : IReportService
         throw new NotImplementedException();
     }
 
-    public Task RemoveReport(Report report)
+    public async Task RemoveReport(Report report)
     {
-        throw new NotImplementedException();
+
+        try
+        {
+            var temp = await ClientAPI.getContent(Methods.Delete,
+                $"/Reports/{report.PostId}/{report.reason}/{report.UserId}");
+        }
+        catch (Exception e)
+        {
+            throw new Exception(e.Message);
+        }
+           
     }
 
-    public Task<List<Report>> GetAllReports()
+    public async Task<List<Report>> GetAllReports()
     {
-        throw new NotImplementedException();
+        try
+        {
+            var temp = await ClientAPI.getContent(Methods.Get, $"/Reports/getAllReports/");
+            List<Report> report = GetDeserialized<List<Report>>(temp);
+            return report;
+        }
+        catch (Exception e)
+        {
+            throw new Exception(e.Message);
+        }
+    }
+    
+    private T GetDeserialized<T>(string jsonFormat) {
+        T obj = JsonSerializer.Deserialize<T>(jsonFormat, new JsonSerializerOptions() {
+            PropertyNameCaseInsensitive = true
+        }) !;
+        return obj;
     }
 }

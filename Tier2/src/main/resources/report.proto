@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option  java_package = "GRPCService";
+import "post.proto";
+import "User.proto";
+
+package Report;
+
+service Report{
+  rpc AddReport(ReportObj) returns (EmptyReportMark);
+  rpc RemoveReport(ReportObj) returns(EmptyReportMark);
+  rpc GetReports(ReportObj) returns (ListOfReports);
+}
+
+message EmptyReportMark{
+
+}
+
+message ListOfReports{
+  
+}
