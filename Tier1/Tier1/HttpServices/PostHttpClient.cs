@@ -134,7 +134,7 @@ public class PostHttpClient : IPostService
             throw new Exception(e.Message);
         }
     }
-
+    
 
     public async Task<Post> GetPostDetails(int Id)
     {

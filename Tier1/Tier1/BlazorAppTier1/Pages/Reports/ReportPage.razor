@@ -1,0 +1,20 @@
+﻿@page "/Reports"
+    
+@using Contracts
+@using Entities.Models
+@using BlazorAppTier1.Pages.UIElements
+@using BlazorAppTier1.Pages.PostPage
+
+@inject IPostService _postService;
+@inject NavigationManager Navigation
+
+@attribute [Authorize(Policy = "Admin")]
+
+
+
+@code {
+
+    private List<Report> _reports;
+
+    
+}

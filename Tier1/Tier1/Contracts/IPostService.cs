@@ -13,4 +13,6 @@ public interface IPostService {
 
     Task<List<Post>> SearchPosts(string title, int current);
     Task<List<Post>?> GetPostsBySubCategoryId(int subCategoryIdSelected, int current);
+
+   
 }
