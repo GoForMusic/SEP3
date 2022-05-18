@@ -4,6 +4,7 @@
 @using Entities.Models
 @using BlazorAppTier1.Pages.UIElements
 @using BlazorAppTier1.Pages.PostPage
+@using Report = Entities.Models.Report
 
 @inject IReportService _reportService;
 @inject NavigationManager _navigationManager
@@ -40,7 +41,7 @@ else
         </tr>
         </thead>
         <tbody>
-        @foreach (var report in _reports)
+        @foreach (Report report in _reports)
         {
             <tr style="cursor: pointer">
                 <td @onclick="@(() =>_navigationManager.NavigateTo($"/PostDetails/{report.PostId}") )">@report.PostId</td>
