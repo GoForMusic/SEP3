@@ -1,0 +1,35 @@
+﻿@using Entities.Models
+@using Contracts
+@using System.Security.Claims
+@inject IAuthService authService
+@inject IUserService _userService;
+@inject NavigationManager _navigationManager;
+@inject IReportService _reportService;
+
+<AuthorizeView>
+    <Authorized>
+        <label> Why do you want to report </label>
+        <input type="text" @bind="_report.Reason"/>
+        <button  @onclick="@(() =>AddReport(context.User.Identity.Name))">Submit</button>
+    </Authorized>
+</AuthorizeView>
+
+
+
+@code {
+
+    private Entities.Models.Report _report = new Entities.Models.Report();
+    [Parameter] public int postId { get; set; }
+
+
+    private async Task AddReport(string userName)
+    {
+        _report.ReporterUsername = userName;
+        _report.PostId = postId;
+
+        await _reportService.AddReport(_report);
+        Console.WriteLine($"{userName} had added report on {_report.PostId} cause {_report.Reason}");
+        _navigationManager.NavigateTo($"/");
+    }
+
+}

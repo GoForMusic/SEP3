@@ -44,8 +44,8 @@ else
         {
             <tr>
                 <td>@item.PostId</td>
-                <td>@item.UserId</td>
-                <td>@item.reason</td>
+                <td>@item.ReporterUsername</td>
+                <td>@item.Reason</td>
                 
                 <td>
                     <label @onclick="@(() => RemoveReport(item))" style="cursor:pointer; color: red; font-weight: bold">&#x2717;</label>
@@ -61,7 +61,7 @@ else
 
 @code {
 
-    private List<Report> _reports;
+    private List<Entities.Models.Report> _reports;
     
     
     protected override async Task OnInitializedAsync() {
@@ -75,7 +75,7 @@ else
         }
     }
     
-    private async Task RemoveReport(Report item)
+    private async Task RemoveReport(Entities.Models.Report item)
     {
         try
         {
