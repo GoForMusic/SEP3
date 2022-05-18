@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 
-
 @Service
 public class ReportServiceImpl implements ReportService {
 
@@ -27,10 +26,9 @@ public class ReportServiceImpl implements ReportService {
 
     @Override
     public void RemoveReport(Report report) {
-        try{
+        try {
             reportClient.RemoveReport(report);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
 
@@ -39,11 +37,7 @@ public class ReportServiceImpl implements ReportService {
 
     @Override
     public List<Report> getReports() {
-        try{
-            return reportClient.getReports();
-        }
-        catch (Exception e){
-            throw new RuntimeException(e.getMessage());
-        }
+        return reportClient.getReports();
+
     }
 }

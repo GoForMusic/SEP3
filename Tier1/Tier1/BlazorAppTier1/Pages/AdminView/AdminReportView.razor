@@ -6,7 +6,7 @@
 @using BlazorAppTier1.Pages.PostPage
 
 @inject IReportService _reportService;
-@inject NavigationManager Navigation
+@inject NavigationManager _navigationManager
 
 @attribute [Authorize(Policy = "Admin")]
 
@@ -22,7 +22,7 @@
         <em>Loading...</em>
     </p>
 }
-else if (_reports.Any())
+else if (!_reports.Any())
 {
     <p>
         <em>No reports</em>
@@ -30,25 +30,25 @@ else if (_reports.Any())
 }
 else
 {
-    <table class="table">
+    <table class="table" style="background: white">
         <thead>
         <tr>
-            <th>Owner ID</th>
-            <th>Report ID</th>
+            <th>Post id</th>
+            <th>Reporter Username</th>
             <th>Reason</th>
             <th>Remove</th>
         </tr>
         </thead>
         <tbody>
-        @foreach (var item in _reports)
+        @foreach (var report in _reports)
         {
-            <tr>
-                <td>@item.PostId</td>
-                <td>@item.UserId</td>
-                <td>@item.reason</td>
+            <tr style="cursor: pointer">
+                <td @onclick="@(() =>_navigationManager.NavigateTo($"/PostDetails/{report.PostId}") )">@report.PostId</td>
+                <td>@report.ReporterUsername</td>
+                <td>@report.Reason</td>                     
                 
                 <td>
-                    <label @onclick="@(() => RemoveReport(item))" style="cursor:pointer; color: red; font-weight: bold">&#x2717;</label>
+                    <label @onclick="@(() => RemoveReport(report))" style="cursor:pointer; color: red; font-weight: bold">&#x2717;</label>
                 </td>
             </tr>
         }

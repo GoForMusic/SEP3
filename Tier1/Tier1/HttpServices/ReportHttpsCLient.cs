@@ -17,7 +17,7 @@ public class ReportHttpsCLient : IReportService
         try
         {
             var temp = await ClientAPI.getContent(Methods.Delete,
-                $"/Reports/{report.PostId}/{report.reason}/{report.UserId}");
+                $"/Reports/{report.PostId}/{report.ReporterUsername}");
         }
         catch (Exception e)
         {
@@ -30,8 +30,10 @@ public class ReportHttpsCLient : IReportService
     {
         try
         {
-            var temp = await ClientAPI.getContent(Methods.Get, $"/Reports/getAllReports/");
+            var temp = await ClientAPI.getContent(Methods.Get, $"/allReports");
             List<Report> report = GetDeserialized<List<Report>>(temp);
+             Console.WriteLine("Reports ----------------");
+            report.ForEach(Console.WriteLine);
             return report;
         }
         catch (Exception e)

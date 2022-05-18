@@ -101,8 +101,8 @@ public class ConvertGrpc {
     }
 
 
-        public static ReportOuterClass.ReportObj getGrpcReportFromReport(Report report){
-            ReportOuterClass.ReportObj reportObj = ReportOuterClass.ReportObj.newBuilder().setPostID(getGrpcPostFromOurPost(report.getPost())).setUserID(getGrpcUserFromUser(report.getReporter())).setReason(report.getReason()).build();
+    public static ReportOuterClass.ReportObj getGrpcReportFromReport(Report report) {
+        ReportOuterClass.ReportObj reportObj = ReportOuterClass.ReportObj.newBuilder().setPostId(report.getPostId()).setReporterUsername(report.getReporterUsername()).setReason(report.getReason()).build();
         return reportObj;
 
 
@@ -124,17 +124,18 @@ public class ConvertGrpc {
         return local;
     }
 
-    public static ReportOuterClass.ReportObj getGrpcReportFromOurReport(Report report){
-        ReportOuterClass.ReportObj reportObj= ReportOuterClass.ReportObj.newBuilder()
-                .setPostID(getGrpcPostFromOurPost(report.getPost()))
-                .setUserID(getGrpcUserFromUser(report.getReporter())).build();
+    public static ReportOuterClass.ReportObj getGrpcReportFromOurReport(Report report) {
+        ReportOuterClass.ReportObj reportObj = ReportOuterClass.ReportObj.newBuilder()
+                .setPostId(report.getPostId())
+                .setReason(report.getReason())
+                .setReporterUsername(report.getReporterUsername()).build();
         return reportObj;
     }
 
-    public static Report getReportFromGrpcReport(ReportOuterClass.ReportObj report){
+    public static Report getReportFromGrpcReport(ReportOuterClass.ReportObj report) {
         Report temp = new Report();
-        temp.setPost(getPostFromGrpcPost(report.getPostID()));
-        temp.setReporter(getUserFromGrpcUser(report.getUserID()));
+        temp.setPostId(report.getPostId());
+        temp.setReporterUsername(report.getReporterUsername());
         temp.setReason(report.getReason());
         return temp;
     }
@@ -163,9 +164,9 @@ public class ConvertGrpc {
         return posts;
     }
 
-    public static List<Report> getListOfReporstFromListOfGrpcReportObject(List<ReportOuterClass.ReportObj>list){
+    public static List<Report> getListOfReporstFromListOfGrpcReportObject(List<ReportOuterClass.ReportObj> list) {
         List<Report> report = new ArrayList<>();
-        for (ReportOuterClass.ReportObj i : list){
+        for (ReportOuterClass.ReportObj i : list) {
             report.add(getReportFromGrpcReport(i));
         }
         return report;
