@@ -68,6 +68,14 @@ namespace GRPCService {
         __Marshaller_report_EmptyReportMark,
         __Marshaller_report_ListOfReports);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GRPCService.ReportObj, global::GRPCService.EmptyReportMark> __Method_AddReport = new grpc::Method<global::GRPCService.ReportObj, global::GRPCService.EmptyReportMark>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddReport",
+        __Marshaller_report_ReportObj,
+        __Marshaller_report_EmptyReportMark);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -90,6 +98,12 @@ namespace GRPCService {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::GRPCService.EmptyReportMark> AddReport(global::GRPCService.ReportObj request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -99,7 +113,8 @@ namespace GRPCService {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_RemoveReport, serviceImpl.RemoveReport)
-          .AddMethod(__Method_GetReports, serviceImpl.GetReports).Build();
+          .AddMethod(__Method_GetReports, serviceImpl.GetReports)
+          .AddMethod(__Method_AddReport, serviceImpl.AddReport).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -111,6 +126,7 @@ namespace GRPCService {
     {
       serviceBinder.AddMethod(__Method_RemoveReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GRPCService.ReportObj, global::GRPCService.EmptyReportMark>(serviceImpl.RemoveReport));
       serviceBinder.AddMethod(__Method_GetReports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GRPCService.EmptyReportMark, global::GRPCService.ListOfReports>(serviceImpl.GetReports));
+      serviceBinder.AddMethod(__Method_AddReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GRPCService.ReportObj, global::GRPCService.EmptyReportMark>(serviceImpl.AddReport));
     }
 
   }

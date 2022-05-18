@@ -9,6 +9,7 @@ package Report;
 service Report{
   rpc RemoveReport(ReportObj) returns(EmptyReportMark);
   rpc GetReports(EmptyReportMark) returns (ListOfReports);
+  rpc AddReport(ReportObj) returns (EmptyReportMark);
 }
 
 message EmptyReportMark{

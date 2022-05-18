@@ -28,10 +28,11 @@ namespace GRPCService {
             "byIRCg9FbXB0eVJlcG9ydE1hcmsiNQoNTGlzdE9mUmVwb3J0cxIkCglyZXBv",
             "cnRPYmoYASADKAsyES5yZXBvcnQuUmVwb3J0T2JqIkUKCVJlcG9ydE9iahIO",
             "CgZwb3N0SWQYASABKAUSGAoQcmVwb3J0ZXJVc2VybmFtZRgCIAEoCRIOCgZy",
-            "ZWFzb24YAyABKAkyggEKBlJlcG9ydBI6CgxSZW1vdmVSZXBvcnQSES5yZXBv",
+            "ZWFzb24YAyABKAkyuwEKBlJlcG9ydBI6CgxSZW1vdmVSZXBvcnQSES5yZXBv",
             "cnQuUmVwb3J0T2JqGhcucmVwb3J0LkVtcHR5UmVwb3J0TWFyaxI8CgpHZXRS",
             "ZXBvcnRzEhcucmVwb3J0LkVtcHR5UmVwb3J0TWFyaxoVLnJlcG9ydC5MaXN0",
-            "T2ZSZXBvcnRzQg6qAgtHUlBDU2VydmljZWIGcHJvdG8z"));
+            "T2ZSZXBvcnRzEjcKCUFkZFJlcG9ydBIRLnJlcG9ydC5SZXBvcnRPYmoaFy5y",
+            "ZXBvcnQuRW1wdHlSZXBvcnRNYXJrQg6qAgtHUlBDU2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GRPCService.UserReflection.Descriptor, global::GRPCService.PostReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
