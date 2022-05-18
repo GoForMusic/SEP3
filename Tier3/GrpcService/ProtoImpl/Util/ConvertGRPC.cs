@@ -45,28 +45,23 @@ public class ConvertGRPC {
         return post;
     }
 
-    public static Entities.Models.Bookmark ConvertBookmarkObjToBookmark(BookmarkObj request)
-    {
-        Entities.Models.Bookmark bookmark = new Entities.Models.Bookmark()
-        {
+    public static Entities.Models.Bookmark ConvertBookmarkObjToBookmark(BookmarkObj request) {
+        Entities.Models.Bookmark bookmark = new Entities.Models.Bookmark() {
             User = GetUserFromUserObj(request.User),
             Post = ConvertPostObjToPost(request.Post)
         };
         return bookmark;
     }
 
-    public static Entities.Models.Report ConvertReportObjToReport(ReportObj reportObj)
-    {
-        Entities.Models.Report report = new Entities.Models.Report()
-        {
-            User = GetUserFromUserObj(reportObj.UserID),
-            Post = ConvertPostObjToPost(reportObj.PostID),
-            Reason = reportObj.Reason
+    public static Entities.Models.Report ConvertReportObjToReport(ReportObj reportObj) {
+        Entities.Models.Report report = new Entities.Models.Report() {
+            Reason = reportObj.Reason,
+            PostId = reportObj.PostId,
+            ReporterUsername = reportObj.ReporterUsername
         };
 
         return report;
     }
-
 
 
     public static ListOfPostObj ConvertListPostToObj(List<Entities.Models.Post> request) {
@@ -78,8 +73,7 @@ public class ConvertGRPC {
         return postObj;
     }
 
- 
-    
+
     public static ListOfPostsForBooking ConvertListPostToObjBooking(List<Entities.Models.Post> request) {
         ListOfPostsForBooking postObj = new ListOfPostsForBooking();
         foreach (var item in request) {
@@ -106,20 +100,16 @@ public class ConvertGRPC {
         return postObj;
     }
 
-    public static BookmarkObj ConvertBookmarkToBookmarkObj(Entities.Models.Bookmark reqest)
-    {
-        BookmarkObj bookmarkObj = new BookmarkObj()
-        {
+    public static BookmarkObj ConvertBookmarkToBookmarkObj(Entities.Models.Bookmark reqest) {
+        BookmarkObj bookmarkObj = new BookmarkObj() {
             Post = ConvertPostToPostObj(reqest.Post),
             User = ConvertUserToUserObj(reqest.User)
         };
         return bookmarkObj;
     }
-  
-    public static UserObj ConvertUserToUserObj(Entities.Models.User reqest)
-    {
-        UserObj userObj = new UserObj()
-        {
+
+    public static UserObj ConvertUserToUserObj(Entities.Models.User reqest) {
+        UserObj userObj = new UserObj() {
             Username = reqest.Username,
             Password = reqest.Password,
             FirstName = reqest.FirstName,
@@ -128,7 +118,7 @@ public class ConvertGRPC {
         };
         return userObj;
     }
-    
+
     public static PostObj ConvertPostToPostObj(Entities.Models.Post request) {
         return new PostObj() {
             Id = request.Id,
@@ -279,7 +269,7 @@ public class ConvertGRPC {
                 Year = request.DateCreated.Year
             },
             PhoneNumber = request.PhoneNumber,
-            Comments = { GetRepeatedFieldsOfCommentObjsFromListOfComments(request.Comments!) }
-        }; 
+            Comments = {GetRepeatedFieldsOfCommentObjsFromListOfComments(request.Comments!)}
+        };
     }
 }

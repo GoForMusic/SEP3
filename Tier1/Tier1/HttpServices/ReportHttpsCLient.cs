@@ -6,17 +6,9 @@ namespace HttpServices;
 
 public class ReportHttpsCLient : IReportService
 {
-    public async Task AddReport(Report report)
+    public Task AddReport(Report report)
     {
-        try
-        {
-            var response = await ClientAPI.getContent(Methods.Post, "/AddReport", report);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw new Exception("Report could not be added");
-        }
+        throw new NotImplementedException();
     }
 
     public async Task RemoveReport(Report report)
@@ -25,7 +17,7 @@ public class ReportHttpsCLient : IReportService
         try
         {
             var temp = await ClientAPI.getContent(Methods.Delete,
-                $"/Reports/{report.PostId}/{report.Reason}/{report.ReporterUsername}");
+                $"/Reports/{report.PostId}/{report.ReporterUsername}");
         }
         catch (Exception e)
         {
@@ -38,8 +30,10 @@ public class ReportHttpsCLient : IReportService
     {
         try
         {
-            var temp = await ClientAPI.getContent(Methods.Get, $"/Reports/getAllReports/");
+            var temp = await ClientAPI.getContent(Methods.Get, $"/allReports");
             List<Report> report = GetDeserialized<List<Report>>(temp);
+             Console.WriteLine("Reports ----------------");
+            report.ForEach(Console.WriteLine);
             return report;
         }
         catch (Exception e)

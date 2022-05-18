@@ -16,12 +16,12 @@ public class ReportGRPCClientImpl implements ReportClient {
 
     private ReportGrpc.ReportBlockingStub reportBlockingStub;
 
-    private ReportGrpc.ReportBlockingStub getReportBlockingStub(){
-        if (reportBlockingStub == null){
+    private ReportGrpc.ReportBlockingStub getReportBlockingStub() {
+        if (reportBlockingStub == null) {
             ManagedChannel managedChannel = ManagedChannelGetter.getManagedChannel();
             reportBlockingStub = ReportGrpc.newBlockingStub(managedChannel);
         }
-        return  reportBlockingStub;
+        return reportBlockingStub;
     }
 
     @Override
@@ -33,13 +33,11 @@ public class ReportGRPCClientImpl implements ReportClient {
     public void RemoveReport(Report report) {
 
         try {
-            ReportOuterClass.ReportObj obj =ConvertGrpc.getGrpcReportFromReport(report);
+            ReportOuterClass.ReportObj obj = ConvertGrpc.getGrpcReportFromReport(report);
             ReportOuterClass.EmptyReportMark message = null;
-        }
-        catch (Exception e){
-            throw  new RuntimeException(e);
-        }
-        finally {
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
             disposeStub();
         }
 
@@ -48,24 +46,19 @@ public class ReportGRPCClientImpl implements ReportClient {
     @Override
     public List<Report> getReports() {
         try {
-            ReportOuterClass.EmptyReportMark message = null;
+            ReportOuterClass.EmptyReportMark message = ReportOuterClass.EmptyReportMark.newBuilder().build();
             ReportOuterClass.ListOfReports obj = getReportBlockingStub().getReports(message);
             return ConvertGrpc.getListOfReporstFromListOfGrpcReportObject(obj.getReportObjList());
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
             throw new RuntimeException(e);
-        }finally {
+        } finally {
             disposeStub();
         }
     }
 
-    private void disposeStub(){
+    private void disposeStub() {
         reportBlockingStub = null;
     }
-
-
-
-
 
 
 }
