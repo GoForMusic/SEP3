@@ -21,7 +21,7 @@ public class ReportServiceImpl implements ReportService {
 
     @Override
     public void AddReport(Report report) {
-
+            reportClient.AddReport(report);
     }
 
     @Override

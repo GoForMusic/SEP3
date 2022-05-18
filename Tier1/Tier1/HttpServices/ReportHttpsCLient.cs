@@ -6,9 +6,17 @@ namespace HttpServices;
 
 public class ReportHttpsCLient : IReportService
 {
-    public Task AddReport(Report report)
+    public async Task AddReport(Report report)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var response = await ClientAPI.getContent(Methods.Post, "/AddReport", report);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw new Exception("Report could not be added");
+        }
     }
 
     public async Task RemoveReport(Report report)
