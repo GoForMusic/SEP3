@@ -13,9 +13,10 @@ public class Report
     [ForeignKey(nameof(User))]
     public string  ReporterUsername { get; set; }
 
-    public Post Post { get; set; }
-    public User User { get; set; }
-
-
     public string Reason { get; set; }
+
+
+    public override string ToString() {
+        return $"{PostId}+  \t\t {ReporterUsername}";
+    }
 }

@@ -26,19 +26,18 @@ namespace GRPCService {
           string.Concat(
             "CgxyZXBvcnQucHJvdG8SBnJlcG9ydBoKdXNlci5wcm90bxoKcG9zdC5wcm90",
             "byIRCg9FbXB0eVJlcG9ydE1hcmsiNQoNTGlzdE9mUmVwb3J0cxIkCglyZXBv",
-            "cnRPYmoYASADKAsyES5yZXBvcnQuUmVwb3J0T2JqIlkKCVJlcG9ydE9iahId",
-            "CgZQb3N0SUQYASABKAsyDS5wb3N0LlBvc3RPYmoSHQoGVXNlcklEGAIgASgL",
-            "Mg0udXNlci5Vc2VyT2JqEg4KBlJlYXNvbhgDIAEoCTKCAQoGUmVwb3J0EjoK",
-            "DFJlbW92ZVJlcG9ydBIRLnJlcG9ydC5SZXBvcnRPYmoaFy5yZXBvcnQuRW1w",
-            "dHlSZXBvcnRNYXJrEjwKCkdldFJlcG9ydHMSFy5yZXBvcnQuRW1wdHlSZXBv",
-            "cnRNYXJrGhUucmVwb3J0Lkxpc3RPZlJlcG9ydHNCDqoCC0dSUENTZXJ2aWNl",
-            "YgZwcm90bzM="));
+            "cnRPYmoYASADKAsyES5yZXBvcnQuUmVwb3J0T2JqIkUKCVJlcG9ydE9iahIO",
+            "CgZwb3N0SWQYASABKAUSGAoQcmVwb3J0ZXJVc2VybmFtZRgCIAEoCRIOCgZy",
+            "ZWFzb24YAyABKAkyggEKBlJlcG9ydBI6CgxSZW1vdmVSZXBvcnQSES5yZXBv",
+            "cnQuUmVwb3J0T2JqGhcucmVwb3J0LkVtcHR5UmVwb3J0TWFyaxI8CgpHZXRS",
+            "ZXBvcnRzEhcucmVwb3J0LkVtcHR5UmVwb3J0TWFyaxoVLnJlcG9ydC5MaXN0",
+            "T2ZSZXBvcnRzQg6qAgtHUlBDU2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GRPCService.UserReflection.Descriptor, global::GRPCService.PostReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::GRPCService.EmptyReportMark), global::GRPCService.EmptyReportMark.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GRPCService.ListOfReports), global::GRPCService.ListOfReports.Parser, new[]{ "ReportObj" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GRPCService.ReportObj), global::GRPCService.ReportObj.Parser, new[]{ "PostID", "UserID", "Reason" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GRPCService.ReportObj), global::GRPCService.ReportObj.Parser, new[]{ "PostId", "ReporterUsername", "Reason" }, null, null, null, null)
           }));
     }
     #endregion
@@ -371,8 +370,8 @@ namespace GRPCService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReportObj(ReportObj other) : this() {
-      postID_ = other.postID_ != null ? other.postID_.Clone() : null;
-      userID_ = other.userID_ != null ? other.userID_.Clone() : null;
+      postId_ = other.postId_;
+      reporterUsername_ = other.reporterUsername_;
       reason_ = other.reason_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -382,29 +381,29 @@ namespace GRPCService {
       return new ReportObj(this);
     }
 
-    /// <summary>Field number for the "PostID" field.</summary>
-    public const int PostIDFieldNumber = 1;
-    private global::GRPCService.PostObj postID_;
+    /// <summary>Field number for the "postId" field.</summary>
+    public const int PostIdFieldNumber = 1;
+    private int postId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::GRPCService.PostObj PostID {
-      get { return postID_; }
+    public int PostId {
+      get { return postId_; }
       set {
-        postID_ = value;
+        postId_ = value;
       }
     }
 
-    /// <summary>Field number for the "UserID" field.</summary>
-    public const int UserIDFieldNumber = 2;
-    private global::GRPCService.UserObj userID_;
+    /// <summary>Field number for the "reporterUsername" field.</summary>
+    public const int ReporterUsernameFieldNumber = 2;
+    private string reporterUsername_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::GRPCService.UserObj UserID {
-      get { return userID_; }
+    public string ReporterUsername {
+      get { return reporterUsername_; }
       set {
-        userID_ = value;
+        reporterUsername_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "Reason" field.</summary>
+    /// <summary>Field number for the "reason" field.</summary>
     public const int ReasonFieldNumber = 3;
     private string reason_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -428,8 +427,8 @@ namespace GRPCService {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(PostID, other.PostID)) return false;
-      if (!object.Equals(UserID, other.UserID)) return false;
+      if (PostId != other.PostId) return false;
+      if (ReporterUsername != other.ReporterUsername) return false;
       if (Reason != other.Reason) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -437,8 +436,8 @@ namespace GRPCService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (postID_ != null) hash ^= PostID.GetHashCode();
-      if (userID_ != null) hash ^= UserID.GetHashCode();
+      if (PostId != 0) hash ^= PostId.GetHashCode();
+      if (ReporterUsername.Length != 0) hash ^= ReporterUsername.GetHashCode();
       if (Reason.Length != 0) hash ^= Reason.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -456,13 +455,13 @@ namespace GRPCService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (postID_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(PostID);
+      if (PostId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(PostId);
       }
-      if (userID_ != null) {
+      if (ReporterUsername.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteMessage(UserID);
+        output.WriteString(ReporterUsername);
       }
       if (Reason.Length != 0) {
         output.WriteRawTag(26);
@@ -477,13 +476,13 @@ namespace GRPCService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (postID_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(PostID);
+      if (PostId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(PostId);
       }
-      if (userID_ != null) {
+      if (ReporterUsername.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteMessage(UserID);
+        output.WriteString(ReporterUsername);
       }
       if (Reason.Length != 0) {
         output.WriteRawTag(26);
@@ -498,11 +497,11 @@ namespace GRPCService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (postID_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PostID);
+      if (PostId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PostId);
       }
-      if (userID_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserID);
+      if (ReporterUsername.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ReporterUsername);
       }
       if (Reason.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Reason);
@@ -518,17 +517,11 @@ namespace GRPCService {
       if (other == null) {
         return;
       }
-      if (other.postID_ != null) {
-        if (postID_ == null) {
-          PostID = new global::GRPCService.PostObj();
-        }
-        PostID.MergeFrom(other.PostID);
+      if (other.PostId != 0) {
+        PostId = other.PostId;
       }
-      if (other.userID_ != null) {
-        if (userID_ == null) {
-          UserID = new global::GRPCService.UserObj();
-        }
-        UserID.MergeFrom(other.UserID);
+      if (other.ReporterUsername.Length != 0) {
+        ReporterUsername = other.ReporterUsername;
       }
       if (other.Reason.Length != 0) {
         Reason = other.Reason;
@@ -547,18 +540,12 @@ namespace GRPCService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (postID_ == null) {
-              PostID = new global::GRPCService.PostObj();
-            }
-            input.ReadMessage(PostID);
+          case 8: {
+            PostId = input.ReadInt32();
             break;
           }
           case 18: {
-            if (userID_ == null) {
-              UserID = new global::GRPCService.UserObj();
-            }
-            input.ReadMessage(UserID);
+            ReporterUsername = input.ReadString();
             break;
           }
           case 26: {
@@ -579,18 +566,12 @@ namespace GRPCService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            if (postID_ == null) {
-              PostID = new global::GRPCService.PostObj();
-            }
-            input.ReadMessage(PostID);
+          case 8: {
+            PostId = input.ReadInt32();
             break;
           }
           case 18: {
-            if (userID_ == null) {
-              UserID = new global::GRPCService.UserObj();
-            }
-            input.ReadMessage(UserID);
+            ReporterUsername = input.ReadString();
             break;
           }
           case 26: {

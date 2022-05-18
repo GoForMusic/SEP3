@@ -20,8 +20,8 @@ message ListOfReports{
 }
 
 message ReportObj{
-  post.PostObj PostID = 1;
-  user.UserObj UserID =2;
-  string Reason = 3;
+int32 postId = 1;
+string reporterUsername = 2;
+string reason =3;
 
 }

@@ -7,7 +7,8 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 public class Report {
-    private Post post;
-    private User reporter;
+    private int postId;
+    private String reporterUsername;
     private String reason;
+
 }
