@@ -1,8 +1,10 @@
 package group6.semester.project.grpcClient.user;
 
+import GRPCService.BlockProtoGrpc;
 import GRPCService.UserGrpc;
 import GRPCService.UserOuterClass;
 import group6.semester.project.grpcClient.ManagedChannelGetter;
+import group6.semester.project.model.Block;
 import group6.semester.project.model.User;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
@@ -12,6 +14,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class GRPCUserClientImpl implements UserClient {
     private UserGrpc.UserBlockingStub userBlockingStub;
+
 
 
     /**
@@ -26,6 +29,7 @@ public class GRPCUserClientImpl implements UserClient {
         }
         return userBlockingStub;
     }
+
 
 
 
@@ -97,6 +101,7 @@ public class GRPCUserClientImpl implements UserClient {
 
         return getUser(userObjFromServer);
     }
+
 
     //Converting user object that is sent from server ---
     /**
