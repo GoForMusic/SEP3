@@ -59,6 +59,8 @@ namespace GRPCService {
     static readonly grpc::Marshaller<global::GRPCService.IdWithInteger> __Marshaller_post_IdWithInteger = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GRPCService.IdWithInteger.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GRPCService.SubIdWithCurrent> __Marshaller_post_SubIdWithCurrent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GRPCService.SubIdWithCurrent.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::GRPCService.OnlyString> __Marshaller_post_OnlyString = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GRPCService.OnlyString.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::GRPCService.TransferPostWithSubcategoryId, global::GRPCService.PostObj> __Method_AddPost = new grpc::Method<global::GRPCService.TransferPostWithSubcategoryId, global::GRPCService.PostObj>(
@@ -98,6 +100,22 @@ namespace GRPCService {
         __ServiceName,
         "GetPostsBySubcategoryId",
         __Marshaller_post_SubIdWithCurrent,
+        __Marshaller_post_ListOfPostObj);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GRPCService.OnlyString, global::GRPCService.IdWithInteger> __Method_GetTotalNumberOfPosts = new grpc::Method<global::GRPCService.OnlyString, global::GRPCService.IdWithInteger>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTotalNumberOfPosts",
+        __Marshaller_post_OnlyString,
+        __Marshaller_post_IdWithInteger);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GRPCService.OnlyString, global::GRPCService.ListOfPostObj> __Method_GetAllPostsByUsername = new grpc::Method<global::GRPCService.OnlyString, global::GRPCService.ListOfPostObj>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAllPostsByUsername",
+        __Marshaller_post_OnlyString,
         __Marshaller_post_ListOfPostObj);
 
     /// <summary>Service descriptor</summary>
@@ -140,6 +158,18 @@ namespace GRPCService {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::GRPCService.IdWithInteger> GetTotalNumberOfPosts(global::GRPCService.OnlyString request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::GRPCService.ListOfPostObj> GetAllPostsByUsername(global::GRPCService.OnlyString request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -152,7 +182,9 @@ namespace GRPCService {
           .AddMethod(__Method_SearchPosts, serviceImpl.SearchPosts)
           .AddMethod(__Method_GetAllPosts, serviceImpl.GetAllPosts)
           .AddMethod(__Method_GetPostDetails, serviceImpl.GetPostDetails)
-          .AddMethod(__Method_GetPostsBySubcategoryId, serviceImpl.GetPostsBySubcategoryId).Build();
+          .AddMethod(__Method_GetPostsBySubcategoryId, serviceImpl.GetPostsBySubcategoryId)
+          .AddMethod(__Method_GetTotalNumberOfPosts, serviceImpl.GetTotalNumberOfPosts)
+          .AddMethod(__Method_GetAllPostsByUsername, serviceImpl.GetAllPostsByUsername).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -167,6 +199,8 @@ namespace GRPCService {
       serviceBinder.AddMethod(__Method_GetAllPosts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GRPCService.RequestModel, global::GRPCService.ListOfPostObj>(serviceImpl.GetAllPosts));
       serviceBinder.AddMethod(__Method_GetPostDetails, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GRPCService.IdWithInteger, global::GRPCService.PostObj>(serviceImpl.GetPostDetails));
       serviceBinder.AddMethod(__Method_GetPostsBySubcategoryId, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GRPCService.SubIdWithCurrent, global::GRPCService.ListOfPostObj>(serviceImpl.GetPostsBySubcategoryId));
+      serviceBinder.AddMethod(__Method_GetTotalNumberOfPosts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GRPCService.OnlyString, global::GRPCService.IdWithInteger>(serviceImpl.GetTotalNumberOfPosts));
+      serviceBinder.AddMethod(__Method_GetAllPostsByUsername, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GRPCService.OnlyString, global::GRPCService.ListOfPostObj>(serviceImpl.GetAllPostsByUsername));
     }
 
   }

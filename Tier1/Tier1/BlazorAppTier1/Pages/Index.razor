@@ -7,6 +7,7 @@
 
 @inject IPostService _postService;
 @inject NavigationManager Navigation
+<script src="maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 
 <PageTitle>Index</PageTitle>
 
@@ -66,9 +67,9 @@
             </div>
             <!--Right side-->
             <div class="col-lg-9">
-                
+
                 <PostList postToShow="@postToShow" userBookedList="@false"></PostList>
-                
+
                 <div class="row">
                     <div class="col-12 text-center mt-4 mt-sm-5">
                         <ul class="pagination justify-content-center mb-0">
