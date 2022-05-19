@@ -14,5 +14,4 @@ public interface IUserService {
     Task<User> BlockUser(Block block);
 
     Task<User> UnblockUser(string username);
-    Task<List<Block>?> GetAllBlockedUsers();
 }

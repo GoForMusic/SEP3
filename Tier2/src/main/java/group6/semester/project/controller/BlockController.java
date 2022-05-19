@@ -5,9 +5,10 @@ import group6.semester.project.model.User;
 import group6.semester.project.services.BlockService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BlockController {
@@ -34,17 +35,6 @@ public class BlockController {
         try {
             User userFromServer = service.unBlockUser(username);
             return ResponseEntity.ok(userFromServer);
-        } catch (Exception e) {
-            return new ResponseEntity(e.getMessage(), HttpStatus.EXPECTATION_FAILED);
-        }
-    }
-
-    @GetMapping (value = "/blockedUsers")
-
-    public ResponseEntity getAllBlockedUsers(){
-        try {
-            List<Block> blockedUsers = service.getAllBlockedUsers();
-            return ResponseEntity.ok(blockedUsers);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.EXPECTATION_FAILED);
         }

@@ -4,8 +4,6 @@ import group6.semester.project.model.Block;
 import group6.semester.project.model.User;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public interface BlockService {
 
@@ -13,5 +11,4 @@ public interface BlockService {
 
     User unBlockUser(String username);
 
-    List<Block> getAllBlockedUsers();
 }
