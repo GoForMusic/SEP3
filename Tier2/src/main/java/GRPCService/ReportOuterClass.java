@@ -1986,13 +1986,11 @@ public final class ReportOuterClass {
       ".proto\"\021\n\017EmptyReportMark\"5\n\rListOfRepor" +
       "ts\022$\n\treportObj\030\001 \003(\0132\021.Report.ReportObj" +
       "\"E\n\tReportObj\022\016\n\006postId\030\001 \001(\005\022\030\n\020reporte" +
-      "rUsername\030\002 \001(\t\022\016\n\006reason\030\003 \001(\t2\273\001\n\006Repo" +
+      "rUsername\030\002 \001(\t\022\016\n\006reason\030\003 \001(\t2\202\001\n\006Repo" +
       "rt\022:\n\014RemoveReport\022\021.Report.ReportObj\032\027." +
       "Report.EmptyReportMark\022<\n\nGetReports\022\027.R" +
       "eport.EmptyReportMark\032\025.Report.ListOfRep" +
-      "orts\0227\n\tAddReport\022\021.Report.ReportObj\032\027.R" +
-      "eport.EmptyReportMarkB\r\n\013GRPCServiceb\006pr" +
-      "oto3"
+      "ortsB\r\n\013GRPCServiceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
