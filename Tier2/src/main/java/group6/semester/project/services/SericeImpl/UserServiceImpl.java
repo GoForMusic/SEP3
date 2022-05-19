@@ -4,6 +4,7 @@
 package group6.semester.project.services.SericeImpl;
 
 import group6.semester.project.grpcClient.user.UserClient;
+import group6.semester.project.model.Block;
 import group6.semester.project.model.User;
 import group6.semester.project.services.UserService;
 import org.springframework.security.crypto.bcrypt.BCrypt;
@@ -96,6 +97,8 @@ public class UserServiceImpl implements UserService {
             return local;
         else return null;
     }
+
+
 
     /**
      * It checks if the password is null or empty, if it's less than 6 characters, if it contains at least one uppercase

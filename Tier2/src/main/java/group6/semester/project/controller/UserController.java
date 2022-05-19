@@ -4,6 +4,7 @@
 package group6.semester.project.controller;
 
 
+import group6.semester.project.model.Block;
 import group6.semester.project.model.User;
 import group6.semester.project.services.UserService;
 import org.springframework.http.HttpStatus;
@@ -28,40 +29,41 @@ public class UserController {
      */
     @PostMapping(value = "/user")
     public ResponseEntity addUser(@RequestBody User user) {
-        try{
+        try {
             System.out.println(user.getUsername());
             User addedUser = userService.CreateUserAsync(user);
             return ResponseEntity.ok().body(addedUser);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
-   }
-
-
-  @GetMapping(value = "/user/{username}")
-  @ResponseBody
-  public ResponseEntity getUser(@PathVariable String username){
-    try {
-
-      User userFromServer = userService.GetUserAsync(username);
-      return ResponseEntity.ok(userFromServer);
-    } catch (Exception e) {
-        System.out.println(e.getMessage());
-      return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
     }
-  }
 
-    @GetMapping(value = "/user/{username}/{password}")
+
+    @GetMapping(value = "/user/{username}")
     @ResponseBody
-    public ResponseEntity getUser(@PathVariable String username, @PathVariable String password){
+    public ResponseEntity getUser(@PathVariable String username) {
         try {
-            User userFromServer = userService.GetUserLogin(username,password);
+
+            User userFromServer = userService.GetUserAsync(username);
             return ResponseEntity.ok(userFromServer);
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
+
+    @GetMapping(value = "/user/{username}/{password}")
+    @ResponseBody
+    public ResponseEntity getUser(@PathVariable String username, @PathVariable String password) {
+        try {
+            User userFromServer = userService.GetUserLogin(username, password);
+            return ResponseEntity.ok(userFromServer);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
+    }
+
+
 
 }

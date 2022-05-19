@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "GRPCService";
+import "user.proto";
+
+
+service BlockProto{
+  rpc BlockUser(BlockObj) returns (user.UserObj);
+  rpc UnBlockUser(user.Username) returns (user.UserObj);
+}
+
+message BlockObj{
+  string username =1;
+  string reason =2;
+}
