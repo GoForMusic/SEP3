@@ -24,4 +24,8 @@ public interface PostService {
     List<Post> getPostsBySubcategories(int subCategoryIdSelected, int current);
 
     void addImage(MultipartFile file, int postId) throws IOException;
+
+    int getNumberOfPosts(String username);
+
+    List<Post> getAllPostsByUsername(String username);
 }

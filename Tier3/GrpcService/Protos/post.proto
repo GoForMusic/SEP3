@@ -14,6 +14,9 @@ service Post{
   rpc GetAllPosts(RequestModel) returns (ListOfPostObj);
   rpc GetPostDetails(IdWithInteger) returns (PostObj);
    rpc GetPostsBySubcategoryId(SubIdWithCurrent) returns (ListOfPostObj);
+  rpc GetTotalNumberOfPosts(OnlyString) returns (IdWithInteger);
+  rpc GetAllPostsByUsername(OnlyString) returns (ListOfPostObj);
+
 
 }
 
@@ -64,3 +67,7 @@ message DateCreated{
   int32 month =2;
   int32 year =3;
 }
+message OnlyString{
+  string  StringToTransfer = 1;
+}
+

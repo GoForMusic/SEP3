@@ -187,6 +187,70 @@ public final class PostGrpc {
      return getGetPostsBySubcategoryIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<GRPCService.PostOuterClass.OnlyString,
+      GRPCService.PostOuterClass.IdWithInteger> getGetTotalNumberOfPostsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTotalNumberOfPosts",
+      requestType = GRPCService.PostOuterClass.OnlyString.class,
+      responseType = GRPCService.PostOuterClass.IdWithInteger.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<GRPCService.PostOuterClass.OnlyString,
+      GRPCService.PostOuterClass.IdWithInteger> getGetTotalNumberOfPostsMethod() {
+    io.grpc.MethodDescriptor<GRPCService.PostOuterClass.OnlyString, GRPCService.PostOuterClass.IdWithInteger> getGetTotalNumberOfPostsMethod;
+    if ((getGetTotalNumberOfPostsMethod = PostGrpc.getGetTotalNumberOfPostsMethod) == null) {
+      synchronized (PostGrpc.class) {
+        if ((getGetTotalNumberOfPostsMethod = PostGrpc.getGetTotalNumberOfPostsMethod) == null) {
+          PostGrpc.getGetTotalNumberOfPostsMethod = getGetTotalNumberOfPostsMethod = 
+              io.grpc.MethodDescriptor.<GRPCService.PostOuterClass.OnlyString, GRPCService.PostOuterClass.IdWithInteger>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "post.Post", "GetTotalNumberOfPosts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  GRPCService.PostOuterClass.OnlyString.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  GRPCService.PostOuterClass.IdWithInteger.getDefaultInstance()))
+                  .setSchemaDescriptor(new PostMethodDescriptorSupplier("GetTotalNumberOfPosts"))
+                  .build();
+          }
+        }
+     }
+     return getGetTotalNumberOfPostsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<GRPCService.PostOuterClass.OnlyString,
+      GRPCService.PostOuterClass.ListOfPostObj> getGetAllPostsByUsernameMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAllPostsByUsername",
+      requestType = GRPCService.PostOuterClass.OnlyString.class,
+      responseType = GRPCService.PostOuterClass.ListOfPostObj.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<GRPCService.PostOuterClass.OnlyString,
+      GRPCService.PostOuterClass.ListOfPostObj> getGetAllPostsByUsernameMethod() {
+    io.grpc.MethodDescriptor<GRPCService.PostOuterClass.OnlyString, GRPCService.PostOuterClass.ListOfPostObj> getGetAllPostsByUsernameMethod;
+    if ((getGetAllPostsByUsernameMethod = PostGrpc.getGetAllPostsByUsernameMethod) == null) {
+      synchronized (PostGrpc.class) {
+        if ((getGetAllPostsByUsernameMethod = PostGrpc.getGetAllPostsByUsernameMethod) == null) {
+          PostGrpc.getGetAllPostsByUsernameMethod = getGetAllPostsByUsernameMethod = 
+              io.grpc.MethodDescriptor.<GRPCService.PostOuterClass.OnlyString, GRPCService.PostOuterClass.ListOfPostObj>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "post.Post", "GetAllPostsByUsername"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  GRPCService.PostOuterClass.OnlyString.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  GRPCService.PostOuterClass.ListOfPostObj.getDefaultInstance()))
+                  .setSchemaDescriptor(new PostMethodDescriptorSupplier("GetAllPostsByUsername"))
+                  .build();
+          }
+        }
+     }
+     return getGetAllPostsByUsernameMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -249,6 +313,20 @@ public final class PostGrpc {
       asyncUnimplementedUnaryCall(getGetPostsBySubcategoryIdMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getTotalNumberOfPosts(GRPCService.PostOuterClass.OnlyString request,
+        io.grpc.stub.StreamObserver<GRPCService.PostOuterClass.IdWithInteger> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetTotalNumberOfPostsMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getAllPostsByUsername(GRPCService.PostOuterClass.OnlyString request,
+        io.grpc.stub.StreamObserver<GRPCService.PostOuterClass.ListOfPostObj> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetAllPostsByUsernameMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -286,6 +364,20 @@ public final class PostGrpc {
                 GRPCService.PostOuterClass.SubIdWithCurrent,
                 GRPCService.PostOuterClass.ListOfPostObj>(
                   this, METHODID_GET_POSTS_BY_SUBCATEGORY_ID)))
+          .addMethod(
+            getGetTotalNumberOfPostsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                GRPCService.PostOuterClass.OnlyString,
+                GRPCService.PostOuterClass.IdWithInteger>(
+                  this, METHODID_GET_TOTAL_NUMBER_OF_POSTS)))
+          .addMethod(
+            getGetAllPostsByUsernameMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                GRPCService.PostOuterClass.OnlyString,
+                GRPCService.PostOuterClass.ListOfPostObj>(
+                  this, METHODID_GET_ALL_POSTS_BY_USERNAME)))
           .build();
     }
   }
@@ -347,6 +439,22 @@ public final class PostGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetPostsBySubcategoryIdMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getTotalNumberOfPosts(GRPCService.PostOuterClass.OnlyString request,
+        io.grpc.stub.StreamObserver<GRPCService.PostOuterClass.IdWithInteger> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetTotalNumberOfPostsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getAllPostsByUsername(GRPCService.PostOuterClass.OnlyString request,
+        io.grpc.stub.StreamObserver<GRPCService.PostOuterClass.ListOfPostObj> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetAllPostsByUsernameMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -400,6 +508,20 @@ public final class PostGrpc {
     public GRPCService.PostOuterClass.ListOfPostObj getPostsBySubcategoryId(GRPCService.PostOuterClass.SubIdWithCurrent request) {
       return blockingUnaryCall(
           getChannel(), getGetPostsBySubcategoryIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public GRPCService.PostOuterClass.IdWithInteger getTotalNumberOfPosts(GRPCService.PostOuterClass.OnlyString request) {
+      return blockingUnaryCall(
+          getChannel(), getGetTotalNumberOfPostsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public GRPCService.PostOuterClass.ListOfPostObj getAllPostsByUsername(GRPCService.PostOuterClass.OnlyString request) {
+      return blockingUnaryCall(
+          getChannel(), getGetAllPostsByUsernameMethod(), getCallOptions(), request);
     }
   }
 
@@ -460,6 +582,22 @@ public final class PostGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetPostsBySubcategoryIdMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<GRPCService.PostOuterClass.IdWithInteger> getTotalNumberOfPosts(
+        GRPCService.PostOuterClass.OnlyString request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetTotalNumberOfPostsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<GRPCService.PostOuterClass.ListOfPostObj> getAllPostsByUsername(
+        GRPCService.PostOuterClass.OnlyString request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetAllPostsByUsernameMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_ADD_POST = 0;
@@ -467,6 +605,8 @@ public final class PostGrpc {
   private static final int METHODID_GET_ALL_POSTS = 2;
   private static final int METHODID_GET_POST_DETAILS = 3;
   private static final int METHODID_GET_POSTS_BY_SUBCATEGORY_ID = 4;
+  private static final int METHODID_GET_TOTAL_NUMBER_OF_POSTS = 5;
+  private static final int METHODID_GET_ALL_POSTS_BY_USERNAME = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -503,6 +643,14 @@ public final class PostGrpc {
           break;
         case METHODID_GET_POSTS_BY_SUBCATEGORY_ID:
           serviceImpl.getPostsBySubcategoryId((GRPCService.PostOuterClass.SubIdWithCurrent) request,
+              (io.grpc.stub.StreamObserver<GRPCService.PostOuterClass.ListOfPostObj>) responseObserver);
+          break;
+        case METHODID_GET_TOTAL_NUMBER_OF_POSTS:
+          serviceImpl.getTotalNumberOfPosts((GRPCService.PostOuterClass.OnlyString) request,
+              (io.grpc.stub.StreamObserver<GRPCService.PostOuterClass.IdWithInteger>) responseObserver);
+          break;
+        case METHODID_GET_ALL_POSTS_BY_USERNAME:
+          serviceImpl.getAllPostsByUsername((GRPCService.PostOuterClass.OnlyString) request,
               (io.grpc.stub.StreamObserver<GRPCService.PostOuterClass.ListOfPostObj>) responseObserver);
           break;
         default:
@@ -571,6 +719,8 @@ public final class PostGrpc {
               .addMethod(getGetAllPostsMethod())
               .addMethod(getGetPostDetailsMethod())
               .addMethod(getGetPostsBySubcategoryIdMethod())
+              .addMethod(getGetTotalNumberOfPostsMethod())
+              .addMethod(getGetAllPostsByUsernameMethod())
               .build();
         }
       }
