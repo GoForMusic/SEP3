@@ -20,4 +20,8 @@ public interface PostClient {
 
     List<Post> getPostBySubcategoryId(int subCategoryIdSelected, int current);
 
+    int getNumberOfPosts(String username);
+
+    List<Post> getAllPostsByUsername(String username);
+
 }

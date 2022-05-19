@@ -6,8 +6,7 @@ using Entities.Models;
 
 namespace HttpServices;
 
-public class PostHttpClient : IPostService
-{
+public class PostHttpClient : IPostService {
     /**  public async Task<Post> AddPostAsync(int subCategoryId, Post postToAdd) {
         try {
             string client =await ClientAPI.getContent(Methods.Post, "/post/" +subCategoryId, postToAdd);
@@ -22,21 +21,17 @@ public class PostHttpClient : IPostService
     **/
 
     // Adding post with  image
-    public async Task<Post> AddPostAsync(int subCategoryId, Post postToAdd, [Optional] MultipartFormDataContent? form)
-    {
+    public async Task<Post> AddPostAsync(int subCategoryId, Post postToAdd, [Optional] MultipartFormDataContent? form) {
         string content = string.Empty;
         Post post = new Post();
         MultipartFormDataContent? formDataContent = form;
 
-        try
-        {
-            using (var httpClient = new HttpClient())
-            {
+        try {
+            using (var httpClient = new HttpClient()) {
                 httpClient.DefaultRequestHeaders.Add("Authentification", "abc123");
                 Uri uri = new Uri("http://localhost:8080/post/" + subCategoryId);
 
-                StringContent stringContent = new(JsonSerializer.Serialize(postToAdd, new JsonSerializerOptions()
-                {
+                StringContent stringContent = new(JsonSerializer.Serialize(postToAdd, new JsonSerializerOptions() {
                     PropertyNameCaseInsensitive = true,
                     PropertyNamingPolicy = JsonNamingPolicy.CamelCase
                 }), Encoding.UTF8, "application/json");
@@ -49,113 +44,105 @@ public class PostHttpClient : IPostService
             //For adding image
 
 
-            if (formDataContent != null)
-            {
+            if (formDataContent != null) {
                 Console.WriteLine("Ading image post ");
                 Console.WriteLine(form.Headers.ToString());
 
-                using (var httpClient1 = new HttpClient())
-                {
+                using (var httpClient1 = new HttpClient()) {
                     httpClient1.DefaultRequestHeaders.Add("Authentification", "abc123");
                     Console.WriteLine(post.Id);
                     HttpResponseMessage responseForImage =
                         await httpClient1.PostAsync($"http://localhost:8080/uploadImage/{post.Id}", formDataContent);
                     // content = await responseForImage.Content.ReadAsStringAsync();
                     // Console.WriteLine(GetDeserialized<string>(content));
-                   ;
+                    ;
                 }
             }
 
-            
+
             return post;
         }
-        catch (Exception e)
-        {
+        catch (Exception e) {
             throw new Exception(e.Message + " " + e.StackTrace);
         }
     }
 
 
-    public async Task<List<Category>> GetALlCategoriesAsync()
-    {
-        try
-        {
+    public async Task<List<Category>> GetALlCategoriesAsync() {
+        try {
             string client = await ClientAPI.getContent(Methods.Get, "/allCategories");
             List<Category> list = GetDeserialized<List<Category>>(client);
             return list;
         }
-        catch (Exception e)
-        {
+        catch (Exception e) {
             throw new Exception(e.Message);
         }
     }
 
 
-    public async Task<List<Post>> GetAllPosts(int current)
-    {
-        try
-        {
+    public async Task<List<Post>> GetAllPosts(int current) {
+        try {
             string client = await ClientAPI.getContent(Methods.Get, $"/post/all/{current}");
             List<Post> list = GetDeserialized<List<Post>>(client);
             return list;
         }
-        catch (Exception e)
-        {
+        catch (Exception e) {
             throw new Exception(e.Message);
         }
     }
 
-    public async Task<List<Post>> SearchPosts(string title, int current)
-    {
-        try
-        {
+    public async Task<List<Post>> SearchPosts(string title, int current) {
+        try {
             string client = await ClientAPI.getContent(Methods.Get, $"/search/{title}/{current}");
             List<Post> listFromServer = GetDeserialized<List<Post>>(client);
             return listFromServer;
         }
-        catch (Exception e)
-        {
+        catch (Exception e) {
             throw new Exception(e.Message);
         }
     }
 
-    public async Task<List<Post>?> GetPostsBySubCategoryId(int subCategoryIdSelected, int current)
-    {
-        try
-        {
+    public async Task<List<Post>?> GetPostsBySubCategoryId(int subCategoryIdSelected, int current) {
+        try {
             string client =
                 await ClientAPI.getContent(Methods.Get, $"/bySubcategory/{subCategoryIdSelected}/{current}");
             List<Post> lisFromServer = GetDeserialized<List<Post>>(client);
             return lisFromServer;
         }
-        catch (Exception e)
-        {
+        catch (Exception e) {
             //   Console.WriteLine(e.Message);
             throw new Exception(e.Message);
         }
     }
 
+    public async Task<List<Post>> GetAllPostsByUsername(string? username) {
+        string content = await ClientAPI.getContent(Methods.Get, $"/allPosts/{username}");
+        List<Post> postFromServer = GetDeserialized<List<Post>>(content);
+        return postFromServer;
 
-    public async Task<Post> GetPostDetails(int Id)
-    {
-        try
-        {
+    }
+
+    public async Task<int> GetTotalNumberOfPostsByUsername(string? username) {
+        string content = await ClientAPI.getContent(Methods.Get, $"/totalPosts/{username}");
+        return int.Parse(content);
+    }
+
+
+    public async Task<Post> GetPostDetails(int Id) {
+        try {
             string client = await ClientAPI.getContent(Methods.Get, $"/PostDetails/{Id}");
             Post post = GetDeserialized<Post>(client);
             Console.WriteLine(post.Writer.Username);
             return post;
         }
-        catch (Exception e)
-        {
+        catch (Exception e) {
             throw new Exception(e.Message);
         }
     }
 
 
-    private T GetDeserialized<T>(string jsonFormat)
-    {
-        T obj = JsonSerializer.Deserialize<T>(jsonFormat, new JsonSerializerOptions()
-        {
+    private T GetDeserialized<T>(string jsonFormat) {
+        T obj = JsonSerializer.Deserialize<T>(jsonFormat, new JsonSerializerOptions() {
             PropertyNameCaseInsensitive = true
         }) !;
         return obj;

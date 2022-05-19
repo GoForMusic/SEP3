@@ -21,7 +21,7 @@ public class BookmarkJUnit
     }
 
     [Test]
-    public async virtual Task TestBookPost()
+    public  virtual async Task TestBookPost()
     {
         try
         {
@@ -57,7 +57,7 @@ public class BookmarkJUnit
     }
 
     [Test]
-    public async virtual Task getListOfPostsThatAreBookedByAUser()
+    public  virtual async Task getListOfPostsThatAreBookedByAUser()
     {
         try
         {
@@ -79,7 +79,7 @@ public class BookmarkJUnit
     
     
     [Test]
-    public async virtual Task TestRemoveBookPost()
+    public  virtual async Task TestRemoveBookPost()
     {
         try
         {

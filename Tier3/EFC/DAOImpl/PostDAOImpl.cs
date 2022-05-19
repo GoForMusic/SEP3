@@ -33,11 +33,9 @@ public class PostDAOImpl : IPostService {
             .ToList());
     }
 
-    public Task<List<Post>> GetAllPostsByUsername(string userName) {
-        List<Post> postsByUser = _context.Posts.Where(post => post.Writer.Username.Equals(userName)).Include(post
-            => post.Subcategory).Include(p
-            => p.Subcategory.Category).ToList();
-        return Task.FromResult(postsByUser);
+    public async Task<List<Post>> GetAllPostsByUsername(string userName) {
+        return await _context.Posts.Where(post => post.Writer!.Username.Equals(userName)).Include(post => post.Writer)
+            .Include(post => post.Images).ToListAsync();
     }
 
 
@@ -56,7 +54,7 @@ public class PostDAOImpl : IPostService {
     }
 
     public async Task<Post> GetPostDetails(int id) {
-        var post= await _context.Posts.Include(post => post.Images)
+        var post = await _context.Posts.Include(post => post.Images)
             .Include(post => post.Writer!)
             .Include(post => post.Comments!)
             .ThenInclude(comment => comment.Writer).FirstAsync(post => post.Id == id);
@@ -73,10 +71,13 @@ public class PostDAOImpl : IPostService {
     }
 
     //To get the id for image and creating href according to it 
-    public async Task<string> AddImage(int postId)
-    {
+    public async Task<string> AddImage(int postId) {
         Image image = new Image();
         var imageId = await _context.Images.AddAsync(image);
         return imageId.Entity.Id.ToString();
+    }
+
+    public async Task<int> GetTotalNumberOfPosts(string username) {
+        return await _context.Posts.Where(post => post.Writer!.Username.Equals(username)).CountAsync();
     }
 }

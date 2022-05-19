@@ -85,8 +85,6 @@ public class PostController {
     @ResponseBody
     public ResponseEntity getPostsBySubcategoryId(@PathVariable int subCategoryIdSelected, @PathVariable int current){
 
-        System.out.println("Sub categopory called");
-
         try {
             List<Post> list = postService.getPostsBySubcategories(subCategoryIdSelected, current);
             return ResponseEntity.ok(list);
@@ -116,6 +114,29 @@ public class PostController {
 
 
     }
+    @GetMapping(value = "/totalPosts/{username}")
+    public ResponseEntity getTotalNumberOfPosts(@PathVariable String username)
+    {
+        try {
+            int totalPosts = postService.getNumberOfPosts(username);
+            return ResponseEntity.ok(totalPosts);
+        } catch (Exception e) {
+            return new ResponseEntity(e.getMessage(), HttpStatus.EXPECTATION_FAILED);
+        }
 
+    }
+
+    @GetMapping(value = "/allPosts/{username}")
+
+    public ResponseEntity getAllPostsByUsername(@PathVariable String username){
+
+        try {
+            List<Post> allPostsFromSever = postService.getAllPostsByUsername(username);
+            return ResponseEntity.ok(allPostsFromSever);
+        } catch (Exception e) {
+            return new ResponseEntity(e.getMessage(),HttpStatus.NOT_FOUND);
+        }
+
+    }
 
 }
