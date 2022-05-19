@@ -91,38 +91,6 @@ public final class ReportGrpc {
      return getGetReportsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<GRPCService.ReportOuterClass.ReportObj,
-      GRPCService.ReportOuterClass.EmptyReportMark> getAddReportMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AddReport",
-      requestType = GRPCService.ReportOuterClass.ReportObj.class,
-      responseType = GRPCService.ReportOuterClass.EmptyReportMark.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<GRPCService.ReportOuterClass.ReportObj,
-      GRPCService.ReportOuterClass.EmptyReportMark> getAddReportMethod() {
-    io.grpc.MethodDescriptor<GRPCService.ReportOuterClass.ReportObj, GRPCService.ReportOuterClass.EmptyReportMark> getAddReportMethod;
-    if ((getAddReportMethod = ReportGrpc.getAddReportMethod) == null) {
-      synchronized (ReportGrpc.class) {
-        if ((getAddReportMethod = ReportGrpc.getAddReportMethod) == null) {
-          ReportGrpc.getAddReportMethod = getAddReportMethod = 
-              io.grpc.MethodDescriptor.<GRPCService.ReportOuterClass.ReportObj, GRPCService.ReportOuterClass.EmptyReportMark>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "Report.Report", "AddReport"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  GRPCService.ReportOuterClass.ReportObj.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  GRPCService.ReportOuterClass.EmptyReportMark.getDefaultInstance()))
-                  .setSchemaDescriptor(new ReportMethodDescriptorSupplier("AddReport"))
-                  .build();
-          }
-        }
-     }
-     return getAddReportMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -164,13 +132,6 @@ public final class ReportGrpc {
       asyncUnimplementedUnaryCall(getGetReportsMethod(), responseObserver);
     }
 
-    /**
-     */
-    public void addReport(GRPCService.ReportOuterClass.ReportObj request,
-        io.grpc.stub.StreamObserver<GRPCService.ReportOuterClass.EmptyReportMark> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddReportMethod(), responseObserver);
-    }
-
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -187,13 +148,6 @@ public final class ReportGrpc {
                 GRPCService.ReportOuterClass.EmptyReportMark,
                 GRPCService.ReportOuterClass.ListOfReports>(
                   this, METHODID_GET_REPORTS)))
-          .addMethod(
-            getAddReportMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                GRPCService.ReportOuterClass.ReportObj,
-                GRPCService.ReportOuterClass.EmptyReportMark>(
-                  this, METHODID_ADD_REPORT)))
           .build();
     }
   }
@@ -231,14 +185,6 @@ public final class ReportGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetReportsMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     */
-    public void addReport(GRPCService.ReportOuterClass.ReportObj request,
-        io.grpc.stub.StreamObserver<GRPCService.ReportOuterClass.EmptyReportMark> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getAddReportMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -271,13 +217,6 @@ public final class ReportGrpc {
     public GRPCService.ReportOuterClass.ListOfReports getReports(GRPCService.ReportOuterClass.EmptyReportMark request) {
       return blockingUnaryCall(
           getChannel(), getGetReportsMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public GRPCService.ReportOuterClass.EmptyReportMark addReport(GRPCService.ReportOuterClass.ReportObj request) {
-      return blockingUnaryCall(
-          getChannel(), getAddReportMethod(), getCallOptions(), request);
     }
   }
 
@@ -314,19 +253,10 @@ public final class ReportGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetReportsMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<GRPCService.ReportOuterClass.EmptyReportMark> addReport(
-        GRPCService.ReportOuterClass.ReportObj request) {
-      return futureUnaryCall(
-          getChannel().newCall(getAddReportMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_REMOVE_REPORT = 0;
   private static final int METHODID_GET_REPORTS = 1;
-  private static final int METHODID_ADD_REPORT = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -352,10 +282,6 @@ public final class ReportGrpc {
         case METHODID_GET_REPORTS:
           serviceImpl.getReports((GRPCService.ReportOuterClass.EmptyReportMark) request,
               (io.grpc.stub.StreamObserver<GRPCService.ReportOuterClass.ListOfReports>) responseObserver);
-          break;
-        case METHODID_ADD_REPORT:
-          serviceImpl.addReport((GRPCService.ReportOuterClass.ReportObj) request,
-              (io.grpc.stub.StreamObserver<GRPCService.ReportOuterClass.EmptyReportMark>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -420,7 +346,6 @@ public final class ReportGrpc {
               .setSchemaDescriptor(new ReportFileDescriptorSupplier())
               .addMethod(getRemoveReportMethod())
               .addMethod(getGetReportsMethod())
-              .addMethod(getAddReportMethod())
               .build();
         }
       }
