@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Third Semester\\Sep3\\Tier3\\GrpcService\\GrpcService.csproj": {}
+    "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\GrpcService\\GrpcService.csproj": {}
   },
   "projects": {
-    "H:\\Third Semester\\Sep3\\Tier3\\EFC\\EFC.csproj": {
+    "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\EFC\\EFC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Third Semester\\Sep3\\Tier3\\EFC\\EFC.csproj",
+        "projectUniqueName": "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\EFC\\EFC.csproj",
         "projectName": "EFC",
-        "projectPath": "H:\\Third Semester\\Sep3\\Tier3\\EFC\\EFC.csproj",
-        "packagesPath": "C:\\Users\\himal\\.nuget\\packages\\",
-        "outputPath": "H:\\Third Semester\\Sep3\\Tier3\\EFC\\obj\\",
+        "projectPath": "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\EFC\\EFC.csproj",
+        "packagesPath": "C:\\Users\\ACM\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\EFC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\himal\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ACM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "H:\\Third Semester\\Sep3\\Tier3\\Entities\\Entities.csproj": {
-                "projectPath": "H:\\Third Semester\\Sep3\\Tier3\\Entities\\Entities.csproj"
+              "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\Entities\\Entities.csproj"
               }
             }
           }
@@ -72,26 +74,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "H:\\Third Semester\\Sep3\\Tier3\\Entities\\Entities.csproj": {
+    "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Third Semester\\Sep3\\Tier3\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "H:\\Third Semester\\Sep3\\Tier3\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\himal\\.nuget\\packages\\",
-        "outputPath": "H:\\Third Semester\\Sep3\\Tier3\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\ACM\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\himal\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ACM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -124,37 +128,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "H:\\Third Semester\\Sep3\\Tier3\\GrpcService\\GrpcService.csproj": {
+    "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\GrpcService\\GrpcService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Third Semester\\Sep3\\Tier3\\GrpcService\\GrpcService.csproj",
+        "projectUniqueName": "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\GrpcService\\GrpcService.csproj",
         "projectName": "GrpcService",
-        "projectPath": "H:\\Third Semester\\Sep3\\Tier3\\GrpcService\\GrpcService.csproj",
-        "packagesPath": "C:\\Users\\himal\\.nuget\\packages\\",
-        "outputPath": "H:\\Third Semester\\Sep3\\Tier3\\GrpcService\\obj\\",
+        "projectPath": "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\GrpcService\\GrpcService.csproj",
+        "packagesPath": "C:\\Users\\ACM\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\GrpcService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\himal\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ACM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "H:\\Third Semester\\Sep3\\Tier3\\EFC\\EFC.csproj": {
-                "projectPath": "H:\\Third Semester\\Sep3\\Tier3\\EFC\\EFC.csproj"
+              "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\EFC\\EFC.csproj": {
+                "projectPath": "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\EFC\\EFC.csproj"
               },
-              "H:\\Third Semester\\Sep3\\Tier3\\Entities\\Entities.csproj": {
-                "projectPath": "H:\\Third Semester\\Sep3\\Tier3\\Entities\\Entities.csproj"
+              "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\ACM\\RiderProjects\\SEP3\\Tier3\\Entities\\Entities.csproj"
               }
             }
           }
@@ -192,7 +198,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
