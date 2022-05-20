@@ -1,16 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Entities.Models; 
+namespace Entities.Models;
 
-public class Rate {
-    // Following two props are just for EFC use
-    [ForeignKey(nameof(RatingUser))]
-    public string RatingUsername { get; set; }
-    public User RatingUser { get; set; }
-         
-    [ForeignKey(nameof(RatedUser))]
-    public string  RatedUsername { get; set; }
-    public User RatedUser { get; set; }
-    public int Score { get; set; }
-    
+public class Rate
+{
+     // Following two props are just for EFC use
+     [ForeignKey(nameof(User))]
+     public string rateUsername { get; set; }
+     [ForeignKey(nameof(User))]
+     public string  ratedUsername { get; set; }
+     public User rateUser; 
+     public User ratedUser;
+     public int score;
 }

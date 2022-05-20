@@ -23,6 +23,8 @@ builder.Services.AddScoped<IPostService, PostDAOImpl>();
 builder.Services.AddScoped<ICommentService, CommentDAOImpl>();
 builder.Services.AddScoped<IImageService,ImageDaoImpl>();
 builder.Services.AddScoped<IReportService, ReportDAOImpl>();
+builder.Services.AddScoped<IRatingService, RatingDAOImpl>();
+
 builder.Services.AddScoped<IBlockService, BlockDAOImpl>();
 
 
@@ -31,6 +33,7 @@ builder.Services.AddDbContext<DbAccess>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+app.MapGrpcService<RatingProtoImpl>();
 app.MapGrpcService<ReportProtoImpl>();
 app.MapGrpcService<BookmarkProtoImpl>();
 app.MapGrpcService<UserProtoImpl>();

@@ -1,0 +1,19 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GRPCService";
+import "user.proto";
+
+package rating;
+
+service rating{
+  
+  rpc AddRating(RatingObj) returns (RatingObj);
+}
+
+message RatingObj{
+  user.UserObj ratedUser = 1;
+  user.UserObj rateUser = 2;
+  int32 score = 3;
+}
+
+

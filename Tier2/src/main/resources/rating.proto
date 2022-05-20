@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "GRPCService";
+import "user.proto";
+
+package Rating;
+
+service Rating{
+
+  rpc AddRating(RatingObj) returns (RatingObj);
+}
+
+message RatingObj{
+  user.UserObj ratedUser = 1;
+  int32 score = 2;
+  user.UserObj rateUser = 3;
+}
