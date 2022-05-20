@@ -16,11 +16,11 @@ public class BlockDAOImpl : IBlockService {
         User? user = await _context.Users.FirstOrDefaultAsync(user1 => user1.Username.Equals(block.Username));
         Block blockToSave = new Block() {
             Reason = block.Reason,
-            User = user
+            User = user!
         };
         await _context.Blocks.AddAsync(blockToSave);
         await _context.SaveChangesAsync();
-        return user;
+        return user!;
     }
 
     public async Task<User> UnBlockUser(string requestUserName) {
