@@ -48,7 +48,7 @@ namespace EFC.Migrations
 
                     b.HasIndex("Username");
 
-                    b.ToTable("Bookmarks");
+                    b.ToTable("Bookmarks", (string)null);
                 });
 
             modelBuilder.Entity("Entities.Models.Category", b =>
@@ -65,7 +65,7 @@ namespace EFC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("Entities.Models.Comment", b =>
@@ -96,7 +96,7 @@ namespace EFC.Migrations
 
                     b.HasIndex("WriterUsername");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("Entities.Models.Image", b =>
@@ -118,7 +118,7 @@ namespace EFC.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("Images");
+                    b.ToTable("Images", (string)null);
                 });
 
             modelBuilder.Entity("Entities.Models.Post", b =>
@@ -167,7 +167,7 @@ namespace EFC.Migrations
 
                     b.HasIndex("WriterUsername");
 
-                    b.ToTable("Posts");
+                    b.ToTable("Posts", (string)null);
                 });
 
             modelBuilder.Entity("Entities.Models.Rate", b =>
@@ -185,7 +185,7 @@ namespace EFC.Migrations
 
                     b.HasIndex("RatingUsername");
 
-                    b.ToTable("Ratings");
+                    b.ToTable("Ratings", (string)null);
                 });
 
             modelBuilder.Entity("Entities.Models.Report", b =>
@@ -202,7 +202,7 @@ namespace EFC.Migrations
 
                     b.HasKey("PostId", "ReporterUsername");
 
-                    b.ToTable("Reports");
+                    b.ToTable("Reports", (string)null);
                 });
 
             modelBuilder.Entity("Entities.Models.Subcategory", b =>
@@ -224,7 +224,7 @@ namespace EFC.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Subcategories");
+                    b.ToTable("Subcategories", (string)null);
                 });
 
             modelBuilder.Entity("Entities.Models.User", b =>
@@ -249,7 +249,7 @@ namespace EFC.Migrations
 
                     b.HasKey("Username");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("Entities.Models.Block", b =>

@@ -5,11 +5,16 @@ namespace Entities.Models;
 public class Rate
 {
      // Following two props are just for EFC use
-     [ForeignKey(nameof(User))]
-     public string rateUsername { get; set; }
-     [ForeignKey(nameof(User))]
+     [ForeignKey(nameof(RatingUser))]
+     public string ratingUsername { get; set; }
+         public User RatingUser { get; set; }
+     
+     
+     [ForeignKey(nameof(RatedUser))]
      public string  ratedUsername { get; set; }
-     public User rateUser; 
-     public User ratedUser;
+
+ 
+
+     public User RatedUser { get; set; }
      public int score;
 }

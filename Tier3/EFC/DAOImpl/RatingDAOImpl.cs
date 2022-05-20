@@ -16,7 +16,7 @@ public class RatingDAOImpl : IRatingService{
     {
         try
         {
-            Console.WriteLine(rate.ratedUser+" "+rate.rateUser+" "+rate.score);
+            Console.WriteLine(rate.ratedUsername+" "+rate.ratingUsername+" "+rate.score);
             //_context.Ratings.Add(rate);
             //await _context.SaveChangesAsync();
             return rate;
