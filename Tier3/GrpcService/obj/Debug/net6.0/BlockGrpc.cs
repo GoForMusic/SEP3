@@ -51,10 +51,6 @@ namespace GRPCService {
     static readonly grpc::Marshaller<global::GRPCService.UserObj> __Marshaller_user_UserObj = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GRPCService.UserObj.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GRPCService.Username> __Marshaller_user_Username = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GRPCService.Username.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::GRPCService.EmptyBlock> __Marshaller_EmptyBlock = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GRPCService.EmptyBlock.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::GRPCService.ListOfBlocks> __Marshaller_ListOfBlocks = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GRPCService.ListOfBlocks.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::GRPCService.BlockObj, global::GRPCService.UserObj> __Method_BlockUser = new grpc::Method<global::GRPCService.BlockObj, global::GRPCService.UserObj>(
@@ -71,14 +67,6 @@ namespace GRPCService {
         "UnBlockUser",
         __Marshaller_user_Username,
         __Marshaller_user_UserObj);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::GRPCService.EmptyBlock, global::GRPCService.ListOfBlocks> __Method_getAllBlockedUsers = new grpc::Method<global::GRPCService.EmptyBlock, global::GRPCService.ListOfBlocks>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "getAllBlockedUsers",
-        __Marshaller_EmptyBlock,
-        __Marshaller_ListOfBlocks);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -102,12 +90,6 @@ namespace GRPCService {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::GRPCService.ListOfBlocks> getAllBlockedUsers(global::GRPCService.EmptyBlock request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -117,8 +99,7 @@ namespace GRPCService {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_BlockUser, serviceImpl.BlockUser)
-          .AddMethod(__Method_UnBlockUser, serviceImpl.UnBlockUser)
-          .AddMethod(__Method_getAllBlockedUsers, serviceImpl.getAllBlockedUsers).Build();
+          .AddMethod(__Method_UnBlockUser, serviceImpl.UnBlockUser).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -130,7 +111,6 @@ namespace GRPCService {
     {
       serviceBinder.AddMethod(__Method_BlockUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GRPCService.BlockObj, global::GRPCService.UserObj>(serviceImpl.BlockUser));
       serviceBinder.AddMethod(__Method_UnBlockUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GRPCService.Username, global::GRPCService.UserObj>(serviceImpl.UnBlockUser));
-      serviceBinder.AddMethod(__Method_getAllBlockedUsers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GRPCService.EmptyBlock, global::GRPCService.ListOfBlocks>(serviceImpl.getAllBlockedUsers));
     }
 
   }
