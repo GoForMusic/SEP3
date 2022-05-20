@@ -90,11 +90,15 @@ public class PostGRPCClientImpl implements PostClient {
 
     @Override
     public Post getPostDetails(int Id) {
-        PostOuterClass.IdWithInteger obj = PostOuterClass.IdWithInteger.newBuilder().setId(Id).build();
-        PostOuterClass.PostObj postObj = getPostBlockingStub().getPostDetails(obj);
-        Post post = ConvertGrpc.getPostFromGrpcPost(postObj);
-        System.out.println(post.getWriter().getUsername());
-        return post;
+        try{
+            PostOuterClass.IdWithInteger obj = PostOuterClass.IdWithInteger.newBuilder().setId(Id).build();
+            PostOuterClass.PostObj postObj = getPostBlockingStub().getPostDetails(obj);
+            Post post = ConvertGrpc.getPostFromGrpcPost(postObj);
+            System.out.println(post.getWriter().getUsername());
+            return post;
+        }catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
