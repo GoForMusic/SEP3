@@ -98,203 +98,103 @@ D:\VIA_Courses\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.dll
 D:\VIA_Courses\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\ref\UNITtests.dll
 D:\VIA_Courses\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.pdb
 D:\VIA_Courses\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.genruntimeconfig.cache
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\testhost.exe
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\testhost.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.PlatformAbstractions.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\UNITtests.deps.json
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\UNITtests.runtimeconfig.json
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\UNITtests.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ref\UNITtests.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\UNITtests.pdb
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\BCrypt.Net-Next.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.CoreUtilities.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.CommunicationUtilities.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.CrossPlatEngine.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.Utilities.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.Common.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Newtonsoft.Json.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\NuGet.Frameworks.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\nunit.framework.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Contracts.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Entities.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\HttpServices.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Contracts.pdb
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Entities.pdb
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\HttpServices.pdb
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.csproj.AssemblyReference.cache
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.AssemblyInfoInputs.cache
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.AssemblyInfo.cs
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.csproj.CoreCompileInputs.cache
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.csproj.CopyComplete
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\ref\UNITtests.dll
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.pdb
-C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.genruntimeconfig.cache
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\testhost.exe
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\testhost.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.PlatformAbstractions.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\UNITtests.deps.json
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\UNITtests.runtimeconfig.json
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\UNITtests.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\UNITtests.pdb
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\BCrypt.Net-Next.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.CoreUtilities.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.CommunicationUtilities.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.CrossPlatEngine.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.Utilities.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.Common.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Newtonsoft.Json.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\NuGet.Frameworks.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\nunit.framework.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Contracts.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Entities.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\HttpServices.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Contracts.pdb
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Entities.pdb
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\HttpServices.pdb
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.csproj.AssemblyReference.cache
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.GeneratedMSBuildEditorConfig.editorconfig
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.AssemblyInfoInputs.cache
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.AssemblyInfo.cs
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.csproj.CoreCompileInputs.cache
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.csproj.CopyComplete
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\refint\UNITtests.dll
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.pdb
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.genruntimeconfig.cache
-H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\ref\UNITtests.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\testhost.exe
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\testhost.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.PlatformAbstractions.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\UNITtests.deps.json
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\UNITtests.runtimeconfig.json
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\UNITtests.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ref\UNITtests.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\UNITtests.pdb
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.CoreUtilities.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.CommunicationUtilities.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.CrossPlatEngine.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.TestPlatform.Utilities.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.Common.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\NuGet.Frameworks.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\nunit.framework.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Contracts.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Entities.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\HttpServices.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Contracts.pdb
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\Entities.pdb
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\HttpServices.pdb
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.csproj.AssemblyReference.cache
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.AssemblyInfoInputs.cache
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.AssemblyInfo.cs
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.csproj.CoreCompileInputs.cache
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.csproj.CopyComplete
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\ref\UNITtests.dll
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.pdb
+C:\Users\ACM\RiderProjects\SEP3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.genruntimeconfig.cache
