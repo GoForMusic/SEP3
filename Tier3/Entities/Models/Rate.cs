@@ -8,8 +8,7 @@ public class Rate
      [ForeignKey(nameof(RatingUser))]
      public string ratingUsername { get; set; }
          public User RatingUser { get; set; }
-     
-     
+         
      [ForeignKey(nameof(RatedUser))]
      public string  ratedUsername { get; set; }
 

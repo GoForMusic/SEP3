@@ -247,8 +247,8 @@ public class ConvertGRPC {
     {
         return new Rate()
         {
-            rateUser = GetUserFromUserObj(ratingObj.RateUser),
-            ratedUser = GetUserFromUserObj(ratingObj.RatedUser),
+            RatingUser = GetUserFromUserObj(ratingObj.RateUser),
+            RatedUser = GetUserFromUserObj(ratingObj.RatedUser),
             score = ratingObj.Score
         };
     }
@@ -256,8 +256,8 @@ public class ConvertGRPC {
     {
         RatingObj rateObj = new RatingObj()
         {
-            RatedUser = ConvertUserToUserObj(rate.ratedUser),
-            RateUser = ConvertUserToUserObj(rate.rateUser),
+            RatedUser = ConvertUserToUserObj(rate.RatedUser),
+            RateUser = ConvertUserToUserObj(rate.RatingUser),
             Score = rate.score
         };
         return rateObj;
