@@ -45,8 +45,14 @@ public class PostProtoImpl : Post.PostBase {
 
     public override async Task<PostObj> GetPostDetails(IdWithInteger Id, ServerCallContext context)
     {
-        var  post = await _postService.GetPostDetails(Id.Id);
-        return ConvertGRPC.ConvertPostToPostObjWithComments(post);
+        try{
+            var  post = await _postService.GetPostDetails(Id.Id);
+            return ConvertGRPC.ConvertPostToPostObjWithComments(post);       
+        }
+        catch (Exception e)
+        {
+            throw new RpcException(new Status(StatusCode.NotFound,e.Message));
+        }
     }
 
     
