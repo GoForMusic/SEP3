@@ -4,7 +4,6 @@
 package group6.semester.project.grpcClient;
 
 import GRPCService.*;
-import com.google.type.DateTime;
 import group6.semester.project.model.*;
 import group6.semester.project.model.Comment;
 import group6.semester.project.model.Image;
@@ -22,10 +21,13 @@ public class ConvertGrpc {
      * @return A UserOuterClass.UserObj object
      */
     public static UserOuterClass.UserObj getGrpcUserFromUser(User user) {
-        UserOuterClass.UserObj userObj = UserOuterClass.UserObj.newBuilder().setFirstName(
-                user.getFirstName()).setLastName(user.getLastName()).setPassword(
-                user.getPassword()).setUsername(user.getUsername()).setRole(
-                user.getRole()).build();
+        UserOuterClass.UserObj userObj = UserOuterClass.UserObj.newBuilder()
+                .setFirstName(user.getFirstName())
+                .setLastName(user.getLastName())
+                .setPassword(user.getPassword())
+                .setUsername(user.getUsername())
+                .setRole(user.getRole())
+                .build();
         return userObj;
     }
 
@@ -100,9 +102,17 @@ public class ConvertGrpc {
         return postObj;
     }
 
+    public static RatingOuterClass.RatingObj getGrpcRatingFromRating(Rating rating){
+        RatingOuterClass.RatingObj ratingObj = RatingOuterClass.RatingObj.newBuilder()
+                .setRateUser(getGrpcUserFromUser(rating.getRateUser()))
+                .setRatedUser(getGrpcUserFromUser(rating.getRatedUser()))
+                .setScore(rating.getScore()).build();
+        return ratingObj;
+    }
 
     public static ReportOuterClass.ReportObj getGrpcReportFromReport(Report report) {
-        ReportOuterClass.ReportObj reportObj = ReportOuterClass.ReportObj.newBuilder().setPostId(report.getPostId()).setReporterUsername(report.getReporterUsername()).setReason(report.getReason()).build();
+        ReportOuterClass.ReportObj reportObj = ReportOuterClass.ReportObj.newBuilder().setPostId(report.getPostId())
+                .setReporterUsername(report.getReporterUsername()).setReason(report.getReason()).build();
         return reportObj;
 
 
@@ -138,6 +148,14 @@ public class ConvertGrpc {
         temp.setReporterUsername(report.getReporterUsername());
         temp.setReason(report.getReason());
         return temp;
+    }
+
+    public static Rating getRatingFromGrpcRating(RatingOuterClass.RatingObj rating){
+        Rating rate = new Rating();
+        rate.setRateUser(getUserFromGrpcUser(rating.getRateUser()));
+        rate.setRatedUser(getUserFromGrpcUser(rating.getRatedUser()));
+        rate.setScore(rate.getScore());
+        return rate;
     }
 
     public static PostOuterClass.DateCreated getDateCreatedFromYearMonthDay(Date date) {

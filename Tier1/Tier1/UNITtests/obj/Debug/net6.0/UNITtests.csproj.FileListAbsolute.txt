@@ -298,3 +298,11 @@ H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\refint\UNITtests.d
 H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.pdb
 H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\UNITtests.genruntimeconfig.cache
 H:\Third Semester\Sep3\Tier1\Tier1\UNITtests\obj\Debug\net6.0\ref\UNITtests.dll
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\BlazorAppTier1.deps.json
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\BlazorAppTier1.runtimeconfig.json
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\appsettings.json
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\BlazorAppTier1.staticwebassets.runtime.json
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\BlazorAppTier1.exe
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\BlazorAppTier1.dll
+C:\Users\vassi\Desktop\SEP3\SEP3\Tier1\Tier1\UNITtests\bin\Debug\net6.0\BlazorAppTier1.pdb
