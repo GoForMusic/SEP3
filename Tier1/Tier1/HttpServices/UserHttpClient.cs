@@ -47,6 +47,12 @@ public class UserHttpClient : IUserService {
         return user;
     }
 
+    public Task<List<Block>?> GetAllBlockedUsers() {
+
+
+        throw new NotImplementedException();
+    }
+
 
     private T GetDeserialized<T>(string jsonFormat) {
         T obj = JsonSerializer.Deserialize<T>(jsonFormat, new JsonSerializerOptions() {

@@ -91,6 +91,38 @@ public final class BlockProtoGrpc {
      return getUnBlockUserMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<GRPCService.Block.EmptyBlock,
+      GRPCService.Block.ListOfBlocks> getGetAllBlockedUsersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getAllBlockedUsers",
+      requestType = GRPCService.Block.EmptyBlock.class,
+      responseType = GRPCService.Block.ListOfBlocks.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<GRPCService.Block.EmptyBlock,
+      GRPCService.Block.ListOfBlocks> getGetAllBlockedUsersMethod() {
+    io.grpc.MethodDescriptor<GRPCService.Block.EmptyBlock, GRPCService.Block.ListOfBlocks> getGetAllBlockedUsersMethod;
+    if ((getGetAllBlockedUsersMethod = BlockProtoGrpc.getGetAllBlockedUsersMethod) == null) {
+      synchronized (BlockProtoGrpc.class) {
+        if ((getGetAllBlockedUsersMethod = BlockProtoGrpc.getGetAllBlockedUsersMethod) == null) {
+          BlockProtoGrpc.getGetAllBlockedUsersMethod = getGetAllBlockedUsersMethod = 
+              io.grpc.MethodDescriptor.<GRPCService.Block.EmptyBlock, GRPCService.Block.ListOfBlocks>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "BlockProto", "getAllBlockedUsers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  GRPCService.Block.EmptyBlock.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  GRPCService.Block.ListOfBlocks.getDefaultInstance()))
+                  .setSchemaDescriptor(new BlockProtoMethodDescriptorSupplier("getAllBlockedUsers"))
+                  .build();
+          }
+        }
+     }
+     return getGetAllBlockedUsersMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -132,6 +164,13 @@ public final class BlockProtoGrpc {
       asyncUnimplementedUnaryCall(getUnBlockUserMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getAllBlockedUsers(GRPCService.Block.EmptyBlock request,
+        io.grpc.stub.StreamObserver<GRPCService.Block.ListOfBlocks> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetAllBlockedUsersMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -148,6 +187,13 @@ public final class BlockProtoGrpc {
                 GRPCService.UserOuterClass.Username,
                 GRPCService.UserOuterClass.UserObj>(
                   this, METHODID_UN_BLOCK_USER)))
+          .addMethod(
+            getGetAllBlockedUsersMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                GRPCService.Block.EmptyBlock,
+                GRPCService.Block.ListOfBlocks>(
+                  this, METHODID_GET_ALL_BLOCKED_USERS)))
           .build();
     }
   }
@@ -185,6 +231,14 @@ public final class BlockProtoGrpc {
       asyncUnaryCall(
           getChannel().newCall(getUnBlockUserMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getAllBlockedUsers(GRPCService.Block.EmptyBlock request,
+        io.grpc.stub.StreamObserver<GRPCService.Block.ListOfBlocks> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetAllBlockedUsersMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -217,6 +271,13 @@ public final class BlockProtoGrpc {
     public GRPCService.UserOuterClass.UserObj unBlockUser(GRPCService.UserOuterClass.Username request) {
       return blockingUnaryCall(
           getChannel(), getUnBlockUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public GRPCService.Block.ListOfBlocks getAllBlockedUsers(GRPCService.Block.EmptyBlock request) {
+      return blockingUnaryCall(
+          getChannel(), getGetAllBlockedUsersMethod(), getCallOptions(), request);
     }
   }
 
@@ -253,10 +314,19 @@ public final class BlockProtoGrpc {
       return futureUnaryCall(
           getChannel().newCall(getUnBlockUserMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<GRPCService.Block.ListOfBlocks> getAllBlockedUsers(
+        GRPCService.Block.EmptyBlock request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetAllBlockedUsersMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_BLOCK_USER = 0;
   private static final int METHODID_UN_BLOCK_USER = 1;
+  private static final int METHODID_GET_ALL_BLOCKED_USERS = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -282,6 +352,10 @@ public final class BlockProtoGrpc {
         case METHODID_UN_BLOCK_USER:
           serviceImpl.unBlockUser((GRPCService.UserOuterClass.Username) request,
               (io.grpc.stub.StreamObserver<GRPCService.UserOuterClass.UserObj>) responseObserver);
+          break;
+        case METHODID_GET_ALL_BLOCKED_USERS:
+          serviceImpl.getAllBlockedUsers((GRPCService.Block.EmptyBlock) request,
+              (io.grpc.stub.StreamObserver<GRPCService.Block.ListOfBlocks>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -346,6 +420,7 @@ public final class BlockProtoGrpc {
               .setSchemaDescriptor(new BlockProtoFileDescriptorSupplier())
               .addMethod(getBlockUserMethod())
               .addMethod(getUnBlockUserMethod())
+              .addMethod(getGetAllBlockedUsersMethod())
               .build();
         }
       }

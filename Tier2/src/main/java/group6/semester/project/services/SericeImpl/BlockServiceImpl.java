@@ -6,6 +6,8 @@ import group6.semester.project.model.User;
 import group6.semester.project.services.BlockService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class BlockServiceImpl implements BlockService {
 
@@ -24,5 +26,10 @@ public class BlockServiceImpl implements BlockService {
     @Override
     public User unBlockUser(String username) {
         return client.unBlockUser(username);
+    }
+
+    @Override
+    public List<Block> getAllBlockedUsers() {
+        return client.getALlBlockedUsers();
     }
 }
