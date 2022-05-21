@@ -1,0 +1,76 @@
+﻿ @page "/AllBlocks"
+ @using Entities.Models
+@using Contracts
+@inject NavigationManager _navigationManager 
+@inject IUserService _userService
+
+<AuthorizeView Policy="Admin">
+    <NotAuthorized>
+        <p> This page is only available for admins.</p>
+        <button @onclick="@(() => _navigationManager.NavigateTo("/"))"> Back</button>
+    </NotAuthorized>
+
+    <Authorized>
+        @if (_allBlockedUsers == null) {
+            <p>
+                <em> Loading...</em>
+            </p>
+        }
+        else if (!_allBlockedUsers.Any()) {
+            <p>
+                <em> No blocked users yet. They will be available here if any</em>
+
+            </p>
+        }
+        else {
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                        Username
+                    </th>
+
+                    <th> Reason blocked :</th>
+                    <th> Unblock </th>
+                </tr>
+                </thead>
+
+                <tbody>
+                @foreach (var item in _allBlockedUsers) {
+                    <tr>
+                        <td> @item.Username</td>
+                        <td> @item.Reason</td>
+                        <td>
+                            <label @onclick="@(() => RemoveBlock(item.Username))" style="cursor:pointer; color: red; font-weight: bold">
+                                &#x2717;
+                            </label>
+                        </td>
+                    </tr>
+                }
+
+                </tbody>
+            </table>
+        }
+
+    </Authorized>
+
+</AuthorizeView>
+<h3>BlockedUser</h3>
+
+@code {
+
+    private List<Block>? _allBlockedUsers;
+
+    protected override async Task OnInitializedAsync() {
+        _allBlockedUsers = await _userService.GetAllBlockedUsers();
+    }
+
+
+
+    private async Task RemoveBlock(string username) {
+        var fromServer = await _userService.UnblockUser(username);
+        Block block = _allBlockedUsers!.First(block => block.Username.Equals(fromServer.Username));
+        _allBlockedUsers!.Remove(block);
+    }
+
+}

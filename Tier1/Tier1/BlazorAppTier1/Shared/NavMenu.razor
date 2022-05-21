@@ -3,62 +3,68 @@
 @inject IAuthService authManager
 @inject NavigationManager navMgr
 
-<div id="body" class="dark">  
-	<div class="hero-anime">
-	<div class="navigation-wrap bg-light start-header start-style">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<nav class="navbar navbar-expand-md navbar-light">
-						<a class="navbar-brand" href="https://front.codes/" target="_blank">
-							<img src="images/logo.png" alt="">
-						</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						
-						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav ml-auto py-4 py-md-0">
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="Login" role="button">Login</a>
-								</li>
-								
-								<AuthorizeView Policy="User">
-									<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-										<a class="nav-link" href="PostCreation" role="button">Add </a>
-									</li>
-									<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-										<a class="nav-link" href="PostBookmark" role="button">Bookmark list</a>
-									</li>
-								</AuthorizeView>
-								<AuthorizeView Policy="Admin">
-									<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-										<a class="nav-link" href="Reports" role="button">Reports</a>
-									</li>
-								</AuthorizeView>
-								<AuthorizeView Policy="All">
-									<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-										<a class="nav-link" @onclick="@(() => Logout())" role="button">Logout</a>
-									</li>
-								</AuthorizeView>
-							</ul>
-						</div>
-						
-					</nav>		
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
+<div id="body" class="dark">
+    <div class="hero-anime">
+        <div class="navigation-wrap bg-light start-header start-style">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            <a class="navbar-brand" href="https://front.codes/" target="_blank">
+                                <img src="images/logo.png" alt="">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" href="Login" role="button">Login</a>
+                                    </li>
+
+                                    <AuthorizeView Policy="User">
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="PostCreation" role="button">Add </a>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="PostBookmark" role="button">Bookmark list</a>
+                                        </li>
+                                    </AuthorizeView>
+                                    <AuthorizeView Policy="Admin">
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="Reports" role="button">Reports</a>
+                                        </li>
+                                    </AuthorizeView>
+
+                                    <AuthorizeView Policy="Admin">
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="AllBlocks" role="button">Blocks</a>
+                                        </li>
+                                    </AuthorizeView>
+                                    <AuthorizeView Policy="All">
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" @onclick="@(() => Logout())" role="button">Logout</a>
+                                        </li>
+                                    </AuthorizeView>
+                                </ul>
+                            </div>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 @code {
 
-	private User? user = new User();
-	
-	private async Task Logout()
-	{
-		await authManager.LogoutAsync();
-		navMgr.NavigateTo("/");
-	}
+    private User? user = new User();
+
+    private async Task Logout() {
+        await authManager.LogoutAsync();
+        navMgr.NavigateTo("/");
+    }
+
 }

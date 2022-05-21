@@ -39,4 +39,12 @@ public class BlockProtoImpl : BlockProto.BlockProtoBase {
         }
 
     }
+
+    public override async Task<ListOfBlocks> getAllBlockedUsers(EmptyBlock request, ServerCallContext context) {
+        List<Block> blocksFromDb = await _blockService.GetALlBlockedUsers();
+        return new ListOfBlocks() {
+            AllBlocks = {ConvertGRPC.ConvertListOfBlocksToListOfBlockObjs(blocksFromDb)}
+        };
+
+    }
 }

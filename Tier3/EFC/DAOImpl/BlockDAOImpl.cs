@@ -31,4 +31,8 @@ public class BlockDAOImpl : IBlockService {
         await _context.SaveChangesAsync();
         return user!;
     }
+
+    public async Task<List<Block>> GetALlBlockedUsers() {
+        return await _context.Blocks.ToListAsync();
+    }
 }
