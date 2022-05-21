@@ -13,7 +13,14 @@
 
     @if (postToShow == null) {
         <LoadingComponent message="posts"></LoadingComponent>
-    }else {
+    }
+    else if (!postToShow.Any()) {
+        <p>
+            <em> No posts yet..</em>
+        </p>
+        
+    }
+    else {
         
         @foreach (var post in (userBookedList)?listOfBookedPosts:postToShow) {
             <div class="col-sm-6 col-lg-4 mb-4">
@@ -80,7 +87,7 @@
 @code {
     private bool showModal;
     [Parameter]
-    public List<Post> postToShow { get; set; }
+    public List<Post>? postToShow { get; set; }
     [Parameter]
     public bool userBookedList { get; set; }
     
