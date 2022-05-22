@@ -272,4 +272,20 @@ public class ConvertGRPC {
             Comments = {GetRepeatedFieldsOfCommentObjsFromListOfComments(request.Comments!)}
         };
     }
+
+    public static BlockObj ConvertBlockToBlockObj(Block block) {
+        return new BlockObj() {
+            Reason = block.Reason,
+            Username = block.Username
+        };
+    }
+
+    public static List<BlockObj> ConvertListOfBlocksToListOfBlockObjs(List<Block> blocksToConvert) {
+        List<BlockObj> listToReturn = new List<BlockObj>();
+        foreach (Block block in blocksToConvert) {
+            listToReturn.Add(ConvertBlockToBlockObj(block));
+        }
+
+        return listToReturn;
+    }
 }

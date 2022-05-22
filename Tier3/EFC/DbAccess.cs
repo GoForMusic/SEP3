@@ -15,6 +15,10 @@ public class DbAccess : DbContext
 
     public DbSet<Comment> Comments { get; set; }
 
+    public DbSet<Block> Blocks { get; set; }
+
+    public DbSet<Rate> Ratings { get; set; }
+
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -27,6 +31,8 @@ public class DbAccess : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder) {
         modelBuilder.Entity<Report>().HasKey(report => new {report.PostId, report.ReporterUsername});
         modelBuilder.Entity<Bookmark>().HasKey(post => new {post.PostId, post.Username});
+        modelBuilder.Entity<Block>().HasKey(block => new {block.Username});
+        modelBuilder.Entity<Rate>().HasKey(rate => new {rate.RatedUsername, rate.RatingUsername});
 
     }
 }

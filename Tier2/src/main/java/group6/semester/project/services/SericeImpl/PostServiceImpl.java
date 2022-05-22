@@ -75,4 +75,14 @@ public class PostServiceImpl implements PostService {
         imageGrpc.uploadImage(file,postId);
     }
 
+    @Override
+    public int getNumberOfPosts(String username) {
+        return postClient.getNumberOfPosts(username);
+    }
+
+    @Override
+    public List<Post> getAllPostsByUsername(String username) {
+        return postClient.getAllPostsByUsername(username);
+    }
+
 }

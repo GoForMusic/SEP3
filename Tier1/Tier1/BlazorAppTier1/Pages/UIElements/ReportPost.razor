@@ -24,6 +24,11 @@
 
     private async Task AddReport(string userName)
     {
+
+        if (_report.Reason==null) {
+            return;
+            
+        }
         _report.ReporterUsername = userName;
         _report.PostId = postId;
 

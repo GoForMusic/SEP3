@@ -1,0 +1,3 @@
+obj\Debug\net6.0/Block.cs \
+obj\Debug\net6.0/BlockGrpc.cs: Protos/user.proto\
+ Protos/block.proto

@@ -1,6 +1,6 @@
 ﻿@page "/Login"
-@using Entities.Models 
-@using Contracts   
+@using Entities.Models
+@using Contracts
 @using Microsoft.AspNetCore.Identity
 @inject IAuthService _authService
 @inject IUserService _userService
@@ -68,7 +68,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         @if (!string.IsNullOrEmpty(errorLabel)) {
                             <div class="errorPrompt">
                                 <label> @errorLabel</label>
@@ -93,7 +93,7 @@
 
         try {
             await _authService.LoginAsync(UsernameLogin, PasswordLogin);
-            navMgr.NavigateTo("/");    
+            navMgr.NavigateTo("/");
             errorLabel = $"Hello {UsernameLogin}, whats up buddy??";
         }
         catch (Exception e) {
@@ -105,13 +105,14 @@
         errorLabel = string.Empty;
         try {
             Console.WriteLine(userSignUp.Username);
-            await _userService.CreateUserAsync(userSignUp);
-            navMgr.NavigateTo("/");
+            User user = await _userService.CreateUserAsync(userSignUp);
+            UsernameLogin = user.Username;
+            PasswordLogin = user.Password;
+           await LoginAsync();
         }
         catch (Exception e) {
             errorLabel = $"Error : {e.Message}";
         }
-
     }
 
 

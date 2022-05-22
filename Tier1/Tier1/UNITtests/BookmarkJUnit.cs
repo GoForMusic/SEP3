@@ -20,8 +20,8 @@ public class BookmarkJUnit
         _postService = new PostHttpClient();
     }
 
-    [Test, Order(1)]
-    public async virtual Task TestBookPost()
+    [Test]
+    public  virtual async Task TestBookPost()
     {
         try
         {
@@ -40,24 +40,24 @@ public class BookmarkJUnit
         }
     }
 
-    [Test, Order(2)]
+    [Test]
     public async Task TestaddBookAlreadyExist()
     {
         
-        Bookmark bookmark = new Bookmark()
-        {
-            //the id of the post may depend base on what is DB
-            Post = await _postService.GetPostDetails(11),
-            //the id of the user may depend base on what is DB
-            User = await _userService.GetUserAsync("adrian1234")
-        };
+            Bookmark bookmark = new Bookmark()
+            {
+                //the id of the post may depend base on what is DB
+                Post = await _postService.GetPostDetails(11),
+                //the id of the user may depend base on what is DB
+                User = await _userService.GetUserAsync("adrian1234")
+            };
             
             Assert.ThrowsAsync<Exception>((async () => await _bookmarkService.AddBookmark(bookmark)));
         
     }
 
-    [Test, Order(1)]
-    public async virtual Task getListOfPostsThatAreBookedByAUser()
+    [Test]
+    public  virtual async Task getListOfPostsThatAreBookedByAUser()
     {
         try
         {
@@ -78,8 +78,8 @@ public class BookmarkJUnit
     }
     
     
-    [Test, Order(1)]
-    public async virtual Task TestRemoveBookPost()
+    [Test]
+    public  virtual async Task TestRemoveBookPost()
     {
         try
         {

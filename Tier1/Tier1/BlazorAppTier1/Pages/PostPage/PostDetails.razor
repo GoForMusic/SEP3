@@ -2,17 +2,19 @@
 @using Entities.Models
 @using Contracts
 @using BlazorAppTier1.Pages.UIElements
-@inject IPostService _postService
+@inject IPostService _postService   
+@inject NavigationManager _navigationManager;
 
+@if (_post == null) {
+    <LoadingComponent message=" details. Please wait..."/>
 
-<h3>PostDetails</h3>
-
-
+}
+else {
 <div class="section-fluid-main">
     <div class="section">
 
         <div class="info-wrap mob-margin">
-            <p class="title-up">@_user.GetName()</p>
+            <p class="title-up" @onclick="@(() => NavigateToUserProfile(_user!.Username))">@_user.GetName()</p>
             <h2>@_post.Title</h2>
             <h4 >&euro; @_post.Price</h4>
             <div class="section-fluid">
@@ -99,7 +101,20 @@
             <img src="https://assets.codepen.io/1462889/fcy.png" alt="">
         </a>
     </div>
-</div>
+</div>        
+
+    @if (!(string.IsNullOrEmpty(_errorLabel))) {
+        <Modal>
+            <p> @_errorLabel</p>
+            <button @onclick="@(() => _errorLabel=string.Empty)"></button>
+        </Modal>
+    }
+
+
+
+}
+
+
 
 
 @code {
@@ -107,11 +122,12 @@
     [Parameter]
     public int Id { get; set; }
 
-    private Post? _post = new Post();
-    private User? _user = new User();
+    private Post? _post;
+    private User? _user;
     private bool showComments;
-
     private bool ReportThisPost;
+    private string _errorLabel;
+
 
     protected override async Task OnInitializedAsync()
     {
@@ -121,7 +137,7 @@
             _user = _post.Writer;
         }
         catch (Exception e) {
-            throw new Exception(e.Message);
+            _errorLabel = e.Message;
         }
     }
 
@@ -132,6 +148,11 @@
     }
     private void ToggleShowComments() {
         showComments = !showComments;
+    }
+
+    private void NavigateToUserProfile(string username) {
+        _navigationManager.NavigateTo($"/profile/{username}");
+
     }
 
 

@@ -124,6 +124,21 @@ public class PostGRPCClientImpl implements PostClient {
 
     }
 
+    @Override
+    public int getNumberOfPosts(String username) {
+        PostOuterClass.OnlyString usernameToSend = PostOuterClass.OnlyString.newBuilder().setStringToTransfer(username).build();
+        PostOuterClass.IdWithInteger totalNumberOfPosts = getPostBlockingStub().getTotalNumberOfPosts(usernameToSend);
+        return totalNumberOfPosts.getId();
+    }
+
+    @Override
+    public List<Post> getAllPostsByUsername(String username) {
+        PostOuterClass.OnlyString usernametoSend = PostOuterClass.OnlyString.newBuilder().setStringToTransfer(username).build();
+        PostOuterClass.ListOfPostObj allPostsByUsername = getPostBlockingStub().getAllPostsByUsername(usernametoSend);
+        List<PostOuterClass.PostObj> listOfPostObj = allPostsByUsername.getListList();
+        return ConvertGrpc.getListOfPostFromListOfGrpcPostObjects(listOfPostObj);
+    }
+
     private void disposeStub() {
         postBlockingStub = null;
         categoryBlockingStub = null;

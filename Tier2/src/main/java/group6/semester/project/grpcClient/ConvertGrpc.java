@@ -6,6 +6,7 @@ package group6.semester.project.grpcClient;
 import GRPCService.*;
 import com.google.type.DateTime;
 import group6.semester.project.model.*;
+import group6.semester.project.model.Block;
 import group6.semester.project.model.Comment;
 import group6.semester.project.model.Image;
 import group6.semester.project.model.Subcategory;
@@ -357,4 +358,22 @@ public class ConvertGrpc {
     }
 
 
+
+    public static Block getBlockFromGRPCBlock(GRPCService.Block.BlockObj blockObj){
+        Block block = new Block();
+        block.setUsername(blockObj.getUsername());
+        block.setReason(blockObj.getReason());
+        return block;
+    }
+
+    public static List<Block> getListOfBlocksFromGRPCList(GRPCService.Block.ListOfBlocks users) {
+        List<GRPCService.Block.BlockObj> blockObjs = users.getAllBlocksList();
+        List<Block> allBlocksToReturn = new ArrayList<>();
+
+        for (GRPCService.Block.BlockObj blockObj : blockObjs) {
+            allBlocksToReturn.add(getBlockFromGRPCBlock(blockObj));
+        }
+        return allBlocksToReturn;
+
+    }
 }
