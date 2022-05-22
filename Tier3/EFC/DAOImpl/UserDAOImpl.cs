@@ -1,4 +1,3 @@
-
 using Entities.Contracts;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
@@ -26,10 +25,17 @@ public class UserDAOImpl : IUserService {
     }
 
     public async Task<User?> GetUser(string username) {
+        Block? block = await _context.Blocks.FirstOrDefaultAsync(block1 => block1.Username.Equals(username));
+        if (block != null) {
+            throw new Exception($"You have been blocked. \n Reason : {block.Reason}");
+        }
+
+
         User? user = await _context.Users.FirstOrDefaultAsync(t => t.Username.Equals(username));
-        if (user==null) {
+        if (user == null) {
             throw new Exception("Incorrect username");
         }
+
         return user;
     }
 }

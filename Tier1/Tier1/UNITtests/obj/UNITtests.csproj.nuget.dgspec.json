@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\UNITtests\\UNITtests.csproj": {}
+    "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\UNITtests\\UNITtests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj": {
+    "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj",
+        "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\nepal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Contracts\\obj\\",
+        "outputPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nepal\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj"
+              "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj"
               }
             }
           }
@@ -60,14 +60,14 @@
         }
       }
     },
-    "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj": {
+    "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\nepal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nepal\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -112,14 +112,14 @@
         }
       }
     },
-    "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\HttpServices\\HttpServices.csproj": {
+    "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\HttpServices\\HttpServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\HttpServices\\HttpServices.csproj",
+        "projectUniqueName": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\HttpServices\\HttpServices.csproj",
         "projectName": "HttpServices",
-        "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\HttpServices\\HttpServices.csproj",
+        "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\HttpServices\\HttpServices.csproj",
         "packagesPath": "C:\\Users\\nepal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\HttpServices\\obj\\",
+        "outputPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\HttpServices\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nepal\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -134,11 +134,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj"
+              "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj"
+              "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj"
               }
             }
           }
@@ -177,14 +177,14 @@
         }
       }
     },
-    "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\UNITtests\\UNITtests.csproj": {
+    "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\UNITtests\\UNITtests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\UNITtests\\UNITtests.csproj",
+        "projectUniqueName": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\UNITtests\\UNITtests.csproj",
         "projectName": "UNITtests",
-        "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\UNITtests\\UNITtests.csproj",
+        "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\UNITtests\\UNITtests.csproj",
         "packagesPath": "C:\\Users\\nepal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\UNITtests\\obj\\",
+        "outputPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\UNITtests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nepal\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -199,14 +199,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj"
+              "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj"
+              "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\HttpServices\\HttpServices.csproj": {
-                "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3-Final\\SEP3\\Tier1\\Tier1\\HttpServices\\HttpServices.csproj"
+              "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\HttpServices\\HttpServices.csproj": {
+                "projectPath": "C:\\Users\\nepal\\OneDrive\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\HttpServices\\HttpServices.csproj"
               }
             }
           }
