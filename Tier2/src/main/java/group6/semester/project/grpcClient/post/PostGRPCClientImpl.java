@@ -139,6 +139,12 @@ public class PostGRPCClientImpl implements PostClient {
         return ConvertGrpc.getListOfPostFromListOfGrpcPostObjects(listOfPostObj);
     }
 
+    @Override public void removePostById(int postId)
+    {
+        PostOuterClass.PostId postId1 = PostOuterClass.PostId.newBuilder().setPostId(postId).build();
+        getPostBlockingStub().removePostById(postId1);
+    }
+
     private void disposeStub() {
         postBlockingStub = null;
         categoryBlockingStub = null;

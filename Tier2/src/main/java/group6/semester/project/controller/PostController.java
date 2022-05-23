@@ -139,4 +139,15 @@ public class PostController {
 
     }
 
-}
+    @DeleteMapping(value = "/removePost/{postId}")
+
+    public ResponseEntity removePostById(@PathVariable int postId){
+        try
+        {
+            postService.removePostById(postId);
+            return ResponseEntity.ok("Successfully Removed");
+        }catch (Exception e){
+            return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
+    }
+
+}}

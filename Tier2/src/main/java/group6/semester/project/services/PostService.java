@@ -28,4 +28,5 @@ public interface PostService {
     int getNumberOfPosts(String username);
 
     List<Post> getAllPostsByUsername(String username);
+  void removePostById(int postId);
 }
