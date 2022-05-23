@@ -28,7 +28,7 @@ public class ReportGRPCClientImpl implements ReportClient {
     public void AddReport(Report report) {
         try {
             ReportOuterClass.ReportObj reportObj = ConvertGrpc.getGrpcReportFromReport(report);
-            ReportOuterClass.EmptyReportMark message = getReportBlockingStub().addReport(reportObj);
+           // ReportOuterClass.EmptyReportMark message = getReportBlockingStub().addReport(reportObj);
         } catch (Exception e) {
             throw new RuntimeException(e);
         } finally {
