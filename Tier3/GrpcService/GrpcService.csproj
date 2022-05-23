@@ -31,8 +31,7 @@
     </ItemGroup>   
     <ItemGroup>
     <Protobuf Include="Protos\block.proto" GrpcServices="Server" ProtoRoot="Protos\" />
-
-    </ItemGroup>
+</ItemGroup>
     <ItemGroup>
         <Protobuf Include="Protos\rating.proto" GrpcServices="Server" ProtoRoot="Protos\" />
     </ItemGroup>
