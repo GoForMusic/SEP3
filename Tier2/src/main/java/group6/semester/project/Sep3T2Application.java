@@ -1,19 +1,16 @@
 package group6.semester.project;
 
 import group6.semester.project.grpcClient.comment.CommentClientImpl;
-import group6.semester.project.grpcClient.fileUpload.ImageGrpcImpl;
+
 import group6.semester.project.grpcClient.post.PostGRPCClientImpl;
 
-import group6.semester.project.grpcClient.user.GRPCUserClientImpl;
+
 import group6.semester.project.model.*;
 
-import group6.semester.project.services.UserService;
-import org.checkerframework.checker.units.qual.C;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
