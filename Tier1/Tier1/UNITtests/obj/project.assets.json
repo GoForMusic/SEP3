@@ -880,6 +880,24 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "BlazorAppTier1/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "Entities": "1.0.0",
+          "HttpServices": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BlazorAppTier1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlazorAppTier1.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3829,6 +3847,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "BlazorAppTier1/1.0.0": {
+      "type": "project",
+      "path": "../BlazorAppTier1/BlazorAppTier1.csproj",
+      "msbuildProject": "../BlazorAppTier1/BlazorAppTier1.csproj"
+    },
     "Contracts/1.0.0": {
       "type": "project",
       "path": "../Contracts/Contracts.csproj",
@@ -3847,6 +3870,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BlazorAppTier1 >= 1.0.0",
       "Contracts >= 1.0.0",
       "Entities >= 1.0.0",
       "HttpServices >= 1.0.0",
@@ -3855,19 +3879,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Marian\\.nuget\\packages\\": {}
+    "C:\\Users\\vassi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marian\\Desktop\\VIA UNIVERSITY\\3rd semester\\sep project\\SEP3\\Tier1\\Tier1\\UNITtests\\UNITtests.csproj",
+      "projectUniqueName": "C:\\Users\\vassi\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\UNITtests\\UNITtests.csproj",
       "projectName": "UNITtests",
-      "projectPath": "C:\\Users\\Marian\\Desktop\\VIA UNIVERSITY\\3rd semester\\sep project\\SEP3\\Tier1\\Tier1\\UNITtests\\UNITtests.csproj",
-      "packagesPath": "C:\\Users\\Marian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marian\\Desktop\\VIA UNIVERSITY\\3rd semester\\sep project\\SEP3\\Tier1\\Tier1\\UNITtests\\obj\\",
+      "projectPath": "C:\\Users\\vassi\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\UNITtests\\UNITtests.csproj",
+      "packagesPath": "C:\\Users\\vassi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vassi\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\UNITtests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Marian\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\vassi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -3879,14 +3903,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Marian\\Desktop\\VIA UNIVERSITY\\3rd semester\\sep project\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj": {
-              "projectPath": "C:\\Users\\Marian\\Desktop\\VIA UNIVERSITY\\3rd semester\\sep project\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj"
+            "C:\\Users\\vassi\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\BlazorAppTier1\\BlazorAppTier1.csproj": {
+              "projectPath": "C:\\Users\\vassi\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\BlazorAppTier1\\BlazorAppTier1.csproj"
             },
-            "C:\\Users\\Marian\\Desktop\\VIA UNIVERSITY\\3rd semester\\sep project\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Marian\\Desktop\\VIA UNIVERSITY\\3rd semester\\sep project\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj"
+            "C:\\Users\\vassi\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj": {
+              "projectPath": "C:\\Users\\vassi\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Contracts\\Contracts.csproj"
             },
-            "C:\\Users\\Marian\\Desktop\\VIA UNIVERSITY\\3rd semester\\sep project\\SEP3\\Tier1\\Tier1\\HttpServices\\HttpServices.csproj": {
-              "projectPath": "C:\\Users\\Marian\\Desktop\\VIA UNIVERSITY\\3rd semester\\sep project\\SEP3\\Tier1\\Tier1\\HttpServices\\HttpServices.csproj"
+            "C:\\Users\\vassi\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\vassi\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\Entities\\Entities.csproj"
+            },
+            "C:\\Users\\vassi\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\HttpServices\\HttpServices.csproj": {
+              "projectPath": "C:\\Users\\vassi\\Desktop\\SEP3\\SEP3\\Tier1\\Tier1\\HttpServices\\HttpServices.csproj"
             }
           }
         }
@@ -3921,6 +3948,9 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
