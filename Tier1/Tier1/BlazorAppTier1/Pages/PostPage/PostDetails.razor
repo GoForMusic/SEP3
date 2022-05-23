@@ -2,55 +2,52 @@
 @using Entities.Models
 @using Contracts
 @using BlazorAppTier1.Pages.UIElements
-@inject IPostService _postService
+@inject IPostService _postService   
 @inject NavigationManager _navigationManager;
 
-@if (_post == null)
-{
+@if (_post == null) {
     <LoadingComponent message=" details. Please wait..."/>
+
 }
-else
-{
-    <div class="section-fluid-main">
-        <div class="section">
+else {
+<div class="section-fluid-main">
+    <div class="section">
 
-            <div class="info-wrap mob-margin">
-                <p class="title-up" @onclick="@(() => NavigateToUserProfile(_user!.Username))">@_user.GetName()</p>
-                <h2>@_post.Title</h2>
-                <h4 >&euro; @_post.Price</h4>
-                <div class="section-fluid">
-                    <input class="desc-btn" type="radio" id="desc-1" name="desc-btn" checked/>
-                    <label for="desc-1">Description</label>
-                    <input class="desc-btn" type="radio" id="desc-2" name="desc-btn"/>
-                    <label for="desc-2">Details</label>
-                    <div class="section-fluid desc-sec accor-1">
-                        <p>@_post.Description</p>
-                    </div>
-                    <div class="section-fluid desc-sec accor-2">
-                        <p> Condition : @_post.Condition</p>
-                        <p> Price : @_post.Price</p>
-                        <p> Address: @_post.Address</p>
-                        <p> Email : @_post.Email </p>
-                        <p> Phone number : @_post.PhoneNumber</p>
-                    </div>
-                    @if (showComments)
-                    {
-                        <Modal>
-                            <Comments CommentsToShow="_post.Comments" postId="Id"></Comments>
-                            <button @onclick="ToggleShowComments"> Close</button>
-                        </Modal>
-                    }
+        <div class="info-wrap mob-margin">
+            <p class="title-up" @onclick="@(() => NavigateToUserProfile(_user!.Username))">@_user.GetName()</p>
+            <h2>@_post.Title</h2>
+            <h4 >&euro; @_post.Price</h4>
+            <div class="section-fluid">
+                <input class="desc-btn" type="radio" id="desc-1" name="desc-btn" checked/>
+                <label for="desc-1">Description</label>
+                <input class="desc-btn" type="radio" id="desc-2" name="desc-btn"/>
+                <label for="desc-2">Details</label>
+                <div class="section-fluid desc-sec accor-1">
+                    <p>@_post.Description</p>
+                </div>
+                <div class="section-fluid desc-sec accor-2">
+                    <p> Condition : @_post.Condition</p>
+                    <p> Price : @_post.Price</p>
+                    <p> Address: @_post.Address</p>
+                    <p> Email : @_post.Email </p>
+                    <p> Phone number : @_post.PhoneNumber</p>
+                </div>
+                @if (showComments) {
+                    <Modal>
+                        <Comments CommentsToShow="_post.Comments" postId="Id"></Comments>
+                        <button @onclick="ToggleShowComments" > Close</button>
+                    </Modal>
+                }
 
 
-                    <div>
-                        <a class="btn"><i class="uil uil-shopping-cart icon" style="margin-top: 10%"></i>Bookmark</a>
-                    </div>
-                    <div>
-                        <a class="btn" @onclick="ToggleShowComments"><i class="uil uil-shopping-cart icon" style="margin-top: 10%"></i>View Comments</a>
-                    </div>
+                <div>
+                    <a  class="btn"><i class="uil uil-shopping-cart icon" style="margin-top: 10%"></i>Bookmark</a>
+                </div>
+                <div>
+                    <a class="btn" @onclick="ToggleShowComments"><i class="uil uil-shopping-cart icon" style="margin-top: 10%"></i>View Comments</a>
+                </div>
 
 
-                    @*
                 <AuthorizeView>
                     <Authorized>
                         <!--   For reporting post                 -->
@@ -65,92 +62,70 @@ else
                             </Modal>
                         }
                     </Authorized>
-                </AuthorizeView>*@
+                </AuthorizeView>
+                
+                <AuthorizeView Policy="Admin">
+                
+                    <NotAuthorized>
+                        @if (context.User.Identity.Name.Equals(_user.Username))
+                        {
+                            <button @onclick="@RemovePost"> Remove Post</button>
+                        }
+                        
+                    </NotAuthorized>
+                    <Authorized>
+                        <button @onclick="RemovePost"> Remove Post</button>
+                    </Authorized>
+                                 
+                </AuthorizeView>
 
-                    <AuthorizeView Policy="Admin">
-
-                        <NotAuthorized>
-                            <AuthorizeView>
-                                <Authorized Context="another_name">
-                                <!--   For reporting post                 -->
-                                <button @onclick="ToogleReport">Report</button>
-                                @if (ReportThisPost)
-                                {
-                                    <Modal>
-                                        <div>
-                                            <ReportPost postId="_post.Id"></ReportPost>
-
-                                        </div>
-                                    </Modal>
-                                }
-
-                                @*For removing post *@
-                                <button @onclick="ToogleRemovePostForSure">Remove</button>
-                                @if (ReportThisPost)
-                                {
-                                    <Modal>
-                                        <div>
-                                            <RemovingPost PostId="Id" , PostUsername="@_post.Writer.Username"></RemovingPost>
-
-                                        </div>
-                                    </Modal>
-                                }
-</Authorized>
-                            </AuthorizeView>
-
-
-                        </NotAuthorized>
-                        <Authorized>
-                            <button @onclick="RemovePost"> Remove Post</button>
-                        </Authorized>
-
-                    </AuthorizeView>
-
-                    <br/>
-                    <br/>
-
-                </div>
-            </div>
-
-
-            <div class="clearfix"></div>
-            <input class="color-btn for-color-1" type="radio" id="color-1" name="color-btn" checked/>
-
-            <input class="color-btn for-color-2" type="radio" id="color-2" name="color-btn"/>
-            <label class="color-2" for="color-2"></label>
-
-            <div class="clearfix"></div>
-            <div class="info-wrap">
+                <br/>
+                <br/>
 
             </div>
-
-            <div class="img-wrap chair-1"></div>
-            <div class="img-wrap chair-2"></div>
-            <div class="img-wrap chair-3"></div>
-            <div class="img-wrap chair-4"></div>
-            <div class="img-wrap chair-5"></div>
-            <div class="img-wrap chair-6"></div>
-            <div class="back-color"></div>
-            <div class="back-color chair-2"></div>
-            <div class="back-color chair-3"></div>
-            <div class="back-color chair-4"></div>
-            <div class="back-color chair-5"></div>
-            <div class="back-color chair-6"></div>
-
-
-            <a href="https://front.codes/" class="logo" target="_blank">
-                <img src="https://assets.codepen.io/1462889/fcy.png" alt="">
-            </a>
         </div>
-    </div>
 
-    @if (!(string.IsNullOrEmpty(_errorLabel)))
-    {
+
+        <div class="clearfix"></div>
+        <input class="color-btn for-color-1" type="radio" id="color-1" name="color-btn" checked/>
+
+        <input class="color-btn for-color-2" type="radio" id="color-2" name="color-btn"/>
+        <label class="color-2" for="color-2"></label>
+
+        <div class="clearfix"></div>
+        <div class="info-wrap">
+
+        </div>
+
+        <div class="img-wrap chair-1"></div>
+        <div class="img-wrap chair-2"></div>
+        <div class="img-wrap chair-3"></div>
+        <div class="img-wrap chair-4"></div>
+        <div class="img-wrap chair-5"></div>
+        <div class="img-wrap chair-6"></div>
+        <div class="back-color"></div>
+        <div class="back-color chair-2"></div>
+        <div class="back-color chair-3"></div>
+        <div class="back-color chair-4"></div>
+        <div class="back-color chair-5"></div>
+        <div class="back-color chair-6"></div>
+
+
+        <a href="https://front.codes/" class="logo" target="_blank">
+            <img src="https://assets.codepen.io/1462889/fcy.png" alt="">
+        </a>
+    </div>
+</div>        
+
+    @if (!(string.IsNullOrEmpty(_errorLabel))) {
         <Modal>
             <p> @_errorLabel</p>
-            <button @onclick="@(() => _errorLabel = string.Empty)"></button>
+            <button @onclick="@(() => _errorLabel=string.Empty)"></button>
         </Modal>
     }
+
+
+
 }
 
 
@@ -166,7 +141,6 @@ else
     private bool showComments;
     private bool ReportThisPost;
     private string _errorLabel;
-    private bool RemovePostForSure;
 
 
     protected override async Task OnInitializedAsync()
@@ -176,8 +150,7 @@ else
             _post = await _postService.GetPostDetails(Id);
             _user = _post.Writer;
         }
-        catch (Exception e)
-        {
+        catch (Exception e) {
             _errorLabel = e.Message;
         }
     }
@@ -185,21 +158,15 @@ else
     private void ToogleReport()
     {
         ReportThisPost = !ReportThisPost;
-    }
 
-    private void ToggleShowComments()
-    {
+    }
+    private void ToggleShowComments() {
         showComments = !showComments;
     }
 
-    private void ToogleRemovePostForSure()
-    {
-        RemovePostForSure = !RemovePostForSure;
-    }
-
-    private void NavigateToUserProfile(string username)
-    {
+    private void NavigateToUserProfile(string username) {
         _navigationManager.NavigateTo($"/profile/{username}");
+
     }
 
     private async Task RemovePost()
