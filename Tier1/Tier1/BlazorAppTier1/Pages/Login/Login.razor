@@ -106,9 +106,12 @@
         try {
             Console.WriteLine(userSignUp.Username);
             User user = await _userService.CreateUserAsync(userSignUp);
-            UsernameLogin = user.Username;
-            PasswordLogin = user.Password;
-           await LoginAsync();
+            errorLabel = "User successfully created ... Go to login and enter the credentials to login";
+
+            new Thread(() => {
+                Thread.Sleep(3000);
+                errorLabel = string.Empty;
+            }).Start();
         }
         catch (Exception e) {
             errorLabel = $"Error : {e.Message}";
