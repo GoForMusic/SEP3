@@ -33,6 +33,7 @@
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Pages\Message\GetMessage.razor" />
       <_ContentIncludedByDefault Remove="Pages\Message\SendMessage.razor" />
+      <_ContentIncludedByDefault Remove="Pages\OwnPosts\OwnPosts.razor" />
     </ItemGroup>
 
 </Project>
