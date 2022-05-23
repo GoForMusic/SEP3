@@ -1,6 +1,7 @@
 ﻿@using Contracts
 @using Entities.Models
-@inject IAuthService authManager
+@inject IAuthService authManager   
+@inject IUserService _userService
 @inject NavigationManager navMgr
 
 <div id="body" class="dark">
@@ -31,7 +32,7 @@
                                             <a class="nav-link" href="PostBookmark" role="button">Bookmark list</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="OwnPosts" role="button">Your own posts</a>
+                                            <a class="nav-link" href="profile/@context.User.Identity!.Name" role="button">Profile</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" href="/" role="button">Home</a>
@@ -67,7 +68,6 @@
 @code {
 
     private User? user = new User();
-
     private async Task Logout() {
         await authManager.LogoutAsync();
         navMgr.NavigateTo("/");
