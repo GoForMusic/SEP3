@@ -1,13 +1,11 @@
 package group6.semester.project.grpcClient.comment;
 
-import GRPCService.PostGrpc;
+
 import GRPCService.commentGrpc;
 import group6.semester.project.grpcClient.ConvertGrpc;
 import group6.semester.project.grpcClient.ManagedChannelGetter;
 import group6.semester.project.model.Comment;
-import group6.semester.project.services.CommentService;
 import io.grpc.ManagedChannel;
-import org.checkerframework.checker.units.qual.C;
 import org.springframework.stereotype.Service;
 
 @Service
