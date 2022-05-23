@@ -59,6 +59,38 @@ public final class imageGrpc {
      return getUploadMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<GRPCService.Image.FileReturnRequest,
+      GRPCService.Image.FileReturn> getGetImageForPostMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetImageForPost",
+      requestType = GRPCService.Image.FileReturnRequest.class,
+      responseType = GRPCService.Image.FileReturn.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<GRPCService.Image.FileReturnRequest,
+      GRPCService.Image.FileReturn> getGetImageForPostMethod() {
+    io.grpc.MethodDescriptor<GRPCService.Image.FileReturnRequest, GRPCService.Image.FileReturn> getGetImageForPostMethod;
+    if ((getGetImageForPostMethod = imageGrpc.getGetImageForPostMethod) == null) {
+      synchronized (imageGrpc.class) {
+        if ((getGetImageForPostMethod = imageGrpc.getGetImageForPostMethod) == null) {
+          imageGrpc.getGetImageForPostMethod = getGetImageForPostMethod = 
+              io.grpc.MethodDescriptor.<GRPCService.Image.FileReturnRequest, GRPCService.Image.FileReturn>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "image.image", "GetImageForPost"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  GRPCService.Image.FileReturnRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  GRPCService.Image.FileReturn.getDefaultInstance()))
+                  .setSchemaDescriptor(new imageMethodDescriptorSupplier("GetImageForPost"))
+                  .build();
+          }
+        }
+     }
+     return getGetImageForPostMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -93,6 +125,13 @@ public final class imageGrpc {
       return asyncUnimplementedStreamingCall(getUploadMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getImageForPost(GRPCService.Image.FileReturnRequest request,
+        io.grpc.stub.StreamObserver<GRPCService.Image.FileReturn> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetImageForPostMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -102,6 +141,13 @@ public final class imageGrpc {
                 GRPCService.Image.FileUploadRequest,
                 GRPCService.Image.FileUploadResponse>(
                   this, METHODID_UPLOAD)))
+          .addMethod(
+            getGetImageForPostMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                GRPCService.Image.FileReturnRequest,
+                GRPCService.Image.FileReturn>(
+                  this, METHODID_GET_IMAGE_FOR_POST)))
           .build();
     }
   }
@@ -131,6 +177,14 @@ public final class imageGrpc {
       return asyncClientStreamingCall(
           getChannel().newCall(getUploadMethod(), getCallOptions()), responseObserver);
     }
+
+    /**
+     */
+    public void getImageForPost(GRPCService.Image.FileReturnRequest request,
+        io.grpc.stub.StreamObserver<GRPCService.Image.FileReturn> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getGetImageForPostMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -149,6 +203,14 @@ public final class imageGrpc {
     protected imageBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new imageBlockingStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public java.util.Iterator<GRPCService.Image.FileReturn> getImageForPost(
+        GRPCService.Image.FileReturnRequest request) {
+      return blockingServerStreamingCall(
+          getChannel(), getGetImageForPostMethod(), getCallOptions(), request);
     }
   }
 
@@ -171,7 +233,8 @@ public final class imageGrpc {
     }
   }
 
-  private static final int METHODID_UPLOAD = 0;
+  private static final int METHODID_GET_IMAGE_FOR_POST = 0;
+  private static final int METHODID_UPLOAD = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -190,6 +253,10 @@ public final class imageGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_GET_IMAGE_FOR_POST:
+          serviceImpl.getImageForPost((GRPCService.Image.FileReturnRequest) request,
+              (io.grpc.stub.StreamObserver<GRPCService.Image.FileReturn>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -255,6 +322,7 @@ public final class imageGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new imageFileDescriptorSupplier())
               .addMethod(getUploadMethod())
+              .addMethod(getGetImageForPostMethod())
               .build();
         }
       }

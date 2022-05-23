@@ -6,6 +6,7 @@ package image;
 service image{
 
   rpc Upload(stream FileUploadRequest) returns (FileUploadResponse);
+  rpc GetImageForPost(FileReturnRequest) returns (stream FileReturn);
 }
 message ImageObj{
   int32 id = 1;
@@ -35,4 +36,17 @@ message FileUploadRequest {
 message FileUploadResponse {
   string name = 1;
   UploadStatus status = 2;
+}
+
+
+message FileReturnRequest {
+  string name = 1;
+
+}
+
+message FileReturn {
+  oneof request {
+    MetaData metadata = 1;
+    FileObj file = 2;
+  }
 }

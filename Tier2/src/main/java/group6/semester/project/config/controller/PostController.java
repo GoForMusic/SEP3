@@ -1,4 +1,4 @@
-package group6.semester.project.controller;
+package group6.semester.project.config.controller;
 
 import group6.semester.project.model.Category;
 import group6.semester.project.model.Post;

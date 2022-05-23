@@ -1,4 +1,5 @@
-﻿using Entities.Contracts;
+﻿using System.Net.Mime;
+using Entities.Contracts;
 using Google.Protobuf;
 using Grpc.Core;
 
@@ -8,9 +9,15 @@ public class ImageUploadProtoImpl:image.imageBase
 {
     private IImageService _imageService;
 
-    public ImageUploadProtoImpl(IImageService imageService)
+    
+    private readonly ILogger _logger;
+   
+        
+    
+    public ImageUploadProtoImpl(IImageService imageService,ILoggerFactory loggerFactory)
     {
         _imageService = imageService;
+        _logger = loggerFactory.CreateLogger<ImageUploadProtoImpl>();
     }
 
     public override async Task<FileUploadResponse> Upload(IAsyncStreamReader<FileUploadRequest> requestStream,
@@ -70,5 +77,33 @@ public class ImageUploadProtoImpl:image.imageBase
         Buffer.BlockCopy(second, 0, ret, first.Length, second.Length);
         return ret;
     }
-  
+
+
+    public override async Task GetImageForPost(FileReturnRequest request, IServerStreamWriter<FileReturn> responseStream, ServerCallContext context)
+    {
+        const int ChunkSize = 1024 * 32;
+        var filename = request.Name;
+    
+        
+        var buffer = new byte[ChunkSize];
+        await using var fileStream = File.OpenRead(filename);
+
+        while (true)
+        {
+            var numBytesRead = await fileStream.ReadAsync(buffer);
+            if (numBytesRead == 0)
+            {
+                break;
+            }
+
+            _logger.LogInformation("Sending data chunk of {numBytesRead} bytes", numBytesRead);
+          await responseStream.WriteAsync(new FileReturn()
+            {
+               Data = UnsafeByteOperations.UnsafeWrap(buffer.AsMemory(0, numBytesRead))
+            }) ;
+        }
+        
+    }
+    
+ 
 }

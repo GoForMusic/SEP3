@@ -49,6 +49,10 @@ namespace GRPCService {
     static readonly grpc::Marshaller<global::GRPCService.FileUploadRequest> __Marshaller_image_FileUploadRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GRPCService.FileUploadRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GRPCService.FileUploadResponse> __Marshaller_image_FileUploadResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GRPCService.FileUploadResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::GRPCService.FileReturnRequest> __Marshaller_image_FileReturnRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GRPCService.FileReturnRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::GRPCService.FileReturn> __Marshaller_image_FileReturn = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GRPCService.FileReturn.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::GRPCService.FileUploadRequest, global::GRPCService.FileUploadResponse> __Method_Upload = new grpc::Method<global::GRPCService.FileUploadRequest, global::GRPCService.FileUploadResponse>(
@@ -57,6 +61,14 @@ namespace GRPCService {
         "Upload",
         __Marshaller_image_FileUploadRequest,
         __Marshaller_image_FileUploadResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GRPCService.FileReturnRequest, global::GRPCService.FileReturn> __Method_GetImageForPost = new grpc::Method<global::GRPCService.FileReturnRequest, global::GRPCService.FileReturn>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "GetImageForPost",
+        __Marshaller_image_FileReturnRequest,
+        __Marshaller_image_FileReturn);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -74,6 +86,12 @@ namespace GRPCService {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task GetImageForPost(global::GRPCService.FileReturnRequest request, grpc::IServerStreamWriter<global::GRPCService.FileReturn> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -82,7 +100,8 @@ namespace GRPCService {
     public static grpc::ServerServiceDefinition BindService(imageBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_Upload, serviceImpl.Upload).Build();
+          .AddMethod(__Method_Upload, serviceImpl.Upload)
+          .AddMethod(__Method_GetImageForPost, serviceImpl.GetImageForPost).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -93,6 +112,7 @@ namespace GRPCService {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, imageBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_Upload, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::GRPCService.FileUploadRequest, global::GRPCService.FileUploadResponse>(serviceImpl.Upload));
+      serviceBinder.AddMethod(__Method_GetImageForPost, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::GRPCService.FileReturnRequest, global::GRPCService.FileReturn>(serviceImpl.GetImageForPost));
     }
 
   }

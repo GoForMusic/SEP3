@@ -22,6 +22,7 @@ public class ImageGrpcImpl
 
   private imageGrpc.imageStub imageStub;
   private StreamObserver<Image.FileUploadRequest> streamObserver = getImageStub().upload(new FileUploadObserver());
+ 
  // Path path = Paths.get("src/main/java/group6/semester/project/grpcClient/fileUpload/sunflower-0quality.jpg");
 
 
@@ -63,6 +64,14 @@ public class ImageGrpcImpl
     imageStub=null;
 
   }
+
+  public void  GetImageFromServer(String href){
+    Image.FileReturnRequest name = Image.FileReturnRequest.newBuilder().setName(href).build();
+    imageStub.getImageForPost(name,streamObserver);
+  }
+
+
+
   private class FileUploadObserver implements StreamObserver<Image.FileUploadResponse>
   {
     @Override

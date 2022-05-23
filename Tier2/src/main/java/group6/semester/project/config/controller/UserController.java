@@ -1,7 +1,7 @@
 /**
  * It's a controller that handles requests to the /user endpoint
  */
-package group6.semester.project.controller;
+package group6.semester.project.config.controller;
 
 
 import group6.semester.project.model.Block;
