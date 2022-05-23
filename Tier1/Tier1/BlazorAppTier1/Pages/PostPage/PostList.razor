@@ -91,10 +91,10 @@
     [Parameter]
     public bool userBookedList { get; set; }
     
-    public List<Post>? listOfBookedPosts = new List<Post>();
+    private List<Post>? listOfBookedPosts = new List<Post>();
     [CascadingParameter]
     public Task<AuthenticationState> AuthState { get; set; } = null!;
-    public string infoMessage = String.Empty;
+    private string infoMessage = String.Empty;
 
     private User? _user = new User();
     protected override async Task OnInitializedAsync()
