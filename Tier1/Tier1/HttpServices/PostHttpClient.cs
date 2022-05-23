@@ -127,6 +127,11 @@ public class PostHttpClient : IPostService {
         return int.Parse(content);
     }
 
+    public async Task RemovePost(int postId)
+    {
+        string content = await ClientAPI.getContent(Methods.Delete, $"/removePost/{postId}");
+    }
+
 
     public async Task<Post> GetPostDetails(int Id) {
         try {
@@ -143,7 +148,7 @@ public class PostHttpClient : IPostService {
 
     private T GetDeserialized<T>(string jsonFormat) {
         T obj = JsonSerializer.Deserialize<T>(jsonFormat, new JsonSerializerOptions() {
-            PropertyNameCaseInsensitive = true
+            PropertyNameCaseInsensitive = true  
         }) !;
         return obj;
     }

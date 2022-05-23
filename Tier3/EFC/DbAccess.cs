@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using System.Net.Mime;
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace EFC;

@@ -251,6 +251,38 @@ public final class PostGrpc {
      return getGetAllPostsByUsernameMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<GRPCService.PostOuterClass.PostId,
+      GRPCService.PostOuterClass.Nothing> getRemovePostByIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemovePostById",
+      requestType = GRPCService.PostOuterClass.PostId.class,
+      responseType = GRPCService.PostOuterClass.Nothing.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<GRPCService.PostOuterClass.PostId,
+      GRPCService.PostOuterClass.Nothing> getRemovePostByIdMethod() {
+    io.grpc.MethodDescriptor<GRPCService.PostOuterClass.PostId, GRPCService.PostOuterClass.Nothing> getRemovePostByIdMethod;
+    if ((getRemovePostByIdMethod = PostGrpc.getRemovePostByIdMethod) == null) {
+      synchronized (PostGrpc.class) {
+        if ((getRemovePostByIdMethod = PostGrpc.getRemovePostByIdMethod) == null) {
+          PostGrpc.getRemovePostByIdMethod = getRemovePostByIdMethod = 
+              io.grpc.MethodDescriptor.<GRPCService.PostOuterClass.PostId, GRPCService.PostOuterClass.Nothing>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "post.Post", "RemovePostById"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  GRPCService.PostOuterClass.PostId.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  GRPCService.PostOuterClass.Nothing.getDefaultInstance()))
+                  .setSchemaDescriptor(new PostMethodDescriptorSupplier("RemovePostById"))
+                  .build();
+          }
+        }
+     }
+     return getRemovePostByIdMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -327,6 +359,13 @@ public final class PostGrpc {
       asyncUnimplementedUnaryCall(getGetAllPostsByUsernameMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void removePostById(GRPCService.PostOuterClass.PostId request,
+        io.grpc.stub.StreamObserver<GRPCService.PostOuterClass.Nothing> responseObserver) {
+      asyncUnimplementedUnaryCall(getRemovePostByIdMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -378,6 +417,13 @@ public final class PostGrpc {
                 GRPCService.PostOuterClass.OnlyString,
                 GRPCService.PostOuterClass.ListOfPostObj>(
                   this, METHODID_GET_ALL_POSTS_BY_USERNAME)))
+          .addMethod(
+            getRemovePostByIdMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                GRPCService.PostOuterClass.PostId,
+                GRPCService.PostOuterClass.Nothing>(
+                  this, METHODID_REMOVE_POST_BY_ID)))
           .build();
     }
   }
@@ -455,6 +501,14 @@ public final class PostGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetAllPostsByUsernameMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void removePostById(GRPCService.PostOuterClass.PostId request,
+        io.grpc.stub.StreamObserver<GRPCService.PostOuterClass.Nothing> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getRemovePostByIdMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -522,6 +576,13 @@ public final class PostGrpc {
     public GRPCService.PostOuterClass.ListOfPostObj getAllPostsByUsername(GRPCService.PostOuterClass.OnlyString request) {
       return blockingUnaryCall(
           getChannel(), getGetAllPostsByUsernameMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public GRPCService.PostOuterClass.Nothing removePostById(GRPCService.PostOuterClass.PostId request) {
+      return blockingUnaryCall(
+          getChannel(), getRemovePostByIdMethod(), getCallOptions(), request);
     }
   }
 
@@ -598,6 +659,14 @@ public final class PostGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetAllPostsByUsernameMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<GRPCService.PostOuterClass.Nothing> removePostById(
+        GRPCService.PostOuterClass.PostId request) {
+      return futureUnaryCall(
+          getChannel().newCall(getRemovePostByIdMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_ADD_POST = 0;
@@ -607,6 +676,7 @@ public final class PostGrpc {
   private static final int METHODID_GET_POSTS_BY_SUBCATEGORY_ID = 4;
   private static final int METHODID_GET_TOTAL_NUMBER_OF_POSTS = 5;
   private static final int METHODID_GET_ALL_POSTS_BY_USERNAME = 6;
+  private static final int METHODID_REMOVE_POST_BY_ID = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -652,6 +722,10 @@ public final class PostGrpc {
         case METHODID_GET_ALL_POSTS_BY_USERNAME:
           serviceImpl.getAllPostsByUsername((GRPCService.PostOuterClass.OnlyString) request,
               (io.grpc.stub.StreamObserver<GRPCService.PostOuterClass.ListOfPostObj>) responseObserver);
+          break;
+        case METHODID_REMOVE_POST_BY_ID:
+          serviceImpl.removePostById((GRPCService.PostOuterClass.PostId) request,
+              (io.grpc.stub.StreamObserver<GRPCService.PostOuterClass.Nothing>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -721,6 +795,7 @@ public final class PostGrpc {
               .addMethod(getGetPostsBySubcategoryIdMethod())
               .addMethod(getGetTotalNumberOfPostsMethod())
               .addMethod(getGetAllPostsByUsernameMethod())
+              .addMethod(getRemovePostByIdMethod())
               .build();
         }
       }

@@ -51,19 +51,33 @@ else {
                 <AuthorizeView>
                     <Authorized>
                         <!--   For reporting post                 -->
-                                        <button @onclick="ToogleReport">Report</button>
-                                        @if (ReportThisPost)
-                                        {
-                                            <Modal>
-                                                <div>
-                                                    <ReportPost postId="_post.Id"></ReportPost>
+                        <button @onclick="ToogleReport">Report</button>
+                        @if (ReportThisPost)
+                        {
+                            <Modal>
+                                <div>
+                                    <ReportPost postId="_post.Id"></ReportPost>
 
-                                                </div>
-                                            </Modal>
-                                        }
+                                </div>
+                            </Modal>
+                        }
                     </Authorized>
                 </AuthorizeView>
-
+                
+                <AuthorizeView Policy="Admin">
+                
+                    <NotAuthorized>
+                        @if (context.User.Identity.Name.Equals(_user.Username))
+                        {
+                            <button @onclick="@RemovePost"> Remove Post</button>
+                        }
+                        
+                    </NotAuthorized>
+                    <Authorized>
+                        <button @onclick="RemovePost"> Remove Post</button>
+                    </Authorized>
+                                 
+                </AuthorizeView>
 
                 <br/>
                 <br/>
@@ -153,6 +167,12 @@ else {
     private void NavigateToUserProfile(string username) {
         _navigationManager.NavigateTo($"/profile/{username}");
 
+    }
+
+    private async Task RemovePost()
+    {
+        await _postService.RemovePost(_post.Id);
+        _navigationManager.NavigateTo("/");
     }
 
 
