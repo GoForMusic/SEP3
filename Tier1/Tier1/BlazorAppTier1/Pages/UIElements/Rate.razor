@@ -1,0 +1,36 @@
+﻿@using Entities.Models
+@using Contracts
+
+@inject NavigationManager _navigationManager;
+@inject IUserService _userService;
+@inject IRateService _rateService;
+
+<div class="media col-md-12">
+    <button type="button" class="btn btn-default btn-lg btn-block">Rate this user</button>
+    <div class="stars text-center text-warning">
+        <span class="glyphicon glyphicon-star"></span>
+        <span class="glyphicon glyphicon-star"></span>
+        <span class="glyphicon glyphicon-star"></span>
+        <span class="glyphicon glyphicon-star"></span>
+        <span class="glyphicon glyphicon-star-empty"></span>
+    </div>
+</div>
+
+@code{
+
+    public int userId { get; set; }
+
+    private Rating rating = new Rating();
+
+    private async Task GiveARate(string identityName)
+    {
+
+        User user = await _userService.GetUserAsync(identityName);
+        rating.rateUser = user;
+
+        Rating addRate = await _rateService.AddRating(rating);
+        
+
+    }
+
+}

@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using EFC.DAOImpl;
+using Entities.Models;
 using Google.Protobuf.Collections;
 using Grpc.Core;
 
@@ -63,6 +64,7 @@ public class ConvertGRPC {
         return report;
     }
 
+ 
 
     public static ListOfPostObj ConvertListPostToObj(List<Entities.Models.Post> request) {
         ListOfPostObj postObj = new ListOfPostObj();
@@ -240,6 +242,27 @@ public class ConvertGRPC {
                 commentObj.DateCreated.Day)
         };
     }
+
+    public static Rate GetRateFromRateObj(RatingObj ratingObj)
+    {
+        return new Rate()
+        {
+            RatingUser = GetUserFromUserObj(ratingObj.RateUser),
+            RatedUser = GetUserFromUserObj(ratingObj.RatedUser),
+            score = ratingObj.Score
+        };
+    }
+    public static RatingObj ConvertRateObjToRate(Rate rate)
+    {
+        RatingObj rateObj = new RatingObj()
+        {
+            RatedUser = ConvertUserToUserObj(rate.RatedUser),
+            RateUser = ConvertUserToUserObj(rate.RatingUser),
+            Score = rate.score
+        };
+        return rateObj;
+    }
+
 
     public static RepeatedField<CommentObj> GetRepeatedFieldsOfCommentObjsFromListOfComments(
         ICollection<Entities.Models.Comment> comments) {
