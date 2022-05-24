@@ -15,4 +15,5 @@ public interface IPostService {
 
     Task<string> AddImage(int id);
     Task<int> GetTotalNumberOfPosts(string username);
+    Task RemovePostById(int requestPostId);
 }

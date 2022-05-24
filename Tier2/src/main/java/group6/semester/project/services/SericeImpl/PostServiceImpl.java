@@ -85,4 +85,9 @@ public class PostServiceImpl implements PostService {
         return postClient.getAllPostsByUsername(username);
     }
 
+    @Override public void removePostById(int postId)
+    {
+        postClient.removePostById(postId);
+    }
+
 }

@@ -116,4 +116,17 @@ public class PostProtoImpl : Post.PostBase {
             throw new RpcException(new Status(StatusCode.Unavailable, e.Message));
         }
     }
+
+    public override async Task<Nothing> RemovePostById(PostId request, ServerCallContext context)
+    {
+        try
+        {
+          await  _postService.RemovePostById(request.PostId_);
+          return new Nothing();
+        }
+        catch (Exception e)
+        {
+            throw new RpcException(new Status(StatusCode.Unavailable, e.Message));
+        }
+    }
 }

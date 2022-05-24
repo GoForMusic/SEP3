@@ -80,4 +80,14 @@ public class PostDAOImpl : IPostService {
     public async Task<int> GetTotalNumberOfPosts(string username) {
         return await _context.Posts.Where(post => post.Writer!.Username.Equals(username)).CountAsync();
     }
+
+    public async Task RemovePostById(int requestPostId)
+    {
+        var itemToRemove = _context.Posts.SingleOrDefaultAsync(post => post.Id == requestPostId).Result; 
+
+        if (itemToRemove != null) {
+            _context.Posts.Remove(itemToRemove);
+            await _context.SaveChangesAsync();
+        }
+    }
 }

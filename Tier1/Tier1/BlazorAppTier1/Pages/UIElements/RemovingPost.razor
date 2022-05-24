@@ -1,0 +1,28 @@
+﻿@using Contracts
+@inject IPostService _postService;
+@inject NavigationManager _navigationManager;
+
+
+<AuthorizeView>
+    <Authorized>
+      
+        
+            <h3>Are you sure you want to delete this post </h3>
+
+            <button onclick="@removePostById" class="btn-danger" style="margin: 5px 5px 5px 0px">Remove</button>
+        
+    </Authorized>
+    
+</AuthorizeView>
+
+@code {
+    [Parameter] public  int PostId { get; set; }
+
+
+    private async Task removePostById()
+    {
+    await    _postService.RemovePost(PostId);
+            _navigationManager.NavigateTo("/");
+    }
+    
+}

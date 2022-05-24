@@ -16,4 +16,6 @@ public interface IPostService {
     Task<List<Post>> GetAllPostsByUsername(string? username);
     Task<int> GetTotalNumberOfPostsByUsername(string? 
         username);
+
+    Task RemovePost(int postId);
 }

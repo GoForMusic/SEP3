@@ -22,7 +22,7 @@ public class AuthServiceImpl : IAuthService
     {
         User? user = await userService.GetUserLogin(username,password); // Get user from database
 
-        
+               
             
                 // validation success
                 await CacheUserAsync(user!); // Cache the user object in the browser 

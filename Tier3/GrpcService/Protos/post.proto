@@ -16,7 +16,7 @@ service Post{
    rpc GetPostsBySubcategoryId(SubIdWithCurrent) returns (ListOfPostObj);
   rpc GetTotalNumberOfPosts(OnlyString) returns (IdWithInteger);
   rpc GetAllPostsByUsername(OnlyString) returns (ListOfPostObj);
-
+  rpc RemovePostById(PostId) returns(Nothing);
 
 }
 
@@ -70,4 +70,12 @@ message DateCreated{
 message OnlyString{
   string  StringToTransfer = 1;
 }
+
+message  PostId{
+  int32  postId = 1;
+}
+message Nothing{
+
+}
+
 

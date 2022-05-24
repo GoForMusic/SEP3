@@ -24,4 +24,5 @@ public interface PostClient {
 
     List<Post> getAllPostsByUsername(String username);
 
+  void removePostById(int postId);
 }
