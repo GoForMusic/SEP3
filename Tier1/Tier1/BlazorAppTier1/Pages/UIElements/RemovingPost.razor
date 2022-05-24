@@ -5,23 +5,24 @@
 
 <AuthorizeView>
     <Authorized>
-        @if (context.User.Identity.Name == PostUsername)
-        {
+      
+        
             <h3>Are you sure you want to delete this post </h3>
 
-            <button @onclick="removePostById">Remove</button>
-        }
+            <button onclick="@removePostById">Remove</button>
+        
     </Authorized>
     
 </AuthorizeView>
 
 @code {
     [Parameter] public  int PostId { get; set; }
-    [Parameter] public  string PostUsername { get; set; }
+
 
     private async Task removePostById()
     {
     await    _postService.RemovePost(PostId);
+            _navigationManager.NavigateTo("/");
     }
     
 }

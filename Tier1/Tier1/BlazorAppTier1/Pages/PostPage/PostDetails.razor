@@ -50,30 +50,15 @@ else
                     </div>
 
 
-                    @*
-                <AuthorizeView>
-                    <Authorized>
-                        <!--   For reporting post                 -->
-                        <button @onclick="ToogleReport">Report</button>
-                        @if (ReportThisPost)
-                        {
-                            <Modal>
-                                <div>
-                                    <ReportPost postId="_post.Id"></ReportPost>
-
-                                </div>
-                            </Modal>
-                        }
-                    </Authorized>
-                </AuthorizeView>*@
-
+                
                     <AuthorizeView Policy="Admin">
 
                         <NotAuthorized>
                             <AuthorizeView>
                                 <Authorized Context="another_name">
-                                <!--   For reporting post                 -->
-                                <button @onclick="ToogleReport">Report</button>
+                                    <!--   For reporting post                 -->
+                                    
+                                <button @onclick="ToogleReport" class="btn-danger" style="margin: 5px 5px 5px 0px">Report</button>
                                 @if (ReportThisPost)
                                 {
                                     <Modal>
@@ -85,15 +70,18 @@ else
                                 }
 
                                 @*For removing post *@
-                                <button @onclick="ToogleRemovePostForSure">Remove</button>
-                                @if (ReportThisPost)
+                                @if (another_name.User.Identity.Name == _user.Username)
                                 {
-                                    <Modal>
-                                        <div>
-                                            <RemovingPost PostId="Id" , PostUsername="@_post.Writer.Username"></RemovingPost>
+                                    <button @onclick="ToogleRemovePostForSure" class="btn-danger">Remove</button>
+                                    @if (RemovePostForSure)
+                                    {
+                                        <Modal>
+                                            <div>
+                                                <RemovingPost PostId="Id" ></RemovingPost>
 
-                                        </div>
-                                    </Modal>
+                                            </div>
+                                        </Modal>
+                                    }
                                 }
 </Authorized>
                             </AuthorizeView>
