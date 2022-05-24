@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿
+using Entities.Models;
 
 namespace Entities.Contracts; 
 

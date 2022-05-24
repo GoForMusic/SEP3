@@ -134,3 +134,5 @@ C:\Users\nepal\OneDrive\Desktop\SEP3\SEP3\Tier3\EFC\obj\Debug\net6.0\EFC.dll
 C:\Users\nepal\OneDrive\Desktop\SEP3\SEP3\Tier3\EFC\obj\Debug\net6.0\ref\EFC.dll
 C:\Users\nepal\OneDrive\Desktop\SEP3\SEP3\Tier3\EFC\obj\Debug\net6.0\EFC.pdb
 C:\Users\nepal\OneDrive\Desktop\SEP3\SEP3\Tier3\EFC\obj\Debug\net6.0\EFC.genruntimeconfig.cache
+C:\Users\nepal\OneDrive\Desktop\SEP3\SEP3\Tier3\EFC\bin\Debug\net6.0\Contracts.dll
+C:\Users\nepal\OneDrive\Desktop\SEP3\SEP3\Tier3\EFC\bin\Debug\net6.0\Contracts.pdb
