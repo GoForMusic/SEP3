@@ -18,6 +18,7 @@ public class ImageUploadProtoImpl:image.imageBase
         // FileUploadRequest uploadRequest = requestStream.Current;
         // ByteString byteString = uploadRequest.File.Content;
         // throw new NotImplementedException();
+        Console.WriteLine("Adding image");
         await requestStream.MoveNext();
 
         string fileName = requestStream.Current.Metadata.Name;

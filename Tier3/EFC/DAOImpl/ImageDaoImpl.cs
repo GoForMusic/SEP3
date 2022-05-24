@@ -17,6 +17,7 @@ public class ImageDaoImpl : IImageService
 
     public async Task<bool> AddImage(int postId, string fileType, byte[] file)
     {
+        Console.WriteLine("Adding image");
         Image image = new Image();
         image.PostId = postId;
         image.Href=String.Empty;
