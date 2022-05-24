@@ -18,14 +18,14 @@
 
 @code {
 
-    private Report _report = new Entities.Models.Report();
+    private Report _report = new();
     [Parameter] public int postId { get; set; }
 
 
     private async Task AddReport(string userName)
     {
 
-        if (_report.Reason==null) {
+        if ( string.IsNullOrEmpty(_report.Reason)) {
             return;
             
         }
@@ -33,7 +33,6 @@
         _report.PostId = postId;
 
         await _reportService.AddReport(_report);
-        Console.WriteLine($"{userName} had added report on {_report.PostId} cause {_report.Reason}");
         _navigationManager.NavigateTo($"/");
     }
 
