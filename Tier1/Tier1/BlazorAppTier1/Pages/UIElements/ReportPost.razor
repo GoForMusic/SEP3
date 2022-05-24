@@ -10,7 +10,7 @@
     <Authorized>
         <label> Why do you want to report </label>
         <input type="text" @bind="_report.Reason"/>
-        <button  @onclick="@(() =>AddReport(context.User.Identity.Name))">Submit</button>
+        <button  @onclick="@(() =>AddReport(context.User.Identity.Name))" class="btn-danger" style="margin: 5px 5px 5px 0px">Submit</button>
     </Authorized>
 </AuthorizeView>
 
