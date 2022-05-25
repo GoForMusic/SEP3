@@ -42,4 +42,28 @@ public class ReportProtoImpl : Report.ReportBase {
 
         return null;
     }
+    
+    public override async Task<ListOfReports> GetReports(EmptyReportMark request, ServerCallContext context) {
+        try {
+            List<Entities.Models.Report> reportsFromServer = await _reportService.getReports();
+
+            Console.WriteLine("Checking reports ___----");
+            reportsFromServer.ForEach(Console.WriteLine);
+
+            ListOfReports listOfReports = new ListOfReports();
+
+            foreach (Entities.Models.Report report in reportsFromServer) {
+                ReportObj reportObj = new ReportObj() {
+                    Reason = report.Reason,
+                    PostId = report.PostId,
+                    ReporterUsername = report.ReporterUsername
+                };
+                listOfReports.ReportObj.Add(reportObj);
+            }
+            return listOfReports;
+        }
+        catch (Exception e) {
+            throw new RpcException(new Status(StatusCode.NotFound, e.Message));
+        }
+    }
 }
