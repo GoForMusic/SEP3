@@ -32,8 +32,10 @@ public class ReportDAOImpl : IReportService {
 
    public async Task<Report> RemoveReport(Report report) {
         try {
+            
+            Console.WriteLine("Remove report ENDGAME");
             Report reports = await _context.Reports.FirstAsync(t =>
-                t.PostId.Equals(report.PostId) && t.ReporterUsername.Equals(report.ReporterUsername));
+                t.PostId==report.PostId && t.ReporterUsername.Equals(report.ReporterUsername));
             _context.Reports.Remove(reports);
             await _context.SaveChangesAsync();
             return reports;

@@ -82,11 +82,11 @@ else
         {
             
             await _reportService.RemoveReport(item);
-            _reports.Remove(item);
+             _reports.Remove(item);
         }
         catch (Exception e)
         {
-            throw new Exception(e.Message);
+            throw new Exception(e.Message); 
         }
     }
 
